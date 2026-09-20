@@ -1,0 +1,11 @@
+id: 349
+name: SpaceWord
+url: https://spaceword.org
+description: Create crosswords using all letters, using as little space as possible.
+category: Words
+themes:
+- Scrabble-likes
+status: active
+history:
+- date: '2025-04-02'
+  event: added

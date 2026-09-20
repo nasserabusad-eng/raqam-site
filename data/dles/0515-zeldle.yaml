@@ -1,0 +1,11 @@
+id: 515
+name: Zeldle
+url: https://zeldle.xyz
+description: A collection of daily games related to Zelda.
+category: Video Games
+themes:
+- Zelda
+status: active
+history:
+- date: '2025-08-30'
+  event: added

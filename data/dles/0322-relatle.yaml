@@ -1,0 +1,14 @@
+id: 322
+name: Relatle
+url: https://www.relatle.lol
+description: Guess the word based on one of its synonyms, given a new synonym after each guess.
+category: Words
+themes:
+- Semantics
+status: removed
+history:
+- date: '2024-04-10'
+  event: added
+- date: '2026-05-29'
+  event: removed
+  reason: Site now redirects to suspicious website.

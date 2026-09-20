@@ -1,0 +1,384 @@
+<script>
+  export const params = undefined
+
+  import "../app.css"
+  import dles_json from "$lib/data/dles.json"
+  import new_dles_json from "$lib/data/new_dles.json"
+  import changelog_json from "$lib/data/changelog.json"
+  import dles_of_the_week_json from "$lib/data/dles_of_the_week.json"
+
+  import {
+    categories,
+    categorizedDles,
+    changelog,
+    dles,
+    newDles,
+    favoriteIds,
+    hiddenDleIds,
+    playedDleIds,
+    autoMarkPlayed,
+    autoResetPlayed,
+    filteredDles,
+    randomCategories,
+    dlesOfTheWeek,
+    activePanelStore,
+    showHiddenDlesModal,
+    showMarkedDlesModal,
+    showSearchModal,
+    showSettingsModal,
+    showFavoritesSettingsModal,
+  } from "$lib/stores"
+
+  import Header from "$lib/components/Header.svelte"
+  import { onMount } from "svelte"
+  import { afterNavigate } from "$app/navigation"
+  import Footer from "$lib/components/Footer.svelte"
+  import Info from "$lib/components/Info.svelte"
+  import RandomPanel from "$lib/components/RandomPanel.svelte"
+  import SettingsModal from "$lib/components/SettingsModal.svelte"
+  import HowToHelp from "$lib/components/HowToHelp.svelte"
+  import SearchModalPanel from "$lib/components/SearchModalPanel.svelte"
+  import PollPanel from "$lib/components/PollPanel.svelte"
+  import DiscordPanel from "$lib/components/DiscordPanel.svelte"
+  import {
+    getCurrentDlesOfTheWeek,
+    isLocalStorageAvailable,
+  } from "$lib/js/utilities"
+  import {
+    migrateFavoritesToIds,
+    needsFavoritesMigration,
+  } from "$lib/js/favoritesMigration"
+  import LatestChange from "$lib/components/LatestChange.svelte"
+  import Toast from "$lib/components/Toast.svelte"
+  import HiddenDlesModal from "$lib/components/Dles/HiddenDlesModal.svelte"
+  import MarkedDlesModal from "$lib/components/Dles/MarkedDlesModal.svelte"
+  import FavoritesSettingsModal from "$lib/components/Dles/FavoritesSettingsModal.svelte"
+
+  function initializeDles() {
+    $dles = dles_json
+    for (let dle of $dles) {
+      dle.hidden = false
+    }
+  }
+
+  function initializeNewDles() {
+    $newDles = new_dles_json
+  }
+
+  function initializeChangelog() {
+    $changelog = changelog_json
+  }
+
+  initializeDles()
+  initializeNewDles()
+  initializeChangelog()
+
+  afterNavigate(({ from }) => {
+    if (!from) return
+    $activePanelStore = null
+    $showSearchModal = false
+    $showSettingsModal = false
+  })
+
+  onMount(() => {
+    if (isLocalStorageAvailable()) {
+      const rawFavorites = JSON.parse(localStorage.favorites || "[]")
+
+      // Check if migration is needed
+      if (needsFavoritesMigration(rawFavorites)) {
+        console.log("🔄 Migrating favorites to new ID-based format...")
+        const migrationResult = migrateFavoritesToIds(rawFavorites, $dles)
+        $favoriteIds = migrationResult.ids
+        localStorage.favorites = JSON.stringify(migrationResult.ids)
+
+        const { report } = migrationResult
+        console.log(
+          `✅ Migration complete: ${report.migrated}/${report.total} favorites migrated`,
+        )
+
+        if (report.failed.length > 0) {
+          console.warn(
+            "⚠️ Some favorites could not be migrated:",
+            report.failed,
+          )
+          if (report.suggestions.length > 0) {
+            console.log(
+              "💡 Suggestions for failed migrations:",
+              report.suggestions,
+            )
+          }
+        }
+      } else {
+        $favoriteIds = rawFavorites
+      }
+
+      // Load hidden dles from localStorage
+      $hiddenDleIds = JSON.parse(localStorage.hiddenDles || "[]")
+
+      // Load played dles from localStorage
+      $playedDleIds = JSON.parse(localStorage.playedDles || "[]")
+
+      // Load auto-mark played setting
+      $autoMarkPlayed = localStorage.autoMarkPlayed === "true"
+
+      // Load auto-reset played setting and check for midnight reset
+      $autoResetPlayed = localStorage.autoResetPlayed !== "false"
+
+      if ($autoResetPlayed) {
+        const today = new Date().toDateString()
+        const lastResetDate = localStorage.playedDlesLastReset
+
+        if (lastResetDate !== today) {
+          // Reset played dles at midnight
+          $playedDleIds = []
+          localStorage.playedDles = JSON.stringify([])
+          localStorage.playedDlesLastReset = today
+        }
+      }
+    }
+  })
+
+  for (let category of $categories) {
+    let dlesInCategory = $dles.filter((dle) => dle.category == category)
+    $categorizedDles[category] = dlesInCategory
+  }
+
+  $: {
+    for (let category of $categories) {
+      let dlesInCategory = $filteredDles.filter(
+        (dle) => dle.category == category,
+      )
+      $categorizedDles[category] = dlesInCategory
+    }
+  }
+
+  let currentDlesOfTheWeek = getCurrentDlesOfTheWeek(dles_of_the_week_json)
+
+  $: $filteredDles = $dles
+  $: $dlesOfTheWeek = $filteredDles.filter((dle) =>
+    currentDlesOfTheWeek["dle_ids"].includes(dle.id),
+  )
+
+  let loading = true
+
+  onMount(() => {
+    loading = false
+  })
+</script>
+
+<svelte:head>
+  <script>
+    // Restore font size immediately to prevent flash
+    if (typeof localStorage !== "undefined" && localStorage.fontSizeOffset) {
+      document.documentElement.style.setProperty(
+        "--font-size-offset",
+        localStorage.fontSizeOffset,
+      )
+    }
+  </script>
+</svelte:head>
+
+<noscript>
+  <style>
+    .js-only {
+      display: none !important;
+    }
+    .js-panels {
+      display: none !important;
+    }
+    .js-buttons {
+      display: none !important;
+    }
+
+    /* Hide all panels by default */
+    .noscript-panel {
+      display: none;
+    }
+
+    /* Show panel when targeted */
+    .noscript-panel:target {
+      display: block !important;
+    }
+  </style>
+</noscript>
+
+<div class="w-full text-colorText bg-colorBackground">
+  <div class="flex flex-col max-w-screen-xl xl:max-w-[73.125rem] mx-auto">
+    <main
+      class="flex flex-col flex-1 justify-between py-1 md:p-1 min-h-screen w-full mx-auto box-border bg-colorBackground"
+    >
+      <div>
+        <Header />
+        <noscript>
+          <div class="noscript-content pt-16">
+            <div
+              id="panel-info"
+              class="noscript-panel border border-zinc-900 dark:border-zinc-200 p-4 my-4"
+            >
+              <div class="m-auto max-w-[36rem] p-2">
+                <div class="header-section-label">INFO</div>
+                <div class="divider mt-2"></div>
+                <h2 class="question">What is this?</h2>
+                <p class="answer">
+                  A curated collection of 700+ free games that are updated
+                  daily: puzzle games, word games, trivia, logic games, and
+                  more! All games are completely free and
+                  <em>do not require an account or subscription.</em>
+                </p>
+                <h2 class="question">What is a dle?</h2>
+                <p class="answer">
+                  A <strong>dle</strong>, or <em>daily game</em>, is generally a
+                  game that changes everyday which has the same version for
+                  everyone that plays, often taking inspiration from
+                  <a href="https://en.wikipedia.org/wiki/Wordle" target="_blank"
+                    >Wor<strong>dle</strong></a
+                  >.
+                </p>
+                <h2 class="question">Can I help?</h2>
+                <p class="answer">
+                  Sure! You can
+                  <a href="https://tally.so/r/mOKOea" target="_blank"
+                    >suggest a dle</a
+                  >
+                  or
+                  <a href="https://tally.so/r/wQpPpY" target="_blank"
+                    >report a bug</a
+                  >. If you want to support monetarily, you can
+                  <a href="https://ko-fi.com/aukspot" target="_blank"
+                    >donate on Ko-fi</a
+                  >. Lastly, you can
+                  <a href="https://github.com/aukspot/dles" target="_blank"
+                    >look at the code on GitHub</a
+                  >
+                  and propose changes, as this project is open source.
+                </p>
+                <div class="divider mt-2"></div>
+                <p class="answer">
+                  "They call them the dles, but they are anything but." -
+                  <em>Northernlion</em>
+                </p>
+                <div class="flex justify-center mt-6">
+                  <a
+                    href="#top"
+                    class="btn-header hover:bg-red-200 dark:hover:bg-red-800"
+                  >
+                    X CLOSE
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div
+              id="panel-help"
+              class="noscript-panel border border-zinc-900 dark:border-zinc-200 p-4 my-4 pt-16"
+            >
+              <div class="m-auto max-w-[36rem] p-2">
+                <div class="header-section-label">HOW TO HELP</div>
+                <div class="divider my-2 mb-6"></div>
+                <div class="link-grid">
+                  <a
+                    class="btn-action hover:bg-green-100 dark:hover:bg-green-900"
+                    href="https://tally.so/r/mOKOea"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Suggest a Game
+                  </a>
+                  <a
+                    class="btn-action hover:bg-green-100 dark:hover:bg-green-900"
+                    href="https://tally.so/r/wQpPpY"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Report a Bug
+                  </a>
+                  <a
+                    class="btn-action hover:bg-green-100 dark:hover:bg-green-900"
+                    href="https://ko-fi.com/aukspot"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Donate
+                  </a>
+                  <a
+                    class="btn-action hover:bg-green-100 dark:hover:bg-green-900"
+                    href="https://github.com/aukspot/dles"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    GitHub
+                  </a>
+                </div>
+                <div class="flex justify-center mt-6">
+                  <a
+                    href="#top"
+                    class="btn-header hover:bg-red-200 dark:hover:bg-red-800"
+                  >
+                    X CLOSE
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </noscript>
+        <div
+          class="js-panels"
+          class:hidden={loading}
+          class:p-2={$activePanelStore}
+          class:my-2={$activePanelStore}
+        >
+          <Info open={$activePanelStore === "info"} />
+          <RandomPanel open={$activePanelStore === "random"} />
+          <HowToHelp open={$activePanelStore === "help"} />
+          <PollPanel open={$activePanelStore === "poll"} />
+          <DiscordPanel open={$activePanelStore === "discord"} />
+        </div>
+        <slot />
+      </div>
+      <!-- <LatestChange /> -->
+    </main>
+    <Footer />
+  </div>
+  <!-- <ExamplePopUp /> -->
+</div>
+
+<Toast />
+
+{#if $showSearchModal}
+  <SearchModalPanel onClose={() => ($showSearchModal = false)} />
+{/if}
+
+{#if $showSettingsModal}
+  <SettingsModal onClose={() => ($showSettingsModal = false)} />
+{/if}
+
+{#if $showHiddenDlesModal}
+  <HiddenDlesModal
+    onClose={() => ($showHiddenDlesModal = false)}
+    lockScroll={!$showSettingsModal}
+  />
+{/if}
+
+{#if $showMarkedDlesModal}
+  <MarkedDlesModal
+    onClose={() => ($showMarkedDlesModal = false)}
+    lockScroll={!$showSettingsModal}
+  />
+{/if}
+
+{#if $showFavoritesSettingsModal}
+  <FavoritesSettingsModal
+    onClose={() => ($showFavoritesSettingsModal = false)}
+  />
+{/if}
+
+<style lang="postcss">
+  .question {
+    @apply mt-2 text-sm font-bold md:text-base text-center;
+  }
+  .answer {
+    @apply mt-1 text-xs md:text-sm leading-snug text-center;
+  }
+  .link-grid {
+    @apply grid grid-cols-2 gap-1;
+  }
+</style>

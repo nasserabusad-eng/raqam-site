@@ -1,0 +1,5624 @@
+[
+  {
+    "date": "2026-09-04",
+    "dles removed": [
+      {
+        "name": "Jeffgoldblumle",
+        "url": "https://jeffgoldblumle.com",
+        "id": 733,
+        "reason": "Ads cause a redirect to suspicious site."
+      }
+    ],
+    "description": "Remove 1 dle. "
+  },
+  {
+    "date": "2026-09-03",
+    "dles added": [
+      {
+        "name": "HexHunt",
+        "url": "https://thehexhunt.com",
+        "id": 830
+      },
+      {
+        "name": "Lettergrams",
+        "url": "https://puzzlist.com/lettergrams",
+        "id": 829
+      }
+    ],
+    "dles removed": [
+      {
+        "name": "Crosslink",
+        "url": "https://romainpastureau.github.io/crosslink/",
+        "id": 526,
+        "reason": "No new puzzles. Archive still available, but awkward."
+      },
+      {
+        "name": "Netflix - Keysmash",
+        "url": "https://www.netflix.com/tudum/puzzled/keysmash/daily",
+        "id": 664,
+        "reason": "No longer available."
+      },
+      {
+        "name": "Rotatly",
+        "url": "https://www.rotatly.com",
+        "id": 682,
+        "reason": "Link no longer works."
+      },
+      {
+        "name": "Totem Words",
+        "url": "https://totemwords.com",
+        "id": 506,
+        "reason": "No new puzzles. Archive still available, but awkward."
+      }
+    ],
+    "dles archived": [
+      {
+        "name": "Chronoodle",
+        "url": "https://chronoodle.com",
+        "id": 677,
+        "note": "Previously removed 2026-08-26."
+      },
+      {
+        "name": "Collections",
+        "url": "https://puzzmallow.com/collections",
+        "id": 58,
+        "archive_url": "https://puzzmallow.com/collections/archive",
+        "note": "Previously removed 2026-01-06."
+      },
+      {
+        "name": "Couplit",
+        "url": "https://couplit.io",
+        "id": 70,
+        "archive_url": "https://couplit.io/puzzle-archive",
+        "note": "Previously removed 2026-08-26."
+      },
+      {
+        "name": "GuessTen",
+        "url": "https://guessten.com",
+        "id": 155,
+        "archive_url": "https://www.guessten.com/archive.html",
+        "note": "Previously removed 2026-05-22."
+      },
+      {
+        "name": "GuessTheMovie.me",
+        "url": "https://guessthemovie.me",
+        "id": 519,
+        "note": "Previously removed 2026-04-20."
+      },
+      {
+        "name": "Listed",
+        "url": "https://listed.fun",
+        "id": "M15",
+        "note": "Previously removed 2025-06-11."
+      },
+      {
+        "name": "Mini Crossword (The Observer)",
+        "url": "https://fordhamobserver.com/category/fun-and-games/daily-mini-crossword",
+        "id": 229,
+        "note": "Previously removed 2026-05-18."
+      },
+      {
+        "name": "Numblino",
+        "url": "https://numblino.com",
+        "id": 552,
+        "note": "Previously removed 2026-08-26."
+      },
+      {
+        "name": "Outlier",
+        "url": "https://outlier.land",
+        "id": 639,
+        "note": "Previously removed 2026-03-28."
+      },
+      {
+        "name": "Spectra",
+        "url": "https://spectra.quest/puzzles/latest",
+        "id": 676,
+        "archive_url": "https://spectra.quest/puzzles",
+        "note": "Previously removed 2026-03-06."
+      },
+      {
+        "name": "Where in the USA is this?",
+        "url": "https://pudding.cool/games/where",
+        "id": 418,
+        "archive_url": "https://pudding.cool/games/where/?skip=true&game=0",
+        "note": "Previously removed 2025-08-30."
+      }
+    ],
+    "description": "Add 2 dles. Remove 4 dles. Archive 11 dles. <a href=\"https://dles.aukspot.com/archived\">View all archived dles</a>.<br/>Add <a href=\"https://dles.aukspot.com/category/words\">Words page which includes subcategories</a>, also linked to from the header and from the top of the Words category."
+  },
+  {
+    "date": "2026-08-27",
+    "dles archived": [
+      {
+        "name": "Chronoodle",
+        "url": "https://chronoodle.com",
+        "id": 677,
+        "note": "Previously removed 2026-08-26."
+      },
+      {
+        "name": "Collections",
+        "url": "https://puzzmallow.com/collections",
+        "id": 58,
+        "archive_url": "https://puzzmallow.com/collections/archive",
+        "note": "Previously removed 2026-01-06."
+      },
+      {
+        "name": "Couplit",
+        "url": "https://couplit.io",
+        "id": 70,
+        "note": "Previously removed 2026-08-26."
+      },
+      {
+        "name": "GuessTen",
+        "url": "https://guessten.com",
+        "id": 155,
+        "archive_url": "https://www.guessten.com/archive.html",
+        "note": "Previously removed 2026-05-22."
+      },
+      {
+        "name": "GuessTheMovie.me",
+        "url": "https://guessthemovie.me",
+        "id": 519,
+        "note": "Previously removed 2026-04-20."
+      },
+      {
+        "name": "Listed",
+        "url": "https://listed.fun",
+        "id": "M15",
+        "note": "Previously removed 2025-06-11."
+      },
+      {
+        "name": "Mini Crossword (The Observer)",
+        "url": "https://fordhamobserver.com/category/fun-and-games/daily-mini-crossword",
+        "id": 229,
+        "note": "Previously removed 2026-05-18."
+      },
+      {
+        "name": "Numblino",
+        "url": "https://numblino.com",
+        "id": 552,
+        "note": "Previously removed 2026-08-26."
+      },
+      {
+        "name": "Outlier",
+        "url": "https://outlier.land",
+        "id": 639,
+        "note": "Previously removed 2026-03-28."
+      },
+      {
+        "name": "Spectra",
+        "url": "https://spectra.quest/puzzles/latest",
+        "id": 676,
+        "archive_url": "https://spectra.quest/puzzles",
+        "note": "Previously removed 2026-03-06."
+      },
+      {
+        "name": "Where in the USA is this?",
+        "url": "https://pudding.cool/games/where",
+        "id": 418,
+        "archive_url": "https://pudding.cool/games/where/?skip=true&game=0",
+        "note": "Previously removed 2025-08-30."
+      }
+    ],
+    "description": "Archive 11 dles. "
+  },
+  {
+    "date": "2026-08-26",
+    "dles added": [
+      {
+        "name": "Dowsle",
+        "url": "https://dowsle.com",
+        "id": 808
+      },
+      {
+        "name": "Estimania",
+        "url": "https://estimania.app",
+        "id": 809
+      },
+      {
+        "name": "Fermi",
+        "url": "https://fermi.gg",
+        "id": 810
+      },
+      {
+        "name": "fridgle",
+        "url": "https://fridgle.net",
+        "id": 811
+      },
+      {
+        "name": "GnarlyQ",
+        "url": "https://gnarlyq.com",
+        "id": 812
+      },
+      {
+        "name": "haggle",
+        "url": "https://haggle.gg",
+        "id": 813
+      },
+      {
+        "name": "Krillion",
+        "url": "https://krillion.io",
+        "id": 814
+      },
+      {
+        "name": "Lawndle",
+        "url": "https://johalloran.dev/lawndle/",
+        "id": 815
+      },
+      {
+        "name": "Mowkoban",
+        "url": "https://mowkoban.com/",
+        "id": 816
+      },
+      {
+        "name": "Patchdle",
+        "url": "https://patchdle.com",
+        "id": 817
+      },
+      {
+        "name": "Per Night",
+        "url": "https://pernight.app",
+        "id": 818
+      },
+      {
+        "name": "Petalgrams",
+        "url": "https://petalgrams.com",
+        "id": 819
+      },
+      {
+        "name": "Quotadle",
+        "url": "https://quotadle.com",
+        "id": 820
+      },
+      {
+        "name": "Rabbithole",
+        "url": "https://www.theatlantic.com/games/rabbithole/",
+        "id": 821
+      },
+      {
+        "name": "Rackdle",
+        "url": "https://rackdle.fun",
+        "id": 822
+      },
+      {
+        "name": "Thingdle",
+        "url": "https://thingdle.app/en/thingdle",
+        "id": 754
+      },
+      {
+        "name": "Time Machine (MLB)",
+        "url": "https://boxscore.email/games/time-machine",
+        "id": 824
+      },
+      {
+        "name": "Vexle",
+        "url": "https://vexle.org",
+        "id": 825
+      },
+      {
+        "name": "VTuble",
+        "url": "https://www.vtuble.moe",
+        "id": 826
+      },
+      {
+        "name": "Year To Beat",
+        "url": "https://yeartobeat.com",
+        "id": 827
+      },
+      {
+        "name": "Perceptle",
+        "url": "https://perceptle.com",
+        "id": 828
+      }
+    ],
+    "dles removed": [
+      {
+        "name": "Chronoodle",
+        "url": "https://chronoodle.com",
+        "id": 677,
+        "reason": "Game has ended. Archive still available."
+      },
+      {
+        "name": "Numblino",
+        "url": "https://numblino.com",
+        "id": 552,
+        "reason": "No new puzzles. Archive still available."
+      },
+      {
+        "name": "Stacks",
+        "url": "https://www.theatlantic.com/games/stacks/",
+        "id": 365,
+        "reason": "No longer available."
+      },
+      {
+        "name": "Couplit",
+        "url": "https://couplit.io",
+        "id": 70,
+        "reason": "No new puzzles. Archive still available."
+      }
+    ],
+    "description": "Add 21 dles. Remove 4 dles. Move Odle to Novelty."
+  },
+  {
+    "date": "2026-08-02",
+    "dles added": [
+      {
+        "name": "Beat Me At Boggle",
+        "url": "https://beatmeatboggle.com",
+        "id": 802
+      },
+      {
+        "name": "Cascadle",
+        "url": "https://cascadle.xyz",
+        "id": 803
+      },
+      {
+        "name": "Estimatle",
+        "url": "https://estimatle.com",
+        "id": 804
+      },
+      {
+        "name": "FilmLink",
+        "url": "https://filmlink.io",
+        "id": 805
+      },
+      {
+        "name": "Underline",
+        "url": "https://www.fromthethink.com/underline",
+        "id": 806
+      },
+      {
+        "name": "Zaggle",
+        "url": "https://playzaggle.com",
+        "id": 807
+      }
+    ],
+    "dles removed": [
+      {
+        "name": "Bonedle",
+        "url": "https://bonedle.rito.lol",
+        "id": 540,
+        "reason": "Daily game no longer loads."
+      },
+      {
+        "name": "graphs.world",
+        "url": "https://www.graphs.world",
+        "id": 144,
+        "reason": "Domain expired."
+      },
+      {
+        "name": "Historydle",
+        "url": "https://historydle.com",
+        "id": 653,
+        "reason": "Contains AI-generated content."
+      },
+      {
+        "name": "Peekpedia",
+        "url": "https://peekpedia.com",
+        "id": 751,
+        "reason": "No new puzzles for a month."
+      },
+      {
+        "name": "WhichWay",
+        "url": "https://whichway.is",
+        "id": 597,
+        "reason": "Reports of malware after game completion."
+      }
+    ],
+    "description": "Add 6 dles. Remove 5 dles. "
+  },
+  {
+    "date": "2026-07-25",
+    "dles removed": [
+      {
+        "name": "Sortwise",
+        "url": "https://sortwise.fun",
+        "id": 500,
+        "reason": "Daily puzzle no longer loads."
+      }
+    ],
+    "description": "Remove 1 dle. "
+  },
+  {
+    "date": "2026-07-21",
+    "dles added": [
+      {
+        "name": "Geozee",
+        "url": "https://geozee.earth",
+        "id": 799
+      },
+      {
+        "name": "putt.day",
+        "url": "https://putt.day/play",
+        "id": 800
+      },
+      {
+        "name": "Smush",
+        "url": "https://www.hankgreen.com/smush/",
+        "id": 801
+      }
+    ],
+    "description": "Add 3 dles. "
+  },
+  {
+    "date": "2026-07-19",
+    "dles added": [
+      {
+        "name": "Bean Sort",
+        "url": "https://coffeefirst.games/bean-sort",
+        "id": 795
+      },
+      {
+        "name": "Catalogues",
+        "url": "https://www.newyorker.com/puzzles-and-games-dept/catalogues",
+        "id": 796
+      },
+      {
+        "name": "Flag Connections",
+        "url": "https://flagdoku.com/connections.html",
+        "id": 797
+      },
+      {
+        "name": "Lexagon",
+        "url": "https://lexagon.com",
+        "id": 798
+      }
+    ],
+    "dles removed": [
+      {
+        "name": "Fluxis",
+        "url": "https://www.theatlantic.com/games/fluxis/",
+        "id": 127,
+        "reason": "No longer available."
+      }
+    ],
+    "description": "Add 4 dles. Remove 1 dle. "
+  },
+  {
+    "date": "2026-07-12",
+    "dles removed": [
+      {
+        "name": "Tarkovdle",
+        "url": "https://tarkovdle.com",
+        "id": 380,
+        "reason": "Site no longer loads."
+      }
+    ],
+    "description": "Remove 1 dle. "
+  },
+  {
+    "date": "2026-07-10",
+    "dles added": [
+      {
+        "name": "Landmarkr",
+        "url": "https://www.landmarkr.app",
+        "id": 790
+      },
+      {
+        "name": "Odle",
+        "url": "https://www.odle.app",
+        "id": 791
+      },
+      {
+        "name": "Prince Chazz",
+        "url": "https://princechazz.com",
+        "id": 792
+      },
+      {
+        "name": "Squishy Billiards",
+        "url": "https://squishybilliards.com",
+        "id": 793
+      },
+      {
+        "name": "The Split",
+        "url": "https://www.timecube.in",
+        "id": 794
+      }
+    ],
+    "description": "Add 5 dles. "
+  },
+  {
+    "date": "2026-07-09",
+    "dles added": [
+      {
+        "name": "4 x 3",
+        "url": "https://www.hankgreen.com/fourbythree/",
+        "id": 779
+      },
+      {
+        "name": "Anthropeum",
+        "url": "https://anthropeum.com",
+        "id": 780
+      },
+      {
+        "name": "Dialed - Color Toon",
+        "url": "https://dialed.gg/color2",
+        "id": 781
+      },
+      {
+        "name": "FoxiMax",
+        "url": "https://foximax.com",
+        "id": 782
+      },
+      {
+        "name": "LinkedIn - Patches",
+        "url": "https://www.linkedin.com/games/patches/",
+        "id": 783
+      },
+      {
+        "name": "LinkedIn - Wend",
+        "url": "https://www.linkedin.com/games/wend/",
+        "id": 784
+      },
+      {
+        "name": "Motion Path",
+        "url": "https://motionpath.app",
+        "id": 785
+      },
+      {
+        "name": "Pipcross",
+        "url": "https://puzzmallow.com/pipcross",
+        "id": 786
+      },
+      {
+        "name": "Tic-Tac-Word",
+        "url": "https://www.tictacword.com",
+        "id": 787
+      },
+      {
+        "name": "TypeCircuit",
+        "url": "https://typecircuit.com",
+        "id": 788
+      },
+      {
+        "name": "Whereabouts?",
+        "url": "https://whereabouts.earth/daily/",
+        "id": 789
+      }
+    ],
+    "description": "Add 11 dles. "
+  },
+  {
+    "date": "2026-06-12",
+    "dles added": [
+      {
+        "name": "Letterinth",
+        "url": "https://letterinth.com",
+        "id": 776
+      },
+      {
+        "name": "Poopguessr",
+        "url": "https://poopguessr.com",
+        "id": 777
+      },
+      {
+        "name": "Riffdle",
+        "url": "https://www.synthia.space/riffdle",
+        "id": 778
+      }
+    ],
+    "description": "Add 3 dles. "
+  },
+  {
+    "date": "2026-06-06",
+    "dles added": [
+      {
+        "name": "Dialed - Shape Game",
+        "url": "https://dialed.gg/shape",
+        "id": 769
+      },
+      {
+        "name": "Dialed - Sound Game",
+        "url": "https://dialed.gg/sound",
+        "id": 770
+      },
+      {
+        "name": "Dialed - Time Game",
+        "url": "https://dialed.gg/time",
+        "id": 771
+      },
+      {
+        "name": "Gauntle",
+        "url": "https://gauntle.com",
+        "id": 772
+      },
+      {
+        "name": "Lazy River",
+        "url": "https://inkwellgames.com/games/lazy-river",
+        "id": 773
+      },
+      {
+        "name": "The Magical Ferry",
+        "url": "https://magicalferry.com",
+        "id": 774
+      },
+      {
+        "name": "Wikitrivia",
+        "url": "https://wikitrivia.tomjwatson.com/daily",
+        "id": 775
+      }
+    ],
+    "dles removed": [
+      {
+        "name": "Musicle",
+        "url": "https://musicle.app",
+        "id": 248,
+        "reason": "Site no longer loads."
+      },
+      {
+        "name": "Raindle",
+        "url": "https://raindle.net/items",
+        "id": 497,
+        "reason": "Site no longer loads."
+      },
+      {
+        "name": "Rivadle",
+        "url": "https://rivadle.net",
+        "id": 326,
+        "reason": "Site now redirects to suspicious website."
+      }
+    ],
+    "description": "Add 7 dles. Remove 3 dles. "
+  },
+  {
+    "date": "2026-06-01",
+    "dles removed": [
+      {
+        "name": "Estimadle",
+        "url": "https://estimadle.com",
+        "id": 111,
+        "reason": "Site now redirects to suspicious website."
+      }
+    ],
+    "description": "Remove 1 dle. "
+  },
+  {
+    "date": "2026-05-29",
+    "dles removed": [
+      {
+        "name": "Relatle",
+        "url": "https://www.relatle.lol",
+        "id": 322,
+        "reason": "Site now redirects to suspicious website."
+      }
+    ],
+    "description": "Remove 1 dle. "
+  },
+  {
+    "date": "2026-05-22",
+    "dles added": [
+      {
+        "name": "Centumth",
+        "url": "https://www.centumth.com",
+        "id": 764
+      },
+      {
+        "name": "Gerrymandle",
+        "url": "https://gerrymandle.cc",
+        "id": 765
+      },
+      {
+        "name": "Letterboxdle",
+        "url": "https://letterboxdle.net",
+        "id": 766
+      },
+      {
+        "name": "Moneyline",
+        "url": "https://moneyline.fromthethink.com",
+        "id": 767
+      },
+      {
+        "name": "Story Sleuth",
+        "url": "https://booksleuth.club/storysleuth/",
+        "id": 768
+      }
+    ],
+    "dles removed": [
+      {
+        "name": "BingeWatcher",
+        "url": "https://bingewatcher.org",
+        "id": 20,
+        "reason": "Contains AI-generated images."
+      },
+      {
+        "name": "GuessTen",
+        "url": "https://guessten.com",
+        "id": 155,
+        "reason": "No new puzzles since April 28, 2026"
+      },
+      {
+        "name": "NextUp",
+        "url": "https://nextupgame.com",
+        "id": 735,
+        "reason": "Site no longer loads."
+      }
+    ],
+    "description": "Add 5 dles. Remove 3 dles. "
+  },
+  {
+    "date": "2026-05-18",
+    "dles added": [
+      {
+        "name": "Border guesser",
+        "url": "https://borderguesser.com",
+        "id": 759
+      },
+      {
+        "name": "Capitalibrate",
+        "url": "https://guessdash.com/capitalibrate",
+        "id": 760
+      },
+      {
+        "name": "Headline",
+        "url": "https://headline.fromthethink.com",
+        "id": 761
+      },
+      {
+        "name": "Seedle",
+        "url": "https://seedle.io",
+        "id": 762
+      },
+      {
+        "name": "SteppedUpdle",
+        "url": "https://steppedupdle.com",
+        "id": 763
+      }
+    ],
+    "dles removed": [
+      {
+        "name": "Mini Crossword (The Observer)",
+        "url": "https://fordhamobserver.com/category/fun-and-games/daily-mini-crossword",
+        "id": 229,
+        "reason": "No new puzzles since April 27, 2026."
+      },
+      {
+        "name": "Thingdle",
+        "url": "https://thingdle.app/en/thingdle",
+        "id": 754,
+        "reason": "Contains AI-generated images."
+      }
+    ],
+    "description": "Add 5 dles. Remove 2 dles. "
+  },
+  {
+    "date": "2026-05-03",
+    "dles added": [
+      {
+        "name": "Babelle",
+        "url": "https://babelle.terrylaire.fr/",
+        "id": 742
+      },
+      {
+        "name": "Coastle",
+        "url": "https://pkyu.github.io/coastle/",
+        "id": 743
+      },
+      {
+        "name": "DOGDLE",
+        "url": "https://dogdle.org",
+        "id": 744
+      },
+      {
+        "name": "Faustdle",
+        "url": "https://faustdle.com/",
+        "id": 745
+      },
+      {
+        "name": "GlobeHoppr",
+        "url": "https://globehoppr.com",
+        "id": 746
+      },
+      {
+        "name": "Google Feud",
+        "url": "https://googlefeud.com",
+        "id": 747
+      },
+      {
+        "name": "Magnitudle",
+        "url": "https://magnitudle.com",
+        "id": 748
+      },
+      {
+        "name": "NounSense",
+        "url": "https://daily.gametje.com/nounsense",
+        "id": 749
+      },
+      {
+        "name": "Passportle",
+        "url": "https://passportle.lordos.tech",
+        "id": 750
+      },
+      {
+        "name": "Peekpedia",
+        "url": "https://peekpedia.com",
+        "id": 751
+      },
+      {
+        "name": "Quiple",
+        "url": "https://quiple.xyz",
+        "id": 752
+      },
+      {
+        "name": "spiredle.net",
+        "url": "https://spiredle.net",
+        "id": 753
+      },
+      {
+        "name": "Thingdle",
+        "url": "https://thingdle.app/en/thingdle",
+        "id": 754
+      },
+      {
+        "name": "Thruline",
+        "url": "https://cyllibi.com/thruline",
+        "id": 755
+      },
+      {
+        "name": "Timdle Math",
+        "url": "https://timdle.com/math",
+        "id": 756
+      },
+      {
+        "name": "Timdle Music",
+        "url": "https://timdle.com/music",
+        "id": 757
+      },
+      {
+        "name": "TravelGuessr",
+        "url": "https://travelguessr.com/",
+        "id": 758
+      }
+    ],
+    "description": "Add 17 dles. "
+  },
+  {
+    "date": "2026-04-27",
+    "dles removed": [
+      {
+        "name": "Stepdle",
+        "url": "https://www.stepdle.com",
+        "id": 369,
+        "reason": "No longer available."
+      }
+    ],
+    "description": "Remove 1 dle. "
+  },
+  {
+    "date": "2026-04-20",
+    "dles removed": [
+      {
+        "name": "GuessTheMovie.me",
+        "url": "https://guessthemovie.me",
+        "id": 519,
+        "reason": "No new puzzles since March 13, 2026. Archive still available."
+      },
+      {
+        "name": "Hitori Conquest",
+        "url": "https://hitoriconquest.com",
+        "id": 170,
+        "reason": "No daily puzzle, changes on refresh."
+      }
+    ],
+    "description": "Remove 2 dles. "
+  },
+  {
+    "date": "2026-04-07",
+    "dles added": [
+      {
+        "name": "Far Out",
+        "url": "https://www.faroutquiz.com",
+        "id": 739
+      },
+      {
+        "name": "Shrinkle",
+        "url": "https://shrinkle.org",
+        "id": 740
+      },
+      {
+        "name": "TED - Spellcheck",
+        "url": "https://www.ted.com/games/spellcheck",
+        "id": 741
+      }
+    ],
+    "description": "Add 3 dles. "
+  },
+  {
+    "date": "2026-03-28",
+    "dles removed": [
+      {
+        "name": "Outlier",
+        "url": "https://outlier.land",
+        "id": 639,
+        "reason": "No longer updates."
+      }
+    ],
+    "description": "Add 9 dles. Remove 1 dle.<br>Add category: Novelty.<br>Move Coindle and Luckle to Novelty.",
+    "dles added": [
+      {
+        "name": "Crayondle",
+        "url": "https://crayondle.com",
+        "id": 730
+      },
+      {
+        "name": "Doctordle",
+        "url": "https://doctordle.org",
+        "id": 731
+      },
+      {
+        "name": "Horsle",
+        "url": "https://cabletwo.net/horsle/",
+        "id": 732
+      },
+      {
+        "name": "Jeffgoldblumle",
+        "url": "https://jeffgoldblumle.vercel.app",
+        "id": 733
+      },
+      {
+        "name": "Nerdcube - Carom",
+        "url": "https://www.nerdcube.games/carom",
+        "id": 734
+      },
+      {
+        "name": "NextUp",
+        "url": "https://nextupgame.com",
+        "id": 735
+      },
+      {
+        "name": "RNGdle",
+        "url": "https://www.rngdle.com",
+        "id": 736
+      },
+      {
+        "name": "TED - Cheat Sheet",
+        "url": "https://www.ted.com/games/cheat-sheet",
+        "id": 737
+      },
+      {
+        "name": "YGOdle",
+        "url": "https://www.ygodle.net/",
+        "id": 738
+      }
+    ]
+  },
+  {
+    "date": "2026-03-24",
+    "dles added": [
+      {
+        "name": "Parlorbox",
+        "url": "https://parlorbox.com/",
+        "id": 490
+      }
+    ],
+    "dles removed": [
+      {
+        "name": "PlusWord",
+        "url": "https://puzzles-prod.telegraph.co.uk/plusword",
+        "id": 285,
+        "reason": "Link no longer works."
+      }
+    ],
+    "description": "Add 1 dle. Remove 1 dle. "
+  },
+  {
+    "date": "2026-03-22",
+    "dles added": [
+      {
+        "name": "Songdle",
+        "url": "https://statt-land-song.ch/songdle",
+        "id": 729
+      }
+    ],
+    "description": "Add 1 dle. "
+  },
+  {
+    "date": "2026-03-21",
+    "dles added": [
+      {
+        "name": "Am I Dead?",
+        "url": "https://www.amidead.gg",
+        "id": 722
+      },
+      {
+        "name": "Ballot Blocks",
+        "url": "https://ballotblocks.com",
+        "id": 723
+      },
+      {
+        "name": "Kuromasu",
+        "url": "https://nibble.games/kuromasu/kuromasu-small.html",
+        "id": 724
+      },
+      {
+        "name": "Marathondle",
+        "url": "https://marathondle.com",
+        "id": 725
+      },
+      {
+        "name": "NonoDaily",
+        "url": "https://www.nonodaily.com",
+        "id": 726
+      },
+      {
+        "name": "PokeCryptic",
+        "url": "https://www.pokecryptic.com",
+        "id": 727
+      },
+      {
+        "name": "The Daily Baffle",
+        "url": "https://dailybaffle.com",
+        "id": 728
+      }
+    ],
+    "dles removed": [
+      {
+        "name": "Posterdle",
+        "url": "https://likewise.com/games/posterdle",
+        "id": 495,
+        "reason": "Now redirects to an irrelevant site."
+      }
+    ],
+    "description": "Add 7 dles. Remove 1 dle. "
+  },
+  {
+    "date": "2026-03-14",
+    "dles removed": [
+      {
+        "name": "Fishdle",
+        "url": "https://tacklevillage.com/fishdle-game/",
+        "id": 120,
+        "reason": "Now redirects to sketchy site."
+      },
+      {
+        "name": "WordLock",
+        "url": "https://wordlockgame.com",
+        "id": 647,
+        "reason": "Site no longer loads."
+      }
+    ],
+    "description": "Add 1 dle. Remove 2 dles.",
+    "dles added": [
+      {
+        "name": "BallotGuessr",
+        "url": "https://ballotguessr.com/daily",
+        "id": 721
+      }
+    ]
+  },
+  {
+    "date": "2026-03-11",
+    "dles added": [
+      {
+        "name": "Dialed - Color Game",
+        "url": "https://dialed.gg",
+        "id": 684
+      }
+    ],
+    "description": "Add 1 dle.<br>Dialed brought back their daily mode.<br>Change Ballpark's name to Amountle and update its url."
+  },
+  {
+    "date": "2026-03-10",
+    "dles added": [
+      {
+        "name": "MeloGuessr",
+        "url": "https://meloguessr.com",
+        "id": 718
+      },
+      {
+        "name": "Parseword",
+        "url": "https://www.parseword.com",
+        "id": 719
+      },
+      {
+        "name": "StatPad Game",
+        "url": "https://www.statpadgame.com",
+        "id": 720
+      }
+    ],
+    "description": "Add 3 dles.<br>Fix Tuneguessr's spelling and move it from Geography to Music."
+  },
+  {
+    "date": "2026-03-06",
+    "dles added": [
+      {
+        "name": "Ballpark",
+        "url": "https://www.ball-park.dev",
+        "id": 708
+      },
+      {
+        "name": "Chrono NBA",
+        "url": "https://chrono.quest/basketball.html",
+        "id": 709
+      },
+      {
+        "name": "Chrono NFL",
+        "url": "https://chrono.quest/nfl.html",
+        "id": 710
+      },
+      {
+        "name": "Chrono USA",
+        "url": "https://chrono.quest/us_history.html",
+        "id": 711
+      },
+      {
+        "name": "list animals until failure",
+        "url": "https://rose.systems/animalist/#today",
+        "id": 712
+      },
+      {
+        "name": "Nerdcube - Dabble",
+        "url": "https://www.nerdcube.games/dabble",
+        "id": 713
+      },
+      {
+        "name": "Number Crunch",
+        "url": "https://numbercrunch.fun",
+        "id": 714
+      },
+      {
+        "name": "Scrokkdle",
+        "url": "https://scrokkle.io/daily",
+        "id": 715
+      },
+      {
+        "name": "Stepwords",
+        "url": "https://stepwords.xyz",
+        "id": 716
+      },
+      {
+        "name": "Thinky Dailies",
+        "url": "https://thinkygames.com/dailies/today/",
+        "id": 717
+      }
+    ],
+    "description": "Add 10 dles. Remove 1 dle. Dles played with random button will be marked as played if auto-mark setting is active.<br>Random button avoids picking dles marked as played.",
+    "dles removed": [
+      {
+        "name": "Spectra",
+        "url": "https://spectra.quest/puzzles/latest",
+        "id": 676,
+        "reason": "New daily puzzles are very rare."
+      }
+    ]
+  },
+  {
+    "date": "2026-03-01",
+    "dles added": [
+      {
+        "name": "CHN LNK",
+        "url": "https://thechnlnk.com",
+        "id": 699
+      },
+      {
+        "name": "Chroma",
+        "url": "https://robson.plus/chroma",
+        "id": 700
+      },
+      {
+        "name": "Giffle - Friends",
+        "url": "https://giffle.com/friends/",
+        "id": 701
+      },
+      {
+        "name": "Giffle - Simpsons",
+        "url": "https://giffle.com/simpsons/",
+        "id": 702
+      },
+      {
+        "name": "Griddable",
+        "url": "https://griddable.co.uk",
+        "id": 703
+      },
+      {
+        "name": "Ponder Club",
+        "url": "https://ponderclub.co",
+        "id": 704
+      },
+      {
+        "name": "Radiordle",
+        "url": "https://www.radiordle.org",
+        "id": 705
+      },
+      {
+        "name": "Whodle",
+        "url": "https://whodle.dixonary.co.uk",
+        "id": 706
+      },
+      {
+        "name": "WordWavr",
+        "url": "https://wordwavr.app",
+        "id": 707
+      }
+    ],
+    "description": "Add 9 dles. Move LinkedIn - Pinpoint to the Words category."
+  },
+  {
+    "date": "2026-02-24",
+    "dles added": [
+      {
+        "name": "Takes",
+        "url": "https://takes.clevergoat.com",
+        "id": 694
+      },
+      {
+        "name": "Beatdle",
+        "url": "https://beatdle.fun",
+        "id": 695
+      },
+      {
+        "name": "Electle",
+        "url": "https://electle.fun",
+        "id": 696
+      },
+      {
+        "name": "Packle",
+        "url": "https://packle.top",
+        "id": 697
+      },
+      {
+        "name": "The Guardian - Cryptic Crossword",
+        "url": "https://www.theguardian.com/crosswords/series/cryptic",
+        "id": 698
+      }
+    ],
+    "dles removed": [
+      {
+        "name": "Dialed - Color Game",
+        "url": "https://dialed.gg/?daily",
+        "id": 684,
+        "reason": "They removed the daily version."
+      },
+      {
+        "name": "Parlorbox",
+        "url": "https://parlorbox.com/",
+        "id": 490,
+        "reason": "Instructions button opens suspicious url."
+      }
+    ],
+    "description": "Add 5 dles. Remove 2 dles. Update urls for Daily Crypticle and Pufferdle."
+  },
+  {
+    "date": "2026-02-22",
+    "dles added": [
+      {
+        "name": "Boston Globe - Align",
+        "url": "https://www.bostonglobe.com/games/align/",
+        "id": 687
+      },
+      {
+        "name": "Clue Tube",
+        "url": "https://thecluetube.com",
+        "id": 688
+      },
+      {
+        "name": "Harrypotterdle",
+        "url": "https://www.harrypotterdle.com",
+        "id": 689
+      },
+      {
+        "name": "Nonodle",
+        "url": "https://lab174.com/nonodle",
+        "id": 690
+      },
+      {
+        "name": "Past Puzzle",
+        "url": "https://www.pastpuzzle.de",
+        "id": 691
+      },
+      {
+        "name": "PIVOT",
+        "url": "https://pivotthegame.com",
+        "id": 692
+      },
+      {
+        "name": "Zonday",
+        "url": "https://zonday.shop",
+        "id": 693
+      }
+    ],
+    "dles removed": [
+      {
+        "name": "Stewardle",
+        "url": "https://stewardle.com",
+        "id": 594,
+        "reason": "The website does not load."
+      }
+    ],
+    "description": "Add 7 dles. Remove 1 dle."
+  },
+  {
+    "date": "2026-02-19",
+    "dles added": [
+      {
+        "name": "Dialed - Color Game",
+        "url": "https://dialed.gg/?daily",
+        "id": 684
+      },
+      {
+        "name": "TuneGuesser",
+        "url": "https://www.tuneguessr.net/",
+        "id": 685
+      },
+      {
+        "name": "werdel",
+        "url": "https://bennw.github.io/werdel/#daily",
+        "id": 686
+      }
+    ],
+    "description": "Add 3 dles. "
+  },
+  {
+    "date": "2026-02-18",
+    "dles added": [
+      {
+        "name": "Cadgy",
+        "url": "https://onelook.com/cadgy/",
+        "id": 680
+      },
+      {
+        "name": "Gridogram",
+        "url": "https://www.gridogram.com",
+        "id": 681
+      },
+      {
+        "name": "Rotatly",
+        "url": "https://www.rotatly.com",
+        "id": 682
+      },
+      {
+        "name": "Tile Knight",
+        "url": "https://tileknight.com",
+        "id": 683
+      }
+    ],
+    "dles removed": [
+      {
+        "name": "Warbl",
+        "url": "https://www.warbl.org",
+        "id": 582,
+        "reason": "Song audio does not play."
+      }
+    ],
+    "description": "Add 4 dles. Remove 1 dle. "
+  },
+  {
+    "date": "2026-02-15",
+    "dles added": [
+      {
+        "name": "Chronoodle",
+        "url": "https://chronoodle.com",
+        "id": 677
+      },
+      {
+        "name": "Flags Game",
+        "url": "https://flagsgame.net",
+        "id": 678
+      },
+      {
+        "name": "Slate - Pears",
+        "url": "https://slate.com/games/pears",
+        "id": 679
+      }
+    ],
+    "dles removed": [
+      {
+        "name": "WordLinx",
+        "url": "https://sacsgames.com/wordlinx/#/todaydaily",
+        "reason": "Background image is AI-generated.",
+        "id": 442
+      }
+    ],
+    "description": "Add 3 dles. Remove 1 dle. "
+  },
+  {
+    "date": "2026-02-08",
+    "dles added": [
+      {
+        "name": "Spectra",
+        "url": "https://spectra.quest/puzzles/latest",
+        "id": 676
+      }
+    ],
+    "description": "Add 1 dle.<br>Add option for favorites grid view.<br>You should be able to middle-click favorites again."
+  },
+  {
+    "date": "2026-02-07",
+    "description": "Add 22 dles. Remove 4 dles.<br>You can now hide specific dles.<br>You can now mark dles as completed for the day.<br>Add the section NEW.<br>Redesign changelog and favorites to be much cleaner.",
+    "dles added": [
+      {
+        "name": "Baddle",
+        "url": "https://tumblecricket.net/Baddle/",
+        "id": 658
+      },
+      {
+        "name": "Clue Raider",
+        "url": "https://clueraider.com",
+        "id": 659
+      },
+      {
+        "name": "Glyph",
+        "url": "https://glyph.today",
+        "id": 660
+      },
+      {
+        "name": "Jojodle",
+        "url": "https://jojodle.nwcubeok.net/jojodle",
+        "id": 661
+      },
+      {
+        "name": "Landmarkd",
+        "url": "https://www.landmarkdgame.com",
+        "id": 662
+      },
+      {
+        "name": "MapleWordle",
+        "url": "https://www.maplewordle.com",
+        "id": 663
+      },
+      {
+        "name": "Moviedle (from Histordle)",
+        "url": "https://histordle.com/moviedle",
+        "id": 243
+      },
+      {
+        "name": "Netflix - Keysmash",
+        "url": "https://www.netflix.com/tudum/puzzled/keysmash/daily",
+        "id": 664
+      },
+      {
+        "name": "Netflix - Starstruck",
+        "url": "https://www.netflix.com/tudum/puzzled/starstruck/daily",
+        "id": 665
+      },
+      {
+        "name": "Netflix - Sudoku",
+        "url": "https://www.netflix.com/tudum/puzzled/sudoku/daily",
+        "id": 666
+      },
+      {
+        "name": "PopCultured",
+        "url": "https://histordle.com/popcultured",
+        "id": 293
+      },
+      {
+        "name": "QueenSweep",
+        "url": "https://playqueensweep.com",
+        "id": 667
+      },
+      {
+        "name": "Refiner",
+        "url": "https://nibble.games/refiner/",
+        "id": 668
+      },
+      {
+        "name": "Showdle",
+        "url": "https://showdle.com",
+        "id": 669
+      },
+      {
+        "name": "Songle",
+        "url": "https://histordle.com/songle",
+        "id": 345
+      },
+      {
+        "name": "Spelling Bee (Lessgames)",
+        "url": "https://lessgames.com/spellingbee",
+        "id": 670
+      },
+      {
+        "name": "Stat Mini Crossword",
+        "url": "https://www.statnews.com/stat-mini-crossword/",
+        "id": 671
+      },
+      {
+        "name": "Timeline",
+        "url": "https://timeline.fromthethink.com",
+        "id": 672
+      },
+      {
+        "name": "Viewdle",
+        "url": "https://viewdle.org",
+        "id": 673
+      },
+      {
+        "name": "word.golf",
+        "url": "https://word.golf",
+        "id": 674
+      },
+      {
+        "name": "Wordfall",
+        "url": "https://play-wordfall.com",
+        "id": 675
+      },
+      {
+        "name": "Yeardle",
+        "url": "https://histordle.com/yeardle",
+        "id": 450
+      }
+    ],
+    "dles removed": [
+      {
+        "name": "Birdle (like Wordle)",
+        "url": "https://birdle.escism.net",
+        "id": 23,
+        "reason": "Page gives 404 error."
+      },
+      {
+        "name": "IYKYK",
+        "url": "https://daily.iykyk.com",
+        "id": 183,
+        "reason": "Daily puzzles rarely appear."
+      },
+      {
+        "name": "NBAGrid",
+        "url": "https://www.nbagr.id",
+        "id": 455,
+        "reason": "Player pictures are AI-generated."
+      },
+      {
+        "name": "Supervivedle",
+        "url": "https://supervivedle.com",
+        "id": 503,
+        "reason": "Page no longer loads."
+      }
+    ]
+  },
+  {
+    "date": "2026-01-28",
+    "dles added": [
+      {
+        "name": "Crossflip",
+        "url": "https://puzzmallow.com/crossflip",
+        "id": 648
+      },
+      {
+        "name": "GeoQuest",
+        "url": "https://geoquest.gg",
+        "id": 649
+      },
+      {
+        "name": "Globeiku",
+        "url": "https://www.globeiku.com",
+        "id": 650
+      },
+      {
+        "name": "Heardle 2020's",
+        "url": "https://20s.heardledecades.com",
+        "id": 651
+      },
+      {
+        "name": "Heardle K-pop",
+        "url": "https://kpop.heardledecades.com",
+        "id": 652
+      },
+      {
+        "name": "Historydle",
+        "url": "https://historydle.com",
+        "id": 653
+      },
+      {
+        "name": "Lockle",
+        "url": "https://www.lockle.app",
+        "id": 654
+      },
+      {
+        "name": "SatPin",
+        "url": "https://satpixel.com/en/satellite-pin-guess/",
+        "id": 655
+      },
+      {
+        "name": "SatZoom",
+        "url": "https://satpixel.com/en/satellite-zoom-game/",
+        "id": 656
+      },
+      {
+        "name": "Sudoku Shift",
+        "url": "https://coffeefirst.games/sudoku-shift/",
+        "id": 657
+      }
+    ],
+    "dles removed": [
+      {
+        "name": "Trivial Pursuit Daily",
+        "url": "https://www.trivialpursuit.com/daily",
+        "id": 561,
+        "reason": "No longer available."
+      }
+    ],
+    "description": "Add 10 dles. Remove 1 dle. "
+  },
+  {
+    "date": "2026-01-23",
+    "dles added": [
+      {
+        "name": "Humppadle",
+        "url": "https://www.humppadle.de",
+        "id": 641
+      },
+      {
+        "name": "Lettered",
+        "url": "https://lettered.io",
+        "id": 642
+      },
+      {
+        "name": "Luckle",
+        "url": "https://luckle.org",
+        "id": 643
+      },
+      {
+        "name": "Rewordio",
+        "url": "https://rewordio.com",
+        "id": 644
+      },
+      {
+        "name": "The Guardian - Quick Crossword",
+        "url": "https://www.theguardian.com/crosswords/series/quick",
+        "id": 645
+      },
+      {
+        "name": "Wallstreetle",
+        "url": "https://wallstreetle.com",
+        "id": 646
+      },
+      {
+        "name": "WordLock",
+        "url": "https://wordlockgame.com",
+        "id": 647
+      }
+    ],
+    "description": "Add 7 dles. "
+  },
+  {
+    "date": "2026-01-12",
+    "dles added": [
+      {
+        "name": "Animdle",
+        "url": "https://animdle.com",
+        "id": 638
+      },
+      {
+        "name": "Outlier",
+        "url": "https://outlier.land",
+        "id": 639
+      },
+      {
+        "name": "SetFury",
+        "url": "https://www.setfury.com",
+        "id": 640
+      }
+    ],
+    "description": "Add 3 dles. "
+  },
+  {
+    "date": "2026-01-11",
+    "dles added": [
+      {
+        "name": "Antiwordle",
+        "url": "https://www.antiwordle.com",
+        "id": 615
+      },
+      {
+        "name": "Bibdle",
+        "url": "https://bibdle.com",
+        "id": 616
+      },
+      {
+        "name": "Celtix",
+        "url": "https://www.andrewt.net/puzzles/celtix/",
+        "id": 617
+      },
+      {
+        "name": "Cliffhanger",
+        "url": "https://jumoh.com/games/cliffhanger/",
+        "id": 618
+      },
+      {
+        "name": "Colordle",
+        "url": "https://colordle.ryantanen.com",
+        "id": 619
+      },
+      {
+        "name": "Cosmeredle",
+        "url": "https://cosmeredle.net",
+        "id": 620
+      },
+      {
+        "name": "Exodle",
+        "url": "https://exodle.astrelion.com",
+        "id": 621
+      },
+      {
+        "name": "Genshindle",
+        "url": "https://us.genshindle.com/",
+        "id": 622
+      },
+      {
+        "name": "Loopy",
+        "url": "https://loopy.wtf",
+        "id": 623
+      },
+      {
+        "name": "Marveldle",
+        "url": "https://marveldle.com/character/audiovisual/guess",
+        "id": 624
+      },
+      {
+        "name": "Netflix - Bonza",
+        "url": "https://www.netflix.com/tudum/puzzled/bonza/daily",
+        "id": 625
+      },
+      {
+        "name": "Netflix - Crossover",
+        "url": "https://www.netflix.com/tudum/puzzled/crossover/daily",
+        "id": 626
+      },
+      {
+        "name": "Netflix - Jigsaw",
+        "url": "https://www.netflix.com/tudum/puzzled/jigsaw/daily",
+        "id": 627
+      },
+      {
+        "name": "Netflix - Shapes",
+        "url": "https://www.netflix.com/tudum/puzzled/shapes/daily",
+        "id": 628
+      },
+      {
+        "name": "Netflix - Waywords",
+        "url": "https://www.netflix.com/tudum/puzzled/waywords/daily",
+        "id": 629
+      },
+      {
+        "name": "Ophex",
+        "url": "https://www.andrewt.net/puzzles/ophex/",
+        "id": 630
+      },
+      {
+        "name": "Ronin",
+        "url": "https://www.andrewt.net/puzzles/ronin/",
+        "id": 631
+      },
+      {
+        "name": "Spellify",
+        "url": "https://edhrec.com/games/spellify",
+        "id": 632
+      },
+      {
+        "name": "Spongedle",
+        "url": "https://spongedle.onrender.com",
+        "id": 633
+      },
+      {
+        "name": "The Daily Spell",
+        "url": "https://www.the-daily-spell.com",
+        "id": 634
+      },
+      {
+        "name": "Umadle",
+        "url": "https://umadle.net",
+        "id": 635
+      },
+      {
+        "name": "Word Salad",
+        "url": "https://wordsalad.online",
+        "id": 636
+      },
+      {
+        "name": "WRDLINK",
+        "url": "https://www.wrdlink.io",
+        "id": 637
+      }
+    ],
+    "dles removed": [
+      {
+        "name": "Moviedle (from Histordle)",
+        "url": "https://histordle.com/moviedle",
+        "id": 243,
+        "reason": "No daily puzzle."
+      },
+      {
+        "name": "Petdle",
+        "url": "https://petdle.link",
+        "id": 278,
+        "reason": "No longer available."
+      },
+      {
+        "name": "Songle",
+        "url": "https://histordle.com/songle",
+        "id": 345,
+        "reason": "No daily puzzle."
+      },
+      {
+        "name": "Yeardle",
+        "url": "https://histordle.com/yeardle",
+        "id": 450,
+        "reason": "No daily puzzle."
+      }
+    ],
+    "description": "Add 23 dles. Remove 4 dles. "
+  },
+  {
+    "date": "2026-01-06",
+    "dles added": [
+      {
+        "name": "Crossword Club Daily",
+        "url": "https://crosswordclub.com/puzzles/",
+        "id": 610
+      },
+      {
+        "name": "Jigsy",
+        "url": "https://jigsy.app",
+        "id": 611
+      },
+      {
+        "name": "Plausible",
+        "url": "https://plausiblegame.com/en",
+        "id": 612
+      },
+      {
+        "name": "Ripple",
+        "url": "https://ripplegame.app",
+        "id": 613
+      },
+      {
+        "name": "Seadle",
+        "url": "https://seadle.muhashi.com",
+        "id": 614
+      }
+    ],
+    "dles removed": [
+      {
+        "name": "Collections",
+        "url": "https://puzzmallow.com/collections",
+        "id": 58,
+        "reason": "No new puzzles. Archive still available."
+      },
+      {
+        "name": "Meleedle",
+        "url": "https://meleedle.netlify.app/",
+        "id": 486,
+        "reason": "Daily puzzle is empty."
+      }
+    ],
+    "description": "Add 5 dles. Remove 2 dles. "
+  },
+  {
+    "date": "2026-01-03",
+    "dles removed": [
+      {
+        "name": "DBDle",
+        "url": "https://dbdle.net",
+        "reason": "Is now an irrelevant website.",
+        "id": 89
+      }
+    ],
+    "description": "Add 4 dles. Remove 1 dle. ",
+    "dles added": [
+      {
+        "name": "Crosshare",
+        "url": "https://crosshare.org",
+        "id": 606
+      },
+      {
+        "name": "Mazetangle",
+        "url": "https://mazetangle.com",
+        "id": 607
+      },
+      {
+        "name": "Power Scadle",
+        "url": "https://powerscadle.com",
+        "id": 608
+      },
+      {
+        "name": "Washington Post Crossword",
+        "url": "https://www.washingtonpost.com/games/crossword/",
+        "id": 609
+      }
+    ]
+  },
+  {
+    "date": "2026-01-02",
+    "dles added": [
+      {
+        "name": "3Doku",
+        "url": "https://www.andrewt.net/puzzles/3doku/",
+        "id": 604
+      },
+      {
+        "name": "Centroid",
+        "url": "https://centroidgame.com",
+        "id": 605
+      }
+    ],
+    "description": "Add 2 dles. "
+  },
+  {
+    "date": "2026-01-01",
+    "description": "Add 4 dles. Remove 3 dles. Add Discord server.",
+    "dles added": [
+      {
+        "name": "Blossom",
+        "url": "https://www.merriam-webster.com/games/blossom-word-game",
+        "id": 600
+      },
+      {
+        "name": "Brainer",
+        "url": "https://gamebunny.app/brainer",
+        "id": 601
+      },
+      {
+        "name": "Cutle",
+        "url": "https://pfiffel.com/cutle/",
+        "id": 602
+      },
+      {
+        "name": "enclose.horse",
+        "url": "https://enclose.horse",
+        "id": 603
+      }
+    ],
+    "dles removed": [
+      {
+        "name": "List Them All!",
+        "url": "https://listthemall.com",
+        "reason": "Puzzles repeat too often.",
+        "id": 213
+      },
+      {
+        "name": "PopCultured",
+        "url": "https://histordle.com/popcultured",
+        "reason": "Daily puzzle is empty.",
+        "id": 293
+      }
+    ]
+  },
+  {
+    "date": "2025-12-24",
+    "dles removed": [
+      {
+        "name": "Eater of Wordles",
+        "url": "https://hexdecima.github.io/eowordles/",
+        "reason": "The game has ended.",
+        "id": 464
+      }
+    ],
+    "description": "Remove 1 dle. "
+  },
+  {
+    "date": "2025-12-20",
+    "dles added": [
+      {
+        "name": "Circle Moon Puzzles",
+        "url": "https://circle9puzzle.com",
+        "id": 585
+      },
+      {
+        "name": "Curdle",
+        "url": "https://gumbo.systems/curdle/",
+        "id": 586
+      },
+      {
+        "name": "Daily Gogen",
+        "url": "https://www.dailygogen.com",
+        "id": 587
+      },
+      {
+        "name": "Daily Rinds",
+        "url": "https://dailyrinds.com",
+        "id": 588
+      },
+      {
+        "name": "Freestyle",
+        "url": "https://playfreestyle.co",
+        "id": 589
+      },
+      {
+        "name": "Geografind",
+        "url": "https://coffeefirst.games/geografind",
+        "id": 590
+      },
+      {
+        "name": "Pair Down",
+        "url": "https://pairdown.com",
+        "id": 591
+      },
+      {
+        "name": "Royal Family",
+        "url": "https://coffeefirst.games/royal-family",
+        "id": 592
+      },
+      {
+        "name": "Stardle",
+        "url": "https://stardlegame.github.io/stardle",
+        "id": 593
+      },
+      {
+        "name": "Stewardle",
+        "url": "https://stewardle.com",
+        "id": 594
+      },
+      {
+        "name": "Sudoker",
+        "url": "https://sudoker.io",
+        "id": 595
+      },
+      {
+        "name": "trms",
+        "url": "https://impliedampersand.itch.io/trms",
+        "id": 596
+      },
+      {
+        "name": "WhichWay",
+        "url": "https://whichway.is",
+        "id": 597
+      },
+      {
+        "name": "WordSmyth",
+        "url": "https://playwordsmyth.com",
+        "id": 598
+      },
+      {
+        "name": "Wormle",
+        "url": "https://wormle.com",
+        "id": 599
+      }
+    ],
+    "dles removed": [
+      {
+        "name": "MinecraftDle",
+        "url": "https://www.minecraftdle.net",
+        "reason": "Now redirects to Mcdle.net",
+        "id": 227
+      }
+    ],
+    "description": "Add 15 dles. Remove 1 dle. "
+  },
+  {
+    "date": "2025-12-11",
+    "description": "Add 18 dles.<br/>Remove 2 dles.<br/>Major design update with a more blocky feel.<br/>Add new header buttons with their own panels.<br/>Add settings panel that allows you to hide sections and categories, as well as change category ordering.<br/>Add polls. (Experimental)<br/>Add My Book Picks section.<br/>Add ability to import and export favorites.<br/>",
+    "dles added": [
+      {
+        "name": "AITA Guesser",
+        "url": "https://muhashi.com/aita-guesser/",
+        "id": 567
+      },
+      {
+        "name": "cemantle",
+        "url": "https://cemantle.certitudes.org",
+        "id": 568
+      },
+      {
+        "name": "Craft Connections",
+        "url": "https://craftconnections.net",
+        "id": 569
+      },
+      {
+        "name": "Dimension Flux",
+        "url": "https://dimensionflux.com",
+        "id": 570
+      },
+      {
+        "name": "Five Fold",
+        "url": "https://fivefold.ca",
+        "id": 571
+      },
+      {
+        "name": "Kickoff League",
+        "url": "https://kickoffleague.com",
+        "id": 572
+      },
+      {
+        "name": "Letterbrew",
+        "url": "https://www.ted.com/games/letter-brew",
+        "id": 573
+      },
+      {
+        "name": "Pell Puzzles",
+        "url": "https://pell.achromath.com",
+        "id": 574
+      },
+      {
+        "name": "Revealed",
+        "url": "https://www.britannica.com/games/revealed",
+        "id": 575
+      },
+      {
+        "name": "Royaledle",
+        "url": "https://royaledle.com",
+        "id": 576
+      },
+      {
+        "name": "Shuffalo",
+        "url": "https://www.newyorker.com/puzzles-and-games-dept/shuffalo",
+        "id": 577
+      },
+      {
+        "name": "SongSwipe",
+        "url": "https://play.songswipe.fun",
+        "id": 578
+      },
+      {
+        "name": "Swiftle",
+        "url": "https://www.techyonic.co/swiftle",
+        "id": 579
+      },
+      {
+        "name": "Tiled Words",
+        "url": "https://tiledwords.com",
+        "id": 580
+      },
+      {
+        "name": "TimeSwipe",
+        "url": "https://play.timeswipe.fun",
+        "id": 581
+      },
+      {
+        "name": "Warbl",
+        "url": "https://www.warbl.org",
+        "id": 582
+      },
+      {
+        "name": "Weather Darts",
+        "url": "http://www.weatherdarts.com",
+        "id": 583
+      },
+      {
+        "name": "Yearly Daily",
+        "url": "https://coffeefirst.games/yearly-daily",
+        "id": 584
+      }
+    ],
+    "dles removed": [
+      {
+        "name": "Hexle",
+        "url": "https://frankljin.github.io/hexle/",
+        "reason": "The game does not work.",
+        "id": 472
+      },
+      {
+        "name": "sqnces",
+        "url": "https://sqnces.com",
+        "reason": "The game does not work.",
+        "id": 537
+      }
+    ]
+  },
+  {
+    "date": "2025-12-02",
+    "dles removed": [
+      {
+        "name": "Unzoomed",
+        "url": "https://www.unzoomed.com/en",
+        "reason": "Now requires sign-in.",
+        "id": 406
+      },
+      {
+        "name": "Geocircles",
+        "url": "https://geocircles.io",
+        "reason": "No longer available due to API costs.",
+        "id": 137
+      }
+    ],
+    "description": "Add 2 dles. Remove 2 dles. ",
+    "dles added": [
+      {
+        "name": "LinkedIn - Mini Sudoku",
+        "url": "https://www.linkedin.com/games/mini-sudoku/",
+        "id": 565
+      },
+      {
+        "name": "Silksongdle",
+        "url": "https://silksongdle.com",
+        "id": 566
+      }
+    ]
+  },
+  {
+    "date": "2025-11-25",
+    "dles removed": [
+      {
+        "name": "Syllacrostic",
+        "url": "https://www.syllacrostic.com/daily",
+        "reason": "Site no longer loads.",
+        "id": 376
+      }
+    ],
+    "description": "Remove 1 dle. "
+  },
+  {
+    "date": "2025-11-24",
+    "dles removed": [
+      {
+        "name": "steamdle.pro",
+        "url": "https://steamdle.pro",
+        "reason": "Site no longer loads.",
+        "id": 502
+      }
+    ],
+    "description": "Remove 1 dle. "
+  },
+  {
+    "date": "2025-11-23",
+    "dles added": [
+      {
+        "name": "Batter Up",
+        "url": "https://www.batter-up.app",
+        "id": 539
+      },
+      {
+        "name": "Bonedle",
+        "url": "https://bonedle.rito.lol",
+        "id": 540
+      },
+      {
+        "name": "Chartle",
+        "url": "https://chartle.cc",
+        "id": 541
+      },
+      {
+        "name": "Cinema Circuit",
+        "url": "https://www.wfhgames.com/cinema-circuit",
+        "id": 542
+      },
+      {
+        "name": "Cobble",
+        "url": "https://wilf.live/cobble/",
+        "id": 543
+      },
+      {
+        "name": "Daily Walkoff",
+        "url": "https://www.dailywalkoff.com",
+        "id": 544
+      },
+      {
+        "name": "Doggle",
+        "url": "https://doggle.app",
+        "id": 545
+      },
+      {
+        "name": "Equations",
+        "url": "https://www.equations-game.com",
+        "id": 546
+      },
+      {
+        "name": "Fortnitedle",
+        "url": "https://www.fortnitedle.net",
+        "id": 547
+      },
+      {
+        "name": "Guess The Phrase",
+        "url": "https://guessthephrase.xyz",
+        "id": 549
+      },
+      {
+        "name": "Mapster",
+        "url": "https://mapster.teuteuf.fr",
+        "id": 550
+      },
+      {
+        "name": "Narutodle",
+        "url": "https://narutodle.net",
+        "id": 551
+      },
+      {
+        "name": "Numblino",
+        "url": "https://numblino.com",
+        "id": 552
+      },
+      {
+        "name": "Onepiecedle",
+        "url": "https://onepiecedle.net",
+        "id": 553
+      },
+      {
+        "name": "Phrasicle",
+        "url": "https://phrasicle.com",
+        "id": 554
+      },
+      {
+        "name": "Quolture",
+        "url": "https://www.quolture.com/#/",
+        "id": 555
+      },
+      {
+        "name": "Spiredle",
+        "url": "https://spiredle.com",
+        "id": 556
+      },
+      {
+        "name": "Sporcle Daily Acrostic",
+        "url": "https://www.sporcle.com/acrostic/todays-acrostic",
+        "id": 557
+      },
+      {
+        "name": "Stackdown",
+        "url": "https://puzzlist.com/stackdown/",
+        "id": 558
+      },
+      {
+        "name": "Terraformation",
+        "url": "https://puzzmallow.com/terraformation",
+        "id": 559
+      },
+      {
+        "name": "The New Daily - Trivia",
+        "url": "https://www.thenewdaily.com.au/puzzles/quiz-trivia",
+        "id": 560
+      },
+      {
+        "name": "Trivial Pursuit Daily",
+        "url": "https://www.trivialpursuit.com/daily",
+        "id": 561
+      },
+      {
+        "name": "TV Circuit",
+        "url": "https://www.wfhgames.com/tv-circuit",
+        "id": 562
+      },
+      {
+        "name": "Word Zip",
+        "url": "https://www.wfhgames.com/word-zip",
+        "id": 563
+      },
+      {
+        "name": "Wordamid",
+        "url": "https://www.wordamid.com",
+        "id": 564
+      }
+    ],
+    "description": "Add 25 dles. "
+  },
+  {
+    "date": "2025-11-11",
+    "dles removed": [
+      {
+        "name": "Etyle",
+        "url": "https://www.etyle.app",
+        "reason": "Puzzle does not load.",
+        "id": 466
+      },
+      {
+        "name": "Letterset",
+        "url": "https://www.letterset.net/daily",
+        "reason": "Site no longer loads.",
+        "id": 195
+      },
+      {
+        "name": "Rolldle",
+        "url": "https://www.light.gg/rolldle/",
+        "id": 328
+      },
+      {
+        "name": "Unshuffle",
+        "url": "https://www.unshuffle.me",
+        "reason": "Site no longer loads.",
+        "id": 405
+      }
+    ],
+    "description": "Remove 4 dles. "
+  },
+  {
+    "date": "2025-10-27",
+    "dles removed": [
+      {
+        "name": "Pandergram",
+        "url": "https://onelook.com/pandergram",
+        "id": 275
+      }
+    ],
+    "description": "Remove 1 dle. "
+  },
+  {
+    "date": "2025-10-19",
+    "dles added": [
+      {
+        "name": "7 Little Words",
+        "url": "https://7littlewords.com/7lw",
+        "id": 530
+      },
+      {
+        "name": "Geonections",
+        "url": "https://geonections.com",
+        "id": 531
+      },
+      {
+        "name": "Jingle.rs",
+        "url": "https://jingle.rs",
+        "id": 532
+      },
+      {
+        "name": "Jumble Daily",
+        "url": "https://fun.chicagotribune.com/game/tca-jumble-daily/",
+        "id": 533
+      },
+      {
+        "name": "Mineswifter",
+        "url": "https://mineswifter.com",
+        "id": 534
+      },
+      {
+        "name": "Minigolfle",
+        "url": "https://minigolfle.com",
+        "id": 535
+      },
+      {
+        "name": "riddl.ing",
+        "url": "https://riddl.ing",
+        "id": 536
+      },
+      {
+        "name": "sqnces",
+        "url": "https://sqnces.com",
+        "id": 537
+      },
+      {
+        "name": "Timingle",
+        "url": "https://timingle.com",
+        "id": 538
+      }
+    ],
+    "description": "Add 9 dles. Remove 3 dles. ",
+    "dles removed": [
+      {
+        "name": "Capitale",
+        "url": "https://capitale.countryle.com",
+        "id": 35
+      },
+      {
+        "name": "Musicdoku",
+        "url": "https://musicdoku.com",
+        "reason": "Site no longer loads.",
+        "id": 247
+      },
+      {
+        "name": "Twofer Goofer",
+        "url": "https://twofergoofer.com",
+        "reason": "Contains AI-generated images.",
+        "id": 403
+      }
+    ]
+  },
+  {
+    "date": "2025-10-17",
+    "dles added": [
+      {
+        "name": "Framedle.com",
+        "url": "https://framedle.com",
+        "id": 523
+      },
+      {
+        "name": "Coindle",
+        "url": "https://muhashi.com/coindle/",
+        "id": 524
+      },
+      {
+        "name": "Cropple",
+        "url": "https://cropple.app",
+        "id": 525
+      },
+      {
+        "name": "Crosslink",
+        "url": "https://romainpastureau.github.io/crosslink/",
+        "id": 526
+      },
+      {
+        "name": "Gisnep",
+        "url": "https://gisnep.com",
+        "id": 527
+      },
+      {
+        "name": "Wantedle",
+        "url": "https://wantedle.com",
+        "id": 528
+      },
+      {
+        "name": "Wordgy",
+        "url": "https://wordgy.com",
+        "id": 529
+      }
+    ],
+    "description": "Add 7 dles. "
+  },
+  {
+    "date": "2025-10-06",
+    "dles added": [
+      {
+        "name": "BopMatch",
+        "url": "https://bopmatch.com",
+        "id": 516
+      },
+      {
+        "name": "CineLine",
+        "url": "https://www.playcineline.com",
+        "id": 517
+      },
+      {
+        "name": "Flagged",
+        "url": "https://gamebunny.app/flagged",
+        "id": 518
+      },
+      {
+        "name": "GuessTheMovie.me",
+        "url": "https://guessthemovie.me",
+        "id": 519
+      },
+      {
+        "name": "Poople",
+        "url": "https://poople.io",
+        "id": 520
+      },
+      {
+        "name": "Rankle",
+        "url": "https://www.rankle.app",
+        "id": 521
+      },
+      {
+        "name": "Tiler",
+        "url": "https://gamebunny.app/tiler",
+        "id": 522
+      }
+    ],
+    "description": "Add 7 dles. "
+  },
+  {
+    "date": "2025-09-21",
+    "dles removed": [
+      {
+        "name": "NHLdle",
+        "url": "https://nhldle.com/classic",
+        "reason": "Page no longer loads.",
+        "id": 252
+      }
+    ],
+    "description": "Remove 1 dle.<br>Update Circuits, which is now part of Puzzmo."
+  },
+  {
+    "date": "2025-09-19",
+    "description": "Add favorites to the main page.<br>You can now quickly add/remove favorites by pressing the heart icons next to each dle.<br>Add one extra column to larger screens.<br>Move the Miscellaneous category to the left column to give more space to Words for the far right column."
+  },
+  {
+    "date": "2025-09-15",
+    "dles removed": [
+      {
+        "name": "Leetle",
+        "url": "https://leetle.app/",
+        "reason": "Contains AI-generated puzzles.",
+        "id": 483
+      }
+    ],
+    "description": "Remove 1 dle. "
+  },
+  {
+    "date": "2025-09-03",
+    "description": "Add sponsors section."
+  },
+  {
+    "date": "2025-08-30",
+    "dles added": [
+      {
+        "name": "Ace Attorneydle",
+        "url": "https://aceattorneydle.fr",
+        "id": 457
+      },
+      {
+        "name": "Anidle",
+        "url": "https://anidle.net",
+        "id": 458
+      },
+      {
+        "name": "Avatardle",
+        "url": "https://avatardle.com/home",
+        "id": 459
+      },
+      {
+        "name": "Blockle",
+        "url": "https://blockle.au",
+        "id": 460
+      },
+      {
+        "name": "Clasherdle",
+        "url": "https://clasherdle.pixelcrux.com/",
+        "id": 461
+      },
+      {
+        "name": "Daily Analogy",
+        "url": "https://dailyanalogy.com",
+        "id": 462
+      },
+      {
+        "name": "Daily Crypticle",
+        "url": "https://dailycrypticle.com/dailyclue.html",
+        "id": 463
+      },
+      {
+        "name": "Eater of Wordles",
+        "url": "https://hexdecima.github.io/eowordles/",
+        "id": 464
+      },
+      {
+        "name": "Elemingle",
+        "url": "https://elemingle.com",
+        "id": 465
+      },
+      {
+        "name": "Etyle",
+        "url": "https://www.etyle.app",
+        "id": 466
+      },
+      {
+        "name": "Fields",
+        "url": "https://inkwellgames.com/games/fields",
+        "id": 467
+      },
+      {
+        "name": "FlashPopTiles",
+        "url": "https://flashpoptiles.com",
+        "id": 468
+      },
+      {
+        "name": "Forgeous",
+        "url": "https://forgeous.fun",
+        "id": 469
+      },
+      {
+        "name": "Framedle",
+        "url": "https://framedle.org",
+        "id": 470
+      },
+      {
+        "name": "Futbol 11",
+        "url": "https://futbol-11.com/",
+        "id": 471
+      },
+      {
+        "name": "Hexle",
+        "url": "https://frankljin.github.io/hexle/",
+        "id": 472
+      },
+      {
+        "name": "Hoopgrids",
+        "url": "https://www.hoopgrids.com",
+        "id": 473
+      },
+      {
+        "name": "HOTSdle",
+        "url": "https://hotsdle.zgame.studio/",
+        "id": 474
+      },
+      {
+        "name": "Jeopardy 6",
+        "url": "https://www.jeopardy.com/play/j6",
+        "id": 475
+      },
+      {
+        "name": "Keyboard Lines",
+        "url": "https://keyboardlines.com",
+        "id": 476
+      },
+      {
+        "name": "Knotilus",
+        "url": "https://knotil.us",
+        "id": 477
+      },
+      {
+        "name": "LA Times Jigsaw",
+        "url": "https://www.latimes.com/games/jigsaw-puzzle",
+        "id": 478
+      },
+      {
+        "name": "LA Times Mini",
+        "url": "https://www.latimes.com/games/mini-crossword",
+        "id": 479
+      },
+      {
+        "name": "LA Times Word Search",
+        "url": "https://www.latimes.com/games/wordsearch",
+        "id": 480
+      },
+      {
+        "name": "LA Times Sudoku",
+        "url": "https://www.latimes.com/games/sudoku",
+        "id": 481
+      },
+      {
+        "name": "LA Times Wordflower",
+        "url": "https://www.latimes.com/games/wordflower",
+        "id": 482
+      },
+      {
+        "name": "Leetle",
+        "url": "https://leetle.app/",
+        "id": 483
+      },
+      {
+        "name": "Mcbirdle",
+        "url": "https://kendisc.com/mcbirdle",
+        "id": 484
+      },
+      {
+        "name": "Mcdle",
+        "url": "https://www.mcdle.net",
+        "id": 485
+      },
+      {
+        "name": "Meleedle",
+        "url": "https://meleedle.netlify.app/",
+        "id": 486
+      },
+      {
+        "name": "Noggle",
+        "url": "https://nibble.games/noggle/noggle.html",
+        "id": 487
+      },
+      {
+        "name": "NYT Pips",
+        "url": "https://www.nytimes.com/games/pips",
+        "id": 488
+      },
+      {
+        "name": "Omiword",
+        "url": "https://www.omiword.com",
+        "id": 489
+      },
+      {
+        "name": "Parlorbox",
+        "url": "https://parlorbox.com/",
+        "id": 490
+      },
+      {
+        "name": "Pikadoku",
+        "url": "https://pikadoku.dentotino.com",
+        "id": 491
+      },
+      {
+        "name": "Pimantle",
+        "url": "https://semantle.pimanrul.es",
+        "id": 492
+      },
+      {
+        "name": "Pokegrid",
+        "url": "https://www.pokegrid.net/",
+        "id": 493
+      },
+      {
+        "name": "Pokerating",
+        "url": "https://pokerating.com/puzzle",
+        "id": 494
+      },
+      {
+        "name": "Posterdle",
+        "url": "https://likewise.com/games/posterdle",
+        "id": 495
+      },
+      {
+        "name": "R6dle",
+        "url": "https://r6dle.net",
+        "id": 496
+      },
+      {
+        "name": "Raindle",
+        "url": "https://raindle.net/items",
+        "id": 497
+      },
+      {
+        "name": "Reversle",
+        "url": "https://reversle.net",
+        "id": 498
+      },
+      {
+        "name": "Sortdle",
+        "url": "https://sortdle.com",
+        "id": 499
+      },
+      {
+        "name": "Sortwise",
+        "url": "https://sortwise.fun",
+        "id": 500
+      },
+      {
+        "name": "Stars",
+        "url": "https://inkwellgames.com/games/stars",
+        "id": 501
+      },
+      {
+        "name": "steamdle.pro",
+        "url": "https://steamdle.pro",
+        "id": 502
+      },
+      {
+        "name": "Supervivedle",
+        "url": "https://supervivedle.com",
+        "id": 503
+      },
+      {
+        "name": "Tally Game",
+        "url": "https://tally-game.com",
+        "id": 504
+      },
+      {
+        "name": "Totem Words",
+        "url": "https://totemwords.com",
+        "id": 506
+      },
+      {
+        "name": "Traindle",
+        "url": "https://www.traindle.io",
+        "id": 507
+      },
+      {
+        "name": "Treasure Guessr",
+        "url": "https://play.treasureguessr.com",
+        "id": 508
+      },
+      {
+        "name": "Wardle",
+        "url": "https://wardlegame.com/",
+        "id": 509
+      },
+      {
+        "name": "Weakdle",
+        "url": "https://dentotino.com/weakdle",
+        "id": 510
+      },
+      {
+        "name": "Weakdoku",
+        "url": "https://weakdoku.dentotino.com",
+        "id": 511
+      },
+      {
+        "name": "Wordspan",
+        "url": "https://puzzmallow.com/wordspan",
+        "id": 512
+      },
+      {
+        "name": "Wowdle",
+        "url": "https://www.wowdle.app",
+        "id": 513
+      },
+      {
+        "name": "Wridges",
+        "url": "https://www.washingtonpost.com/games/wridges/",
+        "id": 514
+      },
+      {
+        "name": "Zeldle",
+        "url": "https://zeldle.xyz",
+        "id": 515
+      }
+    ],
+    "dles removed": [
+      {
+        "name": "Guess The Jumpshot",
+        "url": "https://guessthepro.com/en/games/guess-the-jumpshot",
+        "reason": "Stuck on loading screen, doesn't always have a new game everyday.",
+        "id": 152
+      },
+      {
+        "name": "NYT Mini Crossword",
+        "url": "https://www.nytimes.com/crosswords/game/mini",
+        "reason": "Now behind a paywall.",
+        "id": 260
+      },
+      {
+        "name": "Toppled",
+        "url": "https://bythomas.co.uk/toppled",
+        "reason": "Cannot access the game, stuck on advertisement.",
+        "id": 398
+      },
+      {
+        "name": "Where in the USA is this?",
+        "url": "https://pudding.cool/games/where",
+        "reason": "The game has ended.",
+        "id": 418
+      }
+    ],
+    "description": "Add 58 dles. Remove 4 dles. "
+  },
+  {
+    "date": "2025-08-08",
+    "description": "Fix bug where DLES of the week could not be favorited."
+  },
+  {
+    "date": "2025-07-28",
+    "dles removed": [
+      {
+        "name": "QuickQ",
+        "url": "https://www.quickqtrivia.com",
+        "reason": "No new games for months.",
+        "id": 307
+      },
+      {
+        "name": "Sorted",
+        "url": "https://puzzles-prod.telegraph.co.uk/sorted/index.html",
+        "reason": "Stuck on Sorted #234.",
+        "id": 347
+      }
+    ],
+    "description": "Remove 2 dles. "
+  },
+  {
+    "date": "2025-07-24",
+    "dles added": [
+      {
+        "name": "Gamedle Character",
+        "url": "https://www.gamedle.wtf/characters",
+        "id": 456
+      }
+    ],
+    "description": "Add 1 dle. "
+  },
+  {
+    "date": "2025-07-21",
+    "dles added": [
+      {
+        "name": "NBAGrid",
+        "url": "https://www.nbagr.id",
+        "id": 455
+      }
+    ],
+    "description": "Add 1 dle. "
+  },
+  {
+    "date": "2025-07-14",
+    "description": "Add dles of the week feature."
+  },
+  {
+    "date": "2025-07-12",
+    "description": "Update link to Disney Heardle."
+  },
+  {
+    "date": "2025-07-06",
+    "description": "Add 12 dles.<br>Remove 1 dle.<br>Fix link to OEC Tradle.<br>Add button to play a random favorite.",
+    "dles added": [
+      {
+        "name": "Basketball 5",
+        "url": "https://basketball-5.com",
+        "id": 16
+      },
+      {
+        "name": "Bells & Whistles",
+        "url": "https://puzzmallow.com/bells",
+        "id": 18
+      },
+      {
+        "name": "Buzzled",
+        "url": "https://puzzmallow.com/buzzled",
+        "id": 32
+      },
+      {
+        "name": "Codenames Daily",
+        "url": "https://codenames.game/daily/en",
+        "id": 57
+      },
+      {
+        "name": "Collections",
+        "url": "https://puzzmallow.com/collections",
+        "id": 58
+      },
+      {
+        "name": "Guess The Jumpshot",
+        "url": "https://guessthepro.com/en/games/guess-the-jumpshot",
+        "id": 152
+      },
+      {
+        "name": "Letteripher",
+        "url": "https://letteripher.com",
+        "id": 193
+      },
+      {
+        "name": "Matle",
+        "url": "https://www.matle.io",
+        "id": 223
+      },
+      {
+        "name": "Quickflip",
+        "url": "https://puzzmallow.com/quickflip",
+        "id": 306
+      },
+      {
+        "name": "Rolldle",
+        "url": "https://www.light.gg/rolldle/",
+        "id": 328
+      },
+      {
+        "name": "Word to your Mother",
+        "url": "https://w2ym.org",
+        "id": 431
+      },
+      {
+        "name": "WrestlePlay",
+        "url": "https://wrestleplay.com",
+        "id": 447
+      }
+    ],
+    "dles removed": [
+      {
+        "name": "Jeopardle",
+        "url": "https://jeopardle.co",
+        "id": "M10"
+      }
+    ]
+  },
+  {
+    "date": "2025-06-29",
+    "dles added": [
+      {
+        "name": "Alphalock",
+        "url": "https://alphalockgame.net",
+        "id": 9
+      },
+      {
+        "name": "Bazaar Doku",
+        "url": "https://bazaardb.gg/doku",
+        "id": 17
+      },
+      {
+        "name": "Birdie Game",
+        "url": "https://birdiegame.net",
+        "id": 21
+      },
+      {
+        "name": "Cancelwise",
+        "url": "https://cancelwise.com",
+        "id": 34
+      },
+      {
+        "name": "CarGuesser",
+        "url": "https://carguesser.com",
+        "id": 37
+      },
+      {
+        "name": "Chronle",
+        "url": "https://chronle.com",
+        "id": 48
+      },
+      {
+        "name": "Decodex",
+        "url": "https://playdecodex.com",
+        "id": 91
+      },
+      {
+        "name": "Duolock Game",
+        "url": "https://www.duolockgame.net",
+        "id": 101
+      },
+      {
+        "name": "Emoji Test",
+        "url": "https://emojitest.com/en",
+        "id": 108
+      },
+      {
+        "name": "Estimadle",
+        "url": "https://estimadle.com",
+        "id": 111
+      },
+      {
+        "name": "Estimate Me",
+        "url": "https://estimate-me.aukspot.com",
+        "id": 112
+      },
+      {
+        "name": "Fluxis",
+        "url": "https://www.theatlantic.com/games/fluxis/",
+        "id": 127
+      },
+      {
+        "name": "Heardle Daily",
+        "url": "https://www.heardle.info/daily/",
+        "id": 164
+      },
+      {
+        "name": "Monster Hunter-dle",
+        "url": "https://monster-hunter-dle.akato.fr/classic",
+        "id": 233
+      },
+      {
+        "name": "Morsle (decipher.wiki)",
+        "url": "https://decipher.wiki/morsle",
+        "id": 236
+      },
+      {
+        "name": "Nookle",
+        "url": "https://nookle.net",
+        "id": 254
+      },
+      {
+        "name": "Padlock",
+        "url": "https://www.padlockgame.net",
+        "id": 273
+      },
+      {
+        "name": "Palwordle",
+        "url": "https://palwordle.net",
+        "id": 274
+      },
+      {
+        "name": "Pokedle.com",
+        "url": "https://pokedle.com",
+        "id": 288
+      },
+      {
+        "name": "Quintalist",
+        "url": "https://www.quintalist.com",
+        "id": 308
+      },
+      {
+        "name": "Redividers",
+        "url": "https://redividers.netlify.app",
+        "id": 317
+      },
+      {
+        "name": "Silly Little Codes",
+        "url": "https://playsillylittlegames.com/codes",
+        "id": 341
+      },
+      {
+        "name": "Stacks",
+        "url": "https://www.theatlantic.com/games/stacks/",
+        "id": 365
+      },
+      {
+        "name": "Swapple",
+        "url": "https://nibble.games/swapple/swapple-easy.html",
+        "id": 375
+      },
+      {
+        "name": "Tarkovdle",
+        "url": "https://tarkovdle.com",
+        "id": 380
+      },
+      {
+        "name": "TF2dle",
+        "url": "https://www.tf2dle.com",
+        "id": 383
+      },
+      {
+        "name": "The Atlantic Crossword",
+        "url": "https://www.theatlantic.com/games/daily-crossword/",
+        "id": 385
+      },
+      {
+        "name": "Timdle",
+        "url": "https://www.timdle.com",
+        "id": 393
+      },
+      {
+        "name": "TimeLine Game",
+        "url": "https://www.playtimelines.com",
+        "id": 395
+      },
+      {
+        "name": "Unshuffle",
+        "url": "https://www.unshuffle.me",
+        "id": 405
+      },
+      {
+        "name": "Word Ladder",
+        "url": "https://wordladder.com",
+        "id": 429
+      },
+      {
+        "name": "WordLink",
+        "url": "https://playwordlink.com",
+        "id": 441
+      },
+      {
+        "name": "Wordloop",
+        "url": "https://word-loop.com",
+        "id": 443
+      },
+      {
+        "name": "Worpel",
+        "url": "https://playworpel.com",
+        "id": 446
+      },
+      {
+        "name": "Wrodeo",
+        "url": "https://wrodeo.com",
+        "id": 448
+      }
+    ],
+    "dles removed": [
+      {
+        "name": "Reciple",
+        "url": "https://reciple.net",
+        "reason": "No new daily recipes.",
+        "id": "M11"
+      },
+      {
+        "name": "Warbl",
+        "url": "https://www.warbl.org",
+        "reason": "Songs do not play.",
+        "id": 582
+      }
+    ],
+    "description": "Add 35 dles. Remove 2 dles.<br>Split Geography/History category into Geography and History."
+  },
+  {
+    "date": "2025-06-24",
+    "description": "Remove 2 dles.<br>Add 7 categories: Card/Board Games, Colors, Estimation, Food, Science/Nature, Shapes/Patterns, Vehicles<br>Remove 1 category: Prices",
+    "dles removed": [
+      {
+        "name": "Colordle",
+        "url": "https://colordle.ryantanen.com",
+        "reason": "Daily puzzle does not change.",
+        "id": 619
+      },
+      {
+        "name": "Dicele",
+        "url": "https://dicele.com",
+        "reason": "Site no longer loads.",
+        "id": "M12"
+      }
+    ]
+  },
+  {
+    "date": "2025-06-11",
+    "description": "Add 39 dles. Remove 5 dles.",
+    "dles added": [
+      {
+        "name": "AniGuessr",
+        "url": "https://aniguessr.com",
+        "id": 11
+      },
+      {
+        "name": "Birdle",
+        "url": "https://www.play-birdle.com",
+        "id": 22
+      },
+      {
+        "name": "Birdle (like Wordle)",
+        "url": "https://birdle.escism.net",
+        "id": 23
+      },
+      {
+        "name": "Couplit",
+        "url": "https://couplit.io",
+        "id": 70
+      },
+      {
+        "name": "Crosstune",
+        "url": "https://crosstune.io",
+        "id": 74
+      },
+      {
+        "name": "Disordle",
+        "url": "https://disordle.com",
+        "id": 94
+      },
+      {
+        "name": "Dodeku",
+        "url": "https://dodeku.com",
+        "id": 95
+      },
+      {
+        "name": "Emoji Quiz - Movies",
+        "url": "https://www.emojiquiz.net/movies",
+        "id": 105
+      },
+      {
+        "name": "Emoji Quiz - TV",
+        "url": "https://www.emojiquiz.net/tv",
+        "id": 106
+      },
+      {
+        "name": "Emoji Quiz - Video Games",
+        "url": "https://www.emojiquiz.net/games",
+        "id": 107
+      },
+      {
+        "name": "Enchant Wordle",
+        "url": "https://enchantworldle.com",
+        "id": 109
+      },
+      {
+        "name": "Futdoku",
+        "url": "https://futdoku.com",
+        "id": 131
+      },
+      {
+        "name": "GuessTen",
+        "url": "https://guessten.com",
+        "id": 155
+      },
+      {
+        "name": "Langle",
+        "url": "https://langle.uk",
+        "id": 191
+      },
+      {
+        "name": "LinkedIn - Crossclimb",
+        "url": "https://www.linkedin.com/games/crossclimb",
+        "id": 205
+      },
+      {
+        "name": "LinkedIn - Pinpoint",
+        "url": "https://www.linkedin.com/games/pinpoint",
+        "id": 206
+      },
+      {
+        "name": "LinkedIn - Queens",
+        "url": "https://www.linkedin.com/games/queens",
+        "id": 207
+      },
+      {
+        "name": "LinkedIn - Tango",
+        "url": "https://www.linkedin.com/games/tango",
+        "id": 208
+      },
+      {
+        "name": "LinkedIn - Zip",
+        "url": "https://www.linkedin.com/games/zip",
+        "id": 209
+      },
+      {
+        "name": "MapTap",
+        "url": "https://maptap.gg",
+        "id": 220
+      },
+      {
+        "name": "Mathdle",
+        "url": "https://mathdle.app",
+        "id": 221
+      },
+      {
+        "name": "Musicle",
+        "url": "https://musicle.app",
+        "id": 248
+      },
+      {
+        "name": "Puzzmo - Bongo",
+        "url": "https://www.puzzmo.com/game/bongo",
+        "id": 297
+      },
+      {
+        "name": "Puzzmo - Memoku",
+        "url": "https://www.puzzmo.com/play/memoku",
+        "id": 300
+      },
+      {
+        "name": "Puzzmo - Pile-Up Poker",
+        "url": "https://www.puzzmo.com/play/pile-up-poker",
+        "id": 301
+      },
+      {
+        "name": "Puzzmo - Weather Memoku",
+        "url": "https://www.puzzmo.com/play/weather-memoku",
+        "id": 305
+      },
+      {
+        "name": "Quizmoji",
+        "url": "https://quizmoji.com",
+        "id": 311
+      },
+      {
+        "name": "Quotesed",
+        "url": "https://www.quotesed.com",
+        "id": 313
+      },
+      {
+        "name": "Retro Game Trivia",
+        "url": "https://retrotrivia.games",
+        "id": 324
+      },
+      {
+        "name": "Stardewdle",
+        "url": "https://stardewdle.com/game",
+        "id": 366
+      },
+      {
+        "name": "steamdle.com",
+        "url": "https://steamdle.com",
+        "id": 368
+      },
+      {
+        "name": "Streetfighterdle",
+        "url": "https://streetfighterdle.net",
+        "id": 370
+      },
+      {
+        "name": "Temple",
+        "url": "https://tck.mn/temple",
+        "id": 381
+      },
+      {
+        "name": "Three Magic Words",
+        "url": "https://www.threemagicwords.app/play",
+        "id": 389
+      },
+      {
+        "name": "TFTdle",
+        "url": "https://tftdle.gg/classic",
+        "id": 384
+      },
+      {
+        "name": "Tracell",
+        "url": "https://tracellgame.com",
+        "id": 399
+      },
+      {
+        "name": "Truncate",
+        "url": "https://truncate.town",
+        "id": 402
+      },
+      {
+        "name": "Wildlife Sudoku",
+        "url": "https://flagdoku.com/wildlife.html",
+        "id": 422
+      },
+      {
+        "name": "Wordcrux",
+        "url": "https://wordcrux.com",
+        "id": 436
+      }
+    ],
+    "dles removed": [
+      {
+        "name": "Chronoline",
+        "url": "https://chronoline.app/daily",
+        "reason": "The daily challenge does not work.",
+        "id": "M13"
+      },
+      {
+        "name": "Geographle",
+        "url": "https://geographle.com",
+        "reason": "Daily puzzles do not load.",
+        "id": "M14"
+      },
+      {
+        "name": "Listed",
+        "url": "https://listed.fun",
+        "reason": "The game has been concluded.",
+        "id": "M15"
+      },
+      {
+        "name": "Order Up",
+        "url": "https://orderup.games",
+        "reason": "The game has been paused.",
+        "id": "M16"
+      },
+      {
+        "name": "Outword",
+        "url": "https://outword.me",
+        "reason": "The website does not load.",
+        "id": "M17"
+      }
+    ]
+  },
+  {
+    "date": "2025-05-15",
+    "description": "Remove 1 dle. ",
+    "dles removed": [
+      {
+        "name": "Anigrams",
+        "url": "https://anigrams.us",
+        "reason": "The game has been paused.",
+        "id": "M18"
+      }
+    ]
+  },
+  {
+    "date": "2025-05-08",
+    "description": "Add 29 dles. Remove 1 dle. ",
+    "dles added": [
+      {
+        "name": "BingeWatcher",
+        "url": "https://bingewatcher.org",
+        "id": 20
+      },
+      {
+        "name": "Breadle",
+        "url": "https://breadle.us",
+        "id": 30
+      },
+      {
+        "name": "Chemdle",
+        "url": "https://www.chemdle.com",
+        "id": 43
+      },
+      {
+        "name": "Chiddle",
+        "url": "https://www.chiddle.net",
+        "id": 47
+      },
+      {
+        "name": "Clues By Sam",
+        "url": "https://cluesbysam.com",
+        "id": 55
+      },
+      {
+        "name": "Fishdle",
+        "url": "https://tacklevillage.com/fishdle-game/",
+        "id": 120
+      },
+      {
+        "name": "Guess The Angle",
+        "url": "https://guesstheangle.wtf",
+        "id": 147
+      },
+      {
+        "name": "Guess The Book",
+        "url": "https://guessthebook.app",
+        "id": 149
+      },
+      {
+        "name": "Guess The House",
+        "url": "https://guessthe.house",
+        "id": 151
+      },
+      {
+        "name": "Guess The Logo",
+        "url": "https://guessthelogo.wtf",
+        "id": 153
+      },
+      {
+        "name": "Guess The Movie",
+        "url": "https://guessthemovie.name",
+        "id": 154
+      },
+      {
+        "name": "Jigsaw Explorer",
+        "url": "https://www.jigsawexplorer.com",
+        "id": 184
+      },
+      {
+        "name": "Kinda Hard Golf",
+        "url": "https://kindahardgolf.com",
+        "id": 189
+      },
+      {
+        "name": "Lexicle",
+        "url": "https://lexicle.com",
+        "id": 202
+      },
+      {
+        "name": "lichess.org Daily Puzzle",
+        "url": "https://lichess.org/training/daily",
+        "id": 203
+      },
+      {
+        "name": "MusicVidle",
+        "url": "https://www.musicvidle.com",
+        "id": 249
+      },
+      {
+        "name": "Nodes",
+        "url": "https://www.nodes-game.com",
+        "id": 253
+      },
+      {
+        "name": "OWdle",
+        "url": "https://owdle.guessing.day",
+        "id": 272
+      },
+      {
+        "name": "Pixletters",
+        "url": "https://pixletters.com",
+        "id": 282
+      },
+      {
+        "name": "RADDLE",
+        "url": "https://raddle.quest",
+        "id": 314
+      },
+      {
+        "name": "Scrandle",
+        "url": "https://scrandle.com",
+        "id": 333
+      },
+      {
+        "name": "Smixed",
+        "url": "https://smixed.com",
+        "id": 343
+      },
+      {
+        "name": "Snapdle",
+        "url": "https://snapdle.github.io/classic",
+        "id": 344
+      },
+      {
+        "name": "Spot the differences",
+        "url": "https://www.spot-differences.com",
+        "id": 355
+      },
+      {
+        "name": "Talldle",
+        "url": "https://www.talldle.com",
+        "id": 379
+      },
+      {
+        "name": "Warbl",
+        "url": "https://www.warbl.org",
+        "id": 582
+      },
+      {
+        "name": "Which year",
+        "url": "https://whichyr.com",
+        "id": 421
+      },
+      {
+        "name": "Wordcell",
+        "url": "https://wordcell.gamebunny.app",
+        "id": 435
+      },
+      {
+        "name": "words for days",
+        "url": "https://wordsfordays.com",
+        "id": 444
+      }
+    ],
+    "dles removed": [
+      {
+        "name": "Moview",
+        "url": "https://moview.online",
+        "reason": "No new puzzles for months.",
+        "id": "M19"
+      }
+    ]
+  },
+  {
+    "date": "2025-04-16",
+    "description": "Add 1 dle. ",
+    "dles added": [
+      {
+        "name": "Echo Chess",
+        "url": "https://echochess.com",
+        "id": 103
+      }
+    ]
+  },
+  {
+    "date": "2025-04-10",
+    "description": "Add 1 dle. ",
+    "dles added": [
+      {
+        "name": "Daily Akari",
+        "url": "https://dailyakari.com",
+        "id": 80
+      }
+    ]
+  },
+  {
+    "date": "2025-04-02",
+    "description": "Add 20 dles. ",
+    "dles added": [
+      {
+        "name": "Cartoonguessr",
+        "url": "https://cartoonguesser.pythonanywhere.com",
+        "id": 38
+      },
+      {
+        "name": "Colordle",
+        "url": "https://colordle.ryantanen.com",
+        "id": 619
+      },
+      {
+        "name": "Compound Your Joy",
+        "url": "https://onelook.com/?loc=rd&w=cyj",
+        "id": 62
+      },
+      {
+        "name": "Cracked Sudoku",
+        "url": "https://danielchasehooper.com/projects/cracked-sudoku/",
+        "id": 71
+      },
+      {
+        "name": "Crossherd",
+        "url": "https://crossherd.clevergoat.com",
+        "id": 73
+      },
+      {
+        "name": "LoLdle",
+        "url": "https://loldle.net",
+        "id": 216
+      },
+      {
+        "name": "Minecraftle",
+        "url": "https://minecraftle.zachmanson.com",
+        "id": 228
+      },
+      {
+        "name": "Movie Pyramid",
+        "url": "https://moviepyramid.io",
+        "id": 238
+      },
+      {
+        "name": "Movie Reveal",
+        "url": "https://moviereveal.io",
+        "id": 239
+      },
+      {
+        "name": "Movie Snake",
+        "url": "https://moviesnake.io",
+        "id": 240
+      },
+      {
+        "name": "Musicdoku",
+        "url": "https://musicdoku.com",
+        "id": 247
+      },
+      {
+        "name": "Pandergram",
+        "url": "https://onelook.com/pandergram",
+        "id": 275
+      },
+      {
+        "name": "Real Bird Fake Bird",
+        "url": "https://realbirdfakebird.com",
+        "id": 315
+      },
+      {
+        "name": "Rivadle",
+        "url": "https://rivadle.net",
+        "id": 326
+      },
+      {
+        "name": "SpaceWord",
+        "url": "https://spaceword.org",
+        "id": 349
+      },
+      {
+        "name": "Stacked",
+        "url": "https://stacked.clevergoat.com",
+        "id": 363
+      },
+      {
+        "name": "The Daily Burgle",
+        "url": "https://www.thedailyburgle.app",
+        "id": 386
+      },
+      {
+        "name": "Threepeat",
+        "url": "https://onelook.com/threepeat",
+        "id": 390
+      },
+      {
+        "name": "Weddle",
+        "url": "https://www.weddlegame.com",
+        "id": 415
+      },
+      {
+        "name": "ZoomOut",
+        "url": "https://zoomout.videoludid.com",
+        "id": 454
+      }
+    ]
+  },
+  {
+    "date": "2025-03-08",
+    "description": "Add 1 dle. ",
+    "dles added": [
+      {
+        "name": "Bracket City",
+        "url": "https://bracket.city",
+        "id": 27
+      }
+    ]
+  },
+  {
+    "date": "2025-02-16",
+    "description": "Add 10 dles. ",
+    "dles added": [
+      {
+        "name": "Catfishing",
+        "url": "https://catfishing.net/game/today",
+        "id": 40
+      },
+      {
+        "name": "Couples",
+        "url": "https://www.couples.game",
+        "id": 69
+      },
+      {
+        "name": "Dungleon",
+        "url": "https://www.dungleon.com",
+        "id": 100
+      },
+      {
+        "name": "Eightile",
+        "url": "https://eightile.com",
+        "id": 104
+      },
+      {
+        "name": "GeoConnections",
+        "url": "https://geoconnections.net",
+        "id": 138
+      },
+      {
+        "name": "Isaacle",
+        "url": "https://isaacle.net",
+        "id": 181
+      },
+      {
+        "name": "Isaaconnect",
+        "url": "https://isaaconnect.com",
+        "id": 182
+      },
+      {
+        "name": "LA Times Crossword",
+        "url": "https://www.latimes.com/games/daily-crossword",
+        "id": 190
+      },
+      {
+        "name": "Top 5",
+        "url": "https://top5-game.com",
+        "id": 397
+      },
+      {
+        "name": "WhenTaken Movies",
+        "url": "https://movies.whentaken.com",
+        "id": 417
+      }
+    ]
+  },
+  {
+    "date": "2025-02-10",
+    "dles added": [
+      {
+        "name": "Face Guessr",
+        "url": "https://www.faceguesser.com",
+        "id": 113
+      },
+      {
+        "name": "HowLongToBeat Daily Challenge",
+        "url": "https://howlongtobeat.com/play",
+        "id": 172
+      },
+      {
+        "name": "Lex.Games - By A Vowel",
+        "url": "https://lex.games/byavowel/",
+        "id": 196
+      },
+      {
+        "name": "Lex.Games - Conlextions",
+        "url": "https://lex.games/connections/",
+        "id": 197
+      },
+      {
+        "name": "Lex.Games - Lexicogs",
+        "url": "https://lex.games/lexicogs/",
+        "id": 198
+      },
+      {
+        "name": "Lex.Games - Mini Crossword",
+        "url": "https://lex.games/mini/",
+        "id": 199
+      },
+      {
+        "name": "Lex.Games - Six Appeal",
+        "url": "https://lex.games/six/",
+        "id": 200
+      },
+      {
+        "name": "Lex.Games - Square Dance",
+        "url": "https://lex.games/squaredance",
+        "id": 201
+      },
+      {
+        "name": "Sequences",
+        "url": "https://www.dailyfastgames.com/sequences",
+        "id": 337
+      },
+      {
+        "name": "Sexaginta-quattuordle",
+        "url": "https://64ordle.au/?mode=daily",
+        "id": 338
+      }
+    ],
+    "description": "Add 10 dles."
+  },
+  {
+    "date": "2025-01-31",
+    "dles removed": [
+      {
+        "name": "Acted",
+        "url": "https://acted.wtf",
+        "reason": "Site no longer loads.",
+        "id": "M20"
+      },
+      {
+        "name": "Moviemoji",
+        "url": "https://www.playmoviemoji.com",
+        "reason": "Site no longer loads.",
+        "id": "M21"
+      }
+    ],
+    "description": "Add 4 dles. Remove 2 dles.",
+    "dles added": [
+      {
+        "name": "Pokle",
+        "url": "https://poklegame.com",
+        "id": 291
+      },
+      {
+        "name": "Artle",
+        "url": "https://www.nga.gov/artle.html",
+        "id": 13
+      },
+      {
+        "name": "Geodle",
+        "url": "https://geodle.me",
+        "id": 139
+      },
+      {
+        "name": "NHLdle",
+        "url": "https://nhldle.com/classic",
+        "id": 252
+      }
+    ]
+  },
+  {
+    "date": "2024-11-24",
+    "description": "Add 35 dles. Remove 1 dle.",
+    "dles added": [
+      {
+        "name": "Airport Guessr",
+        "url": "https://airportguessr.bytecatch.io",
+        "id": 8
+      },
+      {
+        "name": "Blunderwall",
+        "url": "https://bythomas.co.uk/blunderwall",
+        "id": 24
+      },
+      {
+        "name": "Cardle",
+        "url": "https://cardle.boxbox.autos",
+        "id": 36
+      },
+      {
+        "name": "Chessguessr",
+        "url": "https://www.chessguessr.com",
+        "id": 45
+      },
+      {
+        "name": "Cyphr",
+        "url": "https://cyphrgame.com",
+        "id": 79
+      },
+      {
+        "name": "Daily Tens",
+        "url": "https://dailytens.com",
+        "id": 85
+      },
+      {
+        "name": "DBDle",
+        "url": "https://dbdle.net",
+        "id": 89
+      },
+      {
+        "name": "Flagle Game",
+        "url": "https://flagle-game.com",
+        "id": 124
+      },
+      {
+        "name": "Geocircles",
+        "url": "https://geocircles.io",
+        "id": 137
+      },
+      {
+        "name": "Geographle",
+        "url": "https://geographle.com",
+        "id": "M14"
+      },
+      {
+        "name": "graphs.world",
+        "url": "https://www.graphs.world",
+        "id": 144
+      },
+      {
+        "name": "Harmonies: Music Connections",
+        "url": "https://harmonies.io",
+        "id": 156
+      },
+      {
+        "name": "Hidden Mirrors",
+        "url": "https://www.hidden-mirrors.com",
+        "id": 169
+      },
+      {
+        "name": "Letroso",
+        "url": "https://letroso.com/en/daily",
+        "id": 192
+      },
+      {
+        "name": "Lirdle",
+        "url": "https://lirdle.com",
+        "id": 212
+      },
+      {
+        "name": "List Them All!",
+        "url": "https://listthemall.com",
+        "id": 213
+      },
+      {
+        "name": "MinecraftDle",
+        "url": "https://www.minecraftdle.net",
+        "id": 227
+      },
+      {
+        "name": "Mini Crossword (The Observer)",
+        "url": "https://fordhamobserver.com/category/fun-and-games/daily-mini-crossword",
+        "id": 229
+      },
+      {
+        "name": "More/Less",
+        "url": "https://lessgames.com/moreless",
+        "id": 234
+      },
+      {
+        "name": "Moviedle (from Histordle)",
+        "url": "https://histordle.com/moviedle",
+        "id": 243
+      },
+      {
+        "name": "Moview",
+        "url": "https://moview.online",
+        "id": "M19"
+      },
+      {
+        "name": "Number Island",
+        "url": "https://numberisland.com",
+        "id": 255
+      },
+      {
+        "name": "NYT Connections: Sports Edition",
+        "url": "https://www.nytimes.com/athletic/connections-sports-edition",
+        "id": 259
+      },
+      {
+        "name": "Octordle",
+        "url": "https://www.britannica.com/games/octordle",
+        "id": 264
+      },
+      {
+        "name": "Planespottle",
+        "url": "https://planespottle.bytecatch.io",
+        "id": 283
+      },
+      {
+        "name": "Poeltl",
+        "url": "https://poeltl.nbpa.com",
+        "id": 287
+      },
+      {
+        "name": "QuickQ",
+        "url": "https://www.quickqtrivia.com",
+        "id": 307
+      },
+      {
+        "name": "Runedle",
+        "url": "https://runedle.com",
+        "id": 330
+      },
+      {
+        "name": "Terradle",
+        "url": "https://www.terradle.com",
+        "id": 382
+      },
+      {
+        "name": "Valodle",
+        "url": "https://valodle.eu",
+        "id": 407
+      },
+      {
+        "name": "VideoPuzzle",
+        "url": "https://videopuzzle.org",
+        "id": 410
+      },
+      {
+        "name": "Vowel Play",
+        "url": "https://bythomas.co.uk/vowelplay",
+        "id": 411
+      },
+      {
+        "name": "Vox Daily Crossword",
+        "url": "https://www.vox.com/21523212/crossword-puzzles-free-daily-printable",
+        "id": 412
+      },
+      {
+        "name": "Word Box",
+        "url": "https://wordbox.game",
+        "id": 424
+      },
+      {
+        "name": "Zeldadle",
+        "url": "https://www.zeldadle.net",
+        "id": 453
+      }
+    ],
+    "dles removed": [
+      {
+        "name": "Apparle",
+        "url": "https://www.apparle.com",
+        "reason": "Game does not load most days.",
+        "id": "M22"
+      }
+    ]
+  },
+  {
+    "date": "2024-10-06",
+    "description": "Fix link to Colorfle."
+  },
+  {
+    "date": "2024-09-18",
+    "description": "Add 19 dle and new header buttonss.<br/>Add ability to import and export favorites.<br/>Update links for Factle, Factle Sports, and the Wiki Game Daily.",
+    "dles added": [
+      {
+        "name": "23 Words",
+        "url": "https://wordnerd.co/23words",
+        "id": 1
+      },
+      {
+        "name": "Cluewords",
+        "url": "https://wordnerd.co/cluewords",
+        "id": 56
+      },
+      {
+        "name": "Daily Fact or Fiction",
+        "url": "https://dailyfactorfiction.com",
+        "id": 82
+      },
+      {
+        "name": "Daily Fill-Ins",
+        "url": "https://azgames.io/game/daily-fill-ins",
+        "id": 83
+      },
+      {
+        "name": "Flagdoku",
+        "url": "https://flagdoku.com",
+        "id": 122
+      },
+      {
+        "name": "morsle",
+        "url": "https://morsle.fun",
+        "id": 235
+      },
+      {
+        "name": "Perfect Pitch Puzzle",
+        "url": "https://www.perfectpitchpuzzle.com",
+        "id": 277
+      },
+      {
+        "name": "Picsey",
+        "url": "https://picsey.io",
+        "id": 280
+      },
+      {
+        "name": "Pivots",
+        "url": "https://playpivots.com",
+        "id": 281
+      },
+      {
+        "name": "Pufferdle",
+        "url": "https://pufferdle.com/#/daily",
+        "id": 296
+      },
+      {
+        "name": "Reciple",
+        "url": "https://reciple.net",
+        "id": "M11"
+      },
+      {
+        "name": "Shaple",
+        "url": "https://swag.github.io/shaple",
+        "id": 339
+      },
+      {
+        "name": "Sorted",
+        "url": "https://puzzles-prod.telegraph.co.uk/sorted/index.html",
+        "id": 347
+      },
+      {
+        "name": "Spell Bee",
+        "url": "https://www.spell-bee.com/game-daily.html",
+        "id": 350
+      },
+      {
+        "name": "Spindle",
+        "url": "https://playspindle.com",
+        "id": 354
+      },
+      {
+        "name": "Tightrope",
+        "url": "https://www.britannica.com/quiz/tightrope",
+        "id": 392
+      },
+      {
+        "name": "Video Game Bandle",
+        "url": "https://www.vgbandle.app",
+        "id": 409
+      },
+      {
+        "name": "Wordiply",
+        "url": "https://www.wordiply.com",
+        "id": 438
+      },
+      {
+        "name": "Zaku Chess",
+        "url": "https://zakuchess.com",
+        "id": 451
+      }
+    ]
+  },
+  {
+    "date": "2024-07-20",
+    "description": "Add 23 dles.",
+    "dles added": [
+      {
+        "name": "Balatrodle",
+        "url": "https://www.balatrodle.com",
+        "id": 14
+      },
+      {
+        "name": "ClickWord",
+        "url": "https://clickword.org",
+        "id": 54
+      },
+      {
+        "name": "cryptle",
+        "url": "https://cryptle.xyz",
+        "id": 78
+      },
+      {
+        "name": "Decipher",
+        "url": "https://decipher.wtf",
+        "id": 90
+      },
+      {
+        "name": "Eruptle",
+        "url": "https://eruptle.app",
+        "id": 110
+      },
+      {
+        "name": "Factle",
+        "url": "https://factle.app",
+        "id": 116
+      },
+      {
+        "name": "Factle Sports",
+        "url": "https://factle.app/sports",
+        "id": 117
+      },
+      {
+        "name": "Mahjong Handle",
+        "url": "https://mahjong-handle.update.sh",
+        "id": 218
+      },
+      {
+        "name": "Mazele",
+        "url": "https://mazele.io",
+        "id": 224
+      },
+      {
+        "name": "Minute Cryptic",
+        "url": "https://www.minutecryptic.com",
+        "id": 230
+      },
+      {
+        "name": "On the Record",
+        "url": "https://www.washingtonpost.com/news-quiz",
+        "id": 268
+      },
+      {
+        "name": "Orbits",
+        "url": "https://www.playorbits.com",
+        "id": 271
+      },
+      {
+        "name": "Outword",
+        "url": "https://outword.me",
+        "id": "M17"
+      },
+      {
+        "name": "PlusWord",
+        "url": "https://puzzles-prod.telegraph.co.uk/plusword",
+        "id": 285
+      },
+      {
+        "name": "Pocket Puzzles",
+        "url": "https://playpocketpuzzles.com",
+        "id": 286
+      },
+      {
+        "name": "Rotaboxes",
+        "url": "https://rotaboxes.com",
+        "id": 329
+      },
+      {
+        "name": "sedecordle",
+        "url": "https://sedecordle.com",
+        "id": 335
+      },
+      {
+        "name": "Soulsborndle",
+        "url": "https://malthesers.github.io/soulsborndle",
+        "id": 348
+      },
+      {
+        "name": "Squareword",
+        "url": "https://squareword.org",
+        "id": 360
+      },
+      {
+        "name": "Verticle",
+        "url": "https://verticle.netlify.app",
+        "id": 408
+      },
+      {
+        "name": "Waffle",
+        "url": "https://wafflegame.net/daily",
+        "id": 413
+      },
+      {
+        "name": "WordLinx",
+        "url": "https://sacsgames.com/wordlinx/#/todaydaily",
+        "id": 442
+      },
+      {
+        "name": "xdle",
+        "url": "https://zaratustra.itch.io/xdle",
+        "id": 449
+      }
+    ]
+  },
+  {
+    "date": "2024-06-22",
+    "description": "Add <a href=\"https://dles.aukspot.com/changelog\">changelog page</a>.<br>Add 27 dles.<br>Remove 1 dle.",
+    "dles added": [
+      {
+        "name": "Capitale",
+        "url": "https://capitale.countryle.com",
+        "id": 35
+      },
+      {
+        "name": "Categories",
+        "url": "https://categories.clevergoat.com",
+        "id": 39
+      },
+      {
+        "name": "Circuits",
+        "url": "https://circuitsgame.com",
+        "id": "M23"
+      },
+      {
+        "name": "Daydoku",
+        "url": "https://www.daydoku.com",
+        "id": 88
+      },
+      {
+        "name": "Domino Fit",
+        "url": "https://dominofit.isotropic.us",
+        "id": 96
+      },
+      {
+        "name": "Dotadle",
+        "url": "https://dotadle.net",
+        "id": 99
+      },
+      {
+        "name": "faces",
+        "url": "https://faces.wtf",
+        "id": 115
+      },
+      {
+        "name": "Fusele",
+        "url": "https://fusele.netlify.app/?daily",
+        "id": 130
+      },
+      {
+        "name": "I Called Game",
+        "url": "https://icalledgame.hoopgrids.com",
+        "id": 174
+      },
+      {
+        "name": "LetterLoop",
+        "url": "https://theletterloop.com",
+        "id": 194
+      },
+      {
+        "name": "Logiquiz",
+        "url": "https://www.logiquiz.com",
+        "id": 215
+      },
+      {
+        "name": "Numbobulate",
+        "url": "https://www.numbobulate.com",
+        "id": 257
+      },
+      {
+        "name": "One Up Puzzle",
+        "url": "https://www.oneuppuzzle.com",
+        "id": 269
+      },
+      {
+        "name": "Pokedle",
+        "url": "https://pokedle.net",
+        "id": 289
+      },
+      {
+        "name": "relatle.io",
+        "url": "https://relatle.io",
+        "id": 323
+      },
+      {
+        "name": "Scramble",
+        "url": "https://playscramble.vercel.app/?daily=1",
+        "id": 332
+      },
+      {
+        "name": "Shikaku of the day",
+        "url": "https://shikakuofthe.day",
+        "id": 340
+      },
+      {
+        "name": "Squaredle",
+        "url": "https://squaredle.app",
+        "id": 358
+      },
+      {
+        "name": "Squeezy",
+        "url": "https://imsqueezy.com",
+        "id": 361
+      },
+      {
+        "name": "Summit Game",
+        "url": "https://summit-puzzle.me",
+        "id": 371
+      },
+      {
+        "name": "Symble",
+        "url": "https://www.symble.app",
+        "id": 377
+      },
+      {
+        "name": "Synthmaze",
+        "url": "https://synthmaze.heliante.io/#/daily",
+        "id": 378
+      },
+      {
+        "name": "Toppled",
+        "url": "https://bythomas.co.uk/toppled",
+        "id": 398
+      },
+      {
+        "name": "Worchle",
+        "url": "https://www.worchle.com",
+        "id": 423
+      },
+      {
+        "name": "Word Chain",
+        "url": "https://wordnerd.co/wordchain",
+        "id": 425
+      },
+      {
+        "name": "Wordistance",
+        "url": "https://wordistance.com",
+        "id": 439
+      },
+      {
+        "name": "Zebra Puzzles",
+        "url": "https://www.zebrapuzzles.com",
+        "id": 452
+      }
+    ],
+    "dles removed": [
+      {
+        "name": "Moviedle - Twenty Questions",
+        "url": "https://moviedle.xyz/twenty",
+        "reason": "Now part of a paid subscription.",
+        "id": "M24"
+      }
+    ]
+  },
+  {
+    "date": "2024-06-06",
+    "description": "Add favorites.<br>Add 4 dles.",
+    "dles added": [
+      {
+        "name": "Huewords",
+        "url": "https://huewords.snellman.net",
+        "id": 173
+      },
+      {
+        "name": "Flipple",
+        "url": "https://flipple.clevergoat.com",
+        "id": 126
+      },
+      {
+        "name": "Fibble",
+        "url": "https://fibble.xyz",
+        "id": 118
+      },
+      {
+        "name": "Word Grid",
+        "url": "https://wordgrid.clevergoat.com",
+        "id": 428
+      }
+    ]
+  },
+  {
+    "date": "2024-05-28",
+    "description": "Rework UI to be more compact.<br>Remove filtering, add categories.<br>Add a <a class=\"changelog-link\" href=\"/report\">form to report a bug.</a><br>Add site information.<br>Add menu to play random dle.<br>Add 84 dles.<br>Remove 2 dles.",
+    "dles added": [
+      {
+        "name": "Absurdle",
+        "url": "https://qntm.org/files/absurdle/absurdle.html",
+        "id": 2
+      },
+      {
+        "name": "Actorle",
+        "url": "https://actorle.com",
+        "id": 3
+      },
+      {
+        "name": "Actorle - Fill The Grid",
+        "url": "https://actorle.com/fill-the-grid",
+        "id": 4
+      },
+      {
+        "name": "Actorle - Storyboard",
+        "url": "https://actorle.com/storyboard",
+        "id": 5
+      },
+      {
+        "name": "Actorle TV",
+        "url": "https://actorle.tv",
+        "id": 6
+      },
+      {
+        "name": "Angle",
+        "url": "https://angle.wtf",
+        "id": 10
+      },
+      {
+        "name": "Anigrams",
+        "url": "https://anigrams.us",
+        "id": "M18"
+      },
+      {
+        "name": "Betweenle",
+        "url": "https://betweenle.com",
+        "id": 19
+      },
+      {
+        "name": "BrainBashers Daily 30 Seconds",
+        "url": "https://www.brainbashers.com/30seconds.asp",
+        "id": 28
+      },
+      {
+        "name": "BrainBashers Daily Puzzle",
+        "url": "https://www.brainbashers.com/dailypuzzle.asp",
+        "id": 29
+      },
+      {
+        "name": "Brickdle",
+        "url": "https://www.brickdle.com",
+        "id": 31
+      },
+      {
+        "name": "Calcle",
+        "url": "https://calclegame.com",
+        "id": 33
+      },
+      {
+        "name": "Cell Tower",
+        "url": "https://www.andrewt.net/puzzles/cell-tower",
+        "id": 41
+      },
+      {
+        "name": "Chainagram",
+        "url": "https://puzzletrail.games/puzzles/chainagram",
+        "id": 42
+      },
+      {
+        "name": "Chess.com Daily Puzzle",
+        "url": "https://www.chess.com/daily-chess-puzzle",
+        "id": 44
+      },
+      {
+        "name": "Chessle",
+        "url": "https://jackli.gg/chessle",
+        "id": 46
+      },
+      {
+        "name": "Chronoline",
+        "url": "https://chronoline.app/daily",
+        "id": "M13"
+      },
+      {
+        "name": "ColorGuesser",
+        "url": "https://colorguesser.com",
+        "id": 60
+      },
+      {
+        "name": "Countryle",
+        "url": "https://www.countryle.com",
+        "id": 68
+      },
+      {
+        "name": "CraftWord",
+        "url": "https://craftword.game",
+        "id": 72
+      },
+      {
+        "name": "Daily Jingle",
+        "url": "https://dailyjingle.me",
+        "id": 84
+      },
+      {
+        "name": "DayBrix",
+        "url": "https://vole.wtf/daybrix",
+        "id": 86
+      },
+      {
+        "name": "Dicele",
+        "url": "https://dicele.com",
+        "id": "M12"
+      },
+      {
+        "name": "Disney Heardle",
+        "url": "https://diz-nee-heardle.glitch.me",
+        "id": 92
+      },
+      {
+        "name": "Disorderly",
+        "url": "https://playdisorderly.com",
+        "id": 93
+      },
+      {
+        "name": "Duotrigordle",
+        "url": "https://duotrigordle.com",
+        "id": 102
+      },
+      {
+        "name": "Facedle",
+        "url": "https://facedle.app",
+        "id": 114
+      },
+      {
+        "name": "Figure",
+        "url": "https://figure.game",
+        "id": 119
+      },
+      {
+        "name": "Flickle",
+        "url": "https://flickle.app",
+        "id": 125
+      },
+      {
+        "name": "Gaps",
+        "url": "https://gaps.wtf",
+        "id": 136
+      },
+      {
+        "name": "GeoGrid",
+        "url": "https://www.geogridgame.com",
+        "id": 140
+      },
+      {
+        "name": "Gram Jam",
+        "url": "https://gramjam.app",
+        "id": 143
+      },
+      {
+        "name": "Griddle",
+        "url": "https://griddlegame.io",
+        "id": 145
+      },
+      {
+        "name": "Guess My Word",
+        "url": "https://hryanjones.com/guess-my-word",
+        "id": 146
+      },
+      {
+        "name": "Heardle 1950's",
+        "url": "https://50s.heardledecades.com",
+        "id": 157
+      },
+      {
+        "name": "Heardle 1960's",
+        "url": "https://60s.heardledecades.com",
+        "id": 158
+      },
+      {
+        "name": "Heardle 1970's",
+        "url": "https://70s.heardledecades.com",
+        "id": 159
+      },
+      {
+        "name": "Heardle 1980's",
+        "url": "https://80s.heardledecades.com",
+        "id": 160
+      },
+      {
+        "name": "Heardle 1990's",
+        "url": "https://90s.heardledecades.com",
+        "id": 161
+      },
+      {
+        "name": "Heardle 2000's",
+        "url": "https://00s.heardledecades.com",
+        "id": 162
+      },
+      {
+        "name": "Heardle 2010's",
+        "url": "https://heardle10s.com",
+        "id": 163
+      },
+      {
+        "name": "Heardle TV Themes",
+        "url": "https://tv.heardledecades.xyz",
+        "id": 165
+      },
+      {
+        "name": "IYKYK",
+        "url": "https://www.iykyk.com",
+        "id": 183
+      },
+      {
+        "name": "Jeopardle",
+        "url": "https://jeopardle.co",
+        "id": "M10"
+      },
+      {
+        "name": "Jumblie",
+        "url": "https://jumblie.com",
+        "id": 185
+      },
+      {
+        "name": "Juxtastat",
+        "url": "https://urbanstats.org/quiz.html",
+        "id": 186
+      },
+      {
+        "name": "LINKR",
+        "url": "https://www.playlinkr.net",
+        "id": 210
+      },
+      {
+        "name": "Lingule",
+        "url": "https://lingule.xyz",
+        "id": 204
+      },
+      {
+        "name": "Linxicon",
+        "url": "https://linxicon.com",
+        "id": 211
+      },
+      {
+        "name": "Locatle",
+        "url": "https://locatle.strct.net",
+        "id": 214
+      },
+      {
+        "name": "Lyricle",
+        "url": "https://www.lyricle.app",
+        "id": 217
+      },
+      {
+        "name": "Moviedle",
+        "url": "https://moviedle.xyz",
+        "id": 242
+      },
+      {
+        "name": "Moviedle - Fill The Grid",
+        "url": "https://moviedle.xyz/fill-the-grid",
+        "id": 244
+      },
+      {
+        "name": "Moviedle - Moviemoji",
+        "url": "https://moviedle.xyz/moviemoji",
+        "id": 245
+      },
+      {
+        "name": "Moviedle - Twenty Questions",
+        "url": "https://moviedle.xyz/twenty",
+        "id": "M24"
+      },
+      {
+        "name": "Moviemoji",
+        "url": "https://www.playmoviemoji.com",
+        "id": "M21"
+      },
+      {
+        "name": "Murdle",
+        "url": "https://murdle.com",
+        "id": 246
+      },
+      {
+        "name": "OEC Connectrade",
+        "url": "https://oec.world/en/games/connectrade",
+        "id": 265
+      },
+      {
+        "name": "OEC Pick 5",
+        "url": "https://oec.world/en/games/pick-5",
+        "id": 266
+      },
+      {
+        "name": "Order Up",
+        "url": "https://orderup.games",
+        "id": "M16"
+      },
+      {
+        "name": "Quintessential",
+        "url": "https://quintessential.fun",
+        "id": 309
+      },
+      {
+        "name": "regexle.com",
+        "url": "https://regexle.com",
+        "id": 318
+      },
+      {
+        "name": "regexle.ithea.de",
+        "url": "https://regexle.ithea.de",
+        "id": 319
+      },
+      {
+        "name": "ReHeardle",
+        "url": "https://reheardle.com",
+        "id": 320
+      },
+      {
+        "name": "ReHeardle Video Games",
+        "url": "https://reheardle.com/videogames",
+        "id": 321
+      },
+      {
+        "name": "Rhyme Time",
+        "url": "https://www.rhymetime.co",
+        "id": 325
+      },
+      {
+        "name": "Searchle",
+        "url": "https://searchle.net",
+        "id": 334
+      },
+      {
+        "name": "Smashdle",
+        "url": "https://smashdle.net",
+        "id": 342
+      },
+      {
+        "name": "Spotle",
+        "url": "https://spotle.io",
+        "id": 356
+      },
+      {
+        "name": "Squardle",
+        "url": "https://fubargames.se/squardle",
+        "id": 357
+      },
+      {
+        "name": "Squares",
+        "url": "https://squares.org",
+        "id": 359
+      },
+      {
+        "name": "Squirdle Daily",
+        "url": "https://squirdle.fireblend.com/daily.html",
+        "id": 362
+      },
+      {
+        "name": "Summle",
+        "url": "https://summle.net",
+        "id": 372
+      },
+      {
+        "name": "Survivle",
+        "url": "https://lazyguyy.github.io/survivle",
+        "id": 374
+      },
+      {
+        "name": "The Wikipedia Game",
+        "url": "https://www.thewikipediagame.com",
+        "id": "M25"
+      },
+      {
+        "name": "Thrice",
+        "url": "https://thrice.geekswhodrink.com",
+        "id": 391
+      },
+      {
+        "name": "Toddle",
+        "url": "https://toddle-puzzle.web.app",
+        "id": 396
+      },
+      {
+        "name": "Triplets",
+        "url": "https://www.tripletgame.com",
+        "id": 401
+      },
+      {
+        "name": "Unzoomed",
+        "url": "https://www.unzoomed.com/en",
+        "id": 406
+      },
+      {
+        "name": "WhenTaken",
+        "url": "https://whentaken.com",
+        "id": 416
+      },
+      {
+        "name": "Word Connection",
+        "url": "https://www.thewordfinder.com/word-connection",
+        "id": 427
+      },
+      {
+        "name": "Word Peaks",
+        "url": "https://vegeta897.github.io/word-peaks",
+        "id": 430
+      },
+      {
+        "name": "Word500",
+        "url": "https://word500.com/game?mode=daily",
+        "id": 433
+      },
+      {
+        "name": "Wordga",
+        "url": "https://wordga.com/daily",
+        "id": 437
+      }
+    ],
+    "dles removed": [
+      {
+        "name": "Daily Tomato",
+        "url": "https://www.rottentomatoes.com/movie-trivia",
+        "reason": "The game is on hiatus, starting May 10, 2024.",
+        "id": "M26"
+      },
+      {
+        "name": "Echo Chess",
+        "url": "https://echochess.com/game.html",
+        "reason": "Frustrating bug on mobile where dragging pieces down causes the browser to refresh.",
+        "id": 103
+      }
+    ]
+  },
+  {
+    "date": "2024-04-10",
+    "description": "Remove the tag 'guessing' to avoid confusion.<br>Add the tag 'colors'.<br>Add 23 dles.",
+    "dles added": [
+      {
+        "name": "Apparle",
+        "url": "https://www.apparle.com",
+        "id": "M22"
+      },
+      {
+        "name": "Boggdle",
+        "url": "https://simenmh.com/boggdle",
+        "id": 25
+      },
+      {
+        "name": "Chrono",
+        "url": "https://chrono.quest",
+        "id": 49
+      },
+      {
+        "name": "Doople",
+        "url": "https://www.dooplepuzzle.com",
+        "id": 97
+      },
+      {
+        "name": "Echo Chess",
+        "url": "https://echochess.com/game.html",
+        "id": 103
+      },
+      {
+        "name": "Hexcodle",
+        "url": "https://www.hexcodle.com",
+        "id": 167
+      },
+      {
+        "name": "Hexcodle Mini",
+        "url": "https://www.hexcodle.com/mini",
+        "id": 168
+      },
+      {
+        "name": "Karat",
+        "url": "https://karat.auronymous.com",
+        "id": 187
+      },
+      {
+        "name": "MapGame",
+        "url": "https://mapgame.net",
+        "id": 219
+      },
+      {
+        "name": "Neighborle",
+        "url": "https://neighborle.com",
+        "id": 250
+      },
+      {
+        "name": "Numble",
+        "url": "https://numble.wtf",
+        "id": 256
+      },
+      {
+        "name": "Phrasle",
+        "url": "https://phrasle.com",
+        "id": 279
+      },
+      {
+        "name": "Polygonle",
+        "url": "https://www.polygonle.com",
+        "id": 292
+      },
+      {
+        "name": "Relatle",
+        "url": "https://www.relatle.lol",
+        "id": 322
+      },
+      {
+        "name": "Satle",
+        "url": "https://satle.ca",
+        "id": 331
+      },
+      {
+        "name": "Spellie",
+        "url": "https://spelliegame.com/#easy",
+        "id": 352
+      },
+      {
+        "name": "Stackle",
+        "url": "https://www.stackle.fun",
+        "id": 364
+      },
+      {
+        "name": "Stepdle",
+        "url": "https://www.stepdle.com",
+        "id": 369
+      },
+      {
+        "name": "Thirdle",
+        "url": "https://thirdle.org",
+        "id": 388
+      },
+      {
+        "name": "Twofer Goofer",
+        "url": "https://twofergoofer.com",
+        "id": 403
+      },
+      {
+        "name": "Unolingo",
+        "url": "https://games.usatoday.com/games/uclick-unolingo",
+        "id": 404
+      },
+      {
+        "name": "Where in the USA is this?",
+        "url": "https://pudding.cool/games/where",
+        "id": 418
+      },
+      {
+        "name": "Word Chase",
+        "url": "https://wordchase.semantle.com",
+        "id": 426
+      }
+    ]
+  },
+  {
+    "date": "2024-03-17",
+    "description": "Redesign with Tailwind CSS.<br>Add button to play a random dle.<br>Remove tags: architecture, art, and color.<br> Add 7 dles.",
+    "dles added": [
+      {
+        "name": "Acted",
+        "url": "https://acted.wtf",
+        "id": "M20"
+      },
+      {
+        "name": "Cinematrix",
+        "url": "https://www.vulture.com/article/daily-movie-grid-trivia-game-cinematrix.html",
+        "id": 52
+      },
+      {
+        "name": "Foodguessr",
+        "url": "https://www.foodguessr.com/daily",
+        "id": 128
+      },
+      {
+        "name": "Guess The Audio",
+        "url": "https://guesstheaudio.com",
+        "id": 148
+      },
+      {
+        "name": "NYT Strands",
+        "url": "https://www.nytimes.com/games/strands",
+        "id": 261
+      },
+      {
+        "name": "Plotwords",
+        "url": "https://plotwords.com/daily",
+        "id": 284
+      },
+      {
+        "name": "Primel",
+        "url": "https://converged.yt/primel",
+        "id": 294
+      }
+    ]
+  },
+  {
+    "date": "2024-02-27",
+    "description": "Add a <a class=\"changelog-link\" href=\"https://github.com/aukspot/dles/blob/main/CHANGELOG.md\" target=\"_blank\">CHANGELOG.md</a>.<br>Add 13 dles.",
+    "dles added": [
+      {
+        "name": "Hitori Conquest",
+        "url": "https://hitoriconquest.com",
+        "id": 170
+      },
+      {
+        "name": "Keyword",
+        "url": "https://www.washingtonpost.com/games/keyword",
+        "id": 188
+      },
+      {
+        "name": "Letterset",
+        "url": "https://www.letterset.net/daily",
+        "id": 195
+      },
+      {
+        "name": "Mathler",
+        "url": "https://www.mathler.com",
+        "id": 222
+      },
+      {
+        "name": "Mislettered",
+        "url": "https://tryhardguides.com/mislettered",
+        "id": 231
+      },
+      {
+        "name": "One Word Search",
+        "url": "https://onewordsearch.com",
+        "id": 270
+      },
+      {
+        "name": "pedantle",
+        "url": "https://cemantle.certitudes.org/pedantle",
+        "id": 276
+      },
+      {
+        "name": "PopCultured",
+        "url": "https://histordle.com/popcultured",
+        "id": 293
+      },
+      {
+        "name": "Rogule",
+        "url": "https://rogule.com/game.html",
+        "id": 327
+      },
+      {
+        "name": "Songle",
+        "url": "https://histordle.com/songle",
+        "id": 345
+      },
+      {
+        "name": "Sumplete",
+        "url": "https://sumplete.com/daily",
+        "id": 373
+      },
+      {
+        "name": "Syllacrostic",
+        "url": "https://www.syllacrostic.com/daily-puzzle",
+        "id": 376
+      },
+      {
+        "name": "Yeardle",
+        "url": "https://histordle.com/yeardle",
+        "id": 450
+      }
+    ]
+  },
+  {
+    "date": "2024-02-17",
+    "description": "Add 8 dles.",
+    "dles added": [
+      {
+        "name": "Connections Game",
+        "url": "https://connectionsgame.org",
+        "id": 65
+      },
+      {
+        "name": "Daily Tomato",
+        "url": "https://www.rottentomatoes.com/movie-trivia",
+        "id": "M26"
+      },
+      {
+        "name": "Dordle",
+        "url": "https://zaratustra.itch.io/dordle",
+        "id": 98
+      },
+      {
+        "name": "hello wordl",
+        "url": "https://hellowordl.net/?today",
+        "id": 166
+      },
+      {
+        "name": "Listed",
+        "url": "https://listed.fun",
+        "id": "M15"
+      },
+      {
+        "name": "Puckdoku",
+        "url": "https://www.puckdoku.com",
+        "id": 295
+      },
+      {
+        "name": "Quordle",
+        "url": "https://quordlegame.com",
+        "id": 312
+      },
+      {
+        "name": "Spelling Bee",
+        "url": "https://spellsbee.com",
+        "id": 353
+      }
+    ]
+  },
+  {
+    "date": "2024-02-16",
+    "description": "Add a <a class=\"changelog-link\" href=\"/suggest\">suggestion form</a>.<br>Add 4 dles.",
+    "dles added": [
+      {
+        "name": "Adoptle",
+        "url": "https://tryhardguides.com/adoptle",
+        "id": 7
+      },
+      {
+        "name": "Concludle",
+        "url": "https://tryhardguides.com/concludle",
+        "id": 63
+      },
+      {
+        "name": "Globle Capitals",
+        "url": "https://globle-capitals.com",
+        "id": 142
+      },
+      {
+        "name": "NYT Sudoku",
+        "url": "https://www.nytimes.com/puzzles/sudoku",
+        "id": 262
+      }
+    ]
+  },
+  {
+    "date": "2024-02-14",
+    "description": "Add a proper <a class=\"changelog-link\" href=\"https://github.com/aukspot/dles/blob/main/README.md\" target=\"_blank\">README</a>.<br>Remove daily and unlimited tags for simplicity.<br>Add archive tag. <br>Add 7 dles, remove 1.",
+    "dles added": [
+      {
+        "name": "Archiguessr",
+        "url": "https://archiguesser.com",
+        "id": 12
+      },
+      {
+        "name": "Daydle",
+        "url": "https://daydle.com",
+        "id": 87
+      },
+      {
+        "name": "Immaculate Grid: Hockey",
+        "url": "https://www.immaculategrid.com/hockey",
+        "id": 177
+      },
+      {
+        "name": "Nerdle",
+        "url": "https://nerdlegame.com",
+        "id": 251
+      },
+      {
+        "name": "Quizl",
+        "url": "https://quizl.io",
+        "id": 310
+      },
+      {
+        "name": "Redactle",
+        "url": "https://redactle.net",
+        "id": 316
+      },
+      {
+        "name": "WordAll",
+        "url": "https://wordall.xyz",
+        "id": 434
+      }
+    ],
+    "dles removed": [
+      {
+        "name": "Gamedle Classic Unlimited",
+        "url": "https://www.gamedle.wtf/unlimited",
+        "reason": "Not a daily game.",
+        "id": "M27"
+      }
+    ]
+  },
+  {
+    "date": "2024-02-13",
+    "description": "Add tags with include/exclude filters.<br>Add dark mode toggle.<br>Add 57 dles.",
+    "dles added": [
+      {
+        "name": "Bandle",
+        "url": "https://bandle.app",
+        "id": 15
+      },
+      {
+        "name": "Box Office Game",
+        "url": "https://boxofficega.me",
+        "id": 26
+      },
+      {
+        "name": "Chronophoto",
+        "url": "https://www.chronophoto.app",
+        "id": 50
+      },
+      {
+        "name": "Cine2Nerdle",
+        "url": "https://www.cinenerdle2.app",
+        "id": 51
+      },
+      {
+        "name": "Colorfle",
+        "url": "https://colorfle.org/index.html",
+        "id": 59
+      },
+      {
+        "name": "Combinations",
+        "url": "https://combinations.org",
+        "id": 61
+      },
+      {
+        "name": "Conexo",
+        "url": "https://conexo.ws/en/daily",
+        "id": 64
+      },
+      {
+        "name": "Connections",
+        "url": "https://www.nytimes.com/games/connections",
+        "id": 258
+      },
+      {
+        "name": "Contexto",
+        "url": "https://contexto.me",
+        "id": 66
+      },
+      {
+        "name": "Costcodle",
+        "url": "https://costcodle.com",
+        "id": 67
+      },
+      {
+        "name": "Crosswordle",
+        "url": "https://crosswordle.vercel.app",
+        "id": 75
+      },
+      {
+        "name": "crosswordle.com",
+        "url": "https://crosswordle.com",
+        "id": 76
+      },
+      {
+        "name": "crosswordle.org",
+        "url": "https://crosswordle.org",
+        "id": 77
+      },
+      {
+        "name": "Daily Dozen Trivia",
+        "url": "https://dailydozentrivia.com",
+        "id": 81
+      },
+      {
+        "name": "Flagdle",
+        "url": "https://www.flagdle.org",
+        "id": 121
+      },
+      {
+        "name": "Flagle",
+        "url": "https://www.flagle.io",
+        "id": 123
+      },
+      {
+        "name": "Framed",
+        "url": "https://framed.wtf",
+        "id": 129
+      },
+      {
+        "name": "Gamedle Artwork",
+        "url": "https://www.gamedle.wtf/artwork",
+        "id": 132
+      },
+      {
+        "name": "Gamedle Classic",
+        "url": "https://www.gamedle.wtf/classic",
+        "id": 133
+      },
+      {
+        "name": "Gamedle Classic Unlimited",
+        "url": "https://www.gamedle.wtf/unlimited",
+        "id": "M27"
+      },
+      {
+        "name": "Gamedle Guess",
+        "url": "https://www.gamedle.wtf/guess",
+        "id": 134
+      },
+      {
+        "name": "Gamedle Keywords",
+        "url": "https://www.gamedle.wtf/keywords",
+        "id": 135
+      },
+      {
+        "name": "Globle",
+        "url": "https://globle-game.com/game",
+        "id": 141
+      },
+      {
+        "name": "Guess The Game",
+        "url": "https://guessthe.game",
+        "id": 150
+      },
+      {
+        "name": "Housle",
+        "url": "https://housle.house",
+        "id": 171
+      },
+      {
+        "name": "Immaculate Footy",
+        "url": "https://www.immaculatefooty.com",
+        "id": 175
+      },
+      {
+        "name": "Immaculate Grid: Baseball",
+        "url": "https://www.immaculategrid.com",
+        "id": 176
+      },
+      {
+        "name": "Immaculate Grid: Men's Basketball",
+        "url": "https://www.immaculategrid.com/basketball/mens",
+        "id": 178
+      },
+      {
+        "name": "Immaculate Grid: Pro Football",
+        "url": "https://www.immaculategrid.com/football",
+        "id": 179
+      },
+      {
+        "name": "Immaculate Grid: Women's Basketball",
+        "url": "https://www.immaculategrid.com/basketball/womens",
+        "id": 180
+      },
+      {
+        "name": "Metaflora",
+        "url": "https://flora.metazooa.com",
+        "id": 225
+      },
+      {
+        "name": "Metazooa",
+        "url": "https://metazooa.com",
+        "id": 226
+      },
+      {
+        "name": "MLB Pickle",
+        "url": "https://www.mlbpickle.com",
+        "id": 232
+      },
+      {
+        "name": "Movie Grid",
+        "url": "https://moviegrid.io",
+        "id": 237
+      },
+      {
+        "name": "Movie to Movie",
+        "url": "https://movietomovie.com",
+        "id": 241
+      },
+      {
+        "name": "NYT Mini Crossword",
+        "url": "https://www.nytimes.com/crosswords/game/mini",
+        "id": 260
+      },
+      {
+        "name": "OEC Tradle",
+        "url": "https://games.oec.world/en/tradle",
+        "id": 267
+      },
+      {
+        "name": "Petdle",
+        "url": "https://petdle.link",
+        "id": 278
+      },
+      {
+        "name": "Pokedoku",
+        "url": "https://pokedoku.com",
+        "id": 290
+      },
+      {
+        "name": "Puzzmo - Crossword",
+        "url": "https://www.puzzmo.com/play/crossword",
+        "id": 298
+      },
+      {
+        "name": "Puzzmo - Flipart",
+        "url": "https://www.puzzmo.com/play/flip-art",
+        "id": 299
+      },
+      {
+        "name": "Puzzmo - Really Bad Chess",
+        "url": "https://www.puzzmo.com/play/really-bad-chess",
+        "id": 302
+      },
+      {
+        "name": "Puzzmo - Spelltower",
+        "url": "https://www.puzzmo.com/play/spelltower",
+        "id": 303
+      },
+      {
+        "name": "Puzzmo - Typeshift",
+        "url": "https://www.puzzmo.com/play/typeshift",
+        "id": 304
+      },
+      {
+        "name": "Semantle",
+        "url": "https://semantle.com",
+        "id": 336
+      },
+      {
+        "name": "Songless",
+        "url": "https://lessgames.com/songless",
+        "id": 346
+      },
+      {
+        "name": "Spellcheck",
+        "url": "https://spellcheck.xyz",
+        "id": 351
+      },
+      {
+        "name": "Statele",
+        "url": "https://statele.teuteuf.fr",
+        "id": 367
+      },
+      {
+        "name": "TimeGuessr",
+        "url": "https://timeguessr.com",
+        "id": 394
+      },
+      {
+        "name": "travle",
+        "url": "https://travle.earth",
+        "id": 400
+      },
+      {
+        "name": "Weaver",
+        "url": "https://weavergame.org",
+        "id": 414
+      },
+      {
+        "name": "WhereTaken",
+        "url": "https://wheretaken.teuteuf.fr",
+        "id": 419
+      },
+      {
+        "name": "WhereTaken USA",
+        "url": "https://wheretakenusa.teuteuf.fr",
+        "id": 420
+      },
+      {
+        "name": "Word Waffle",
+        "url": "https://wordwaffle.org",
+        "id": 432
+      },
+      {
+        "name": "Wordle",
+        "url": "https://www.nytimes.com/games/wordle/index.html",
+        "id": 263
+      },
+      {
+        "name": "Wordless",
+        "url": "https://lessgames.com/wordless",
+        "id": 440
+      },
+      {
+        "name": "Worldle",
+        "url": "https://worldle.teuteuf.fr",
+        "id": 445
+      }
+    ]
+  }
+]

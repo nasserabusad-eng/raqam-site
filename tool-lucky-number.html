@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="https://d8j0ntlcm91z4.cloudfront.net/user_3Gqr8cNvaHecl4CfmnUHSrGscwp/hf_20260914_143316_077bc276-91b2-49e0-9e63-7414df6518b0.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>رقمك المحظوظ | حاسبة الأرقام ومسار الحياة | رقم</title>
+<meta name="description" content="اكتشف رقمك المحظوظ ورقم مسار حياتك من تاريخ ميلادك — حاسبة أرقام ممتعة بالعربية للتسلية. احسبه فوراً وشارك نتيجتك.">
+<meta name="keywords" content="رقمك المحظوظ, رقم الحظ, مسار الحياة, حاسبة الأرقام, علم الأرقام">
+<link rel="canonical" href="https://raqam.ai/tool-lucky-number.html">
+<meta property="og:title" content="رقمك المحظوظ — رقم">
+<meta property="og:description" content="اكتشف رقمك المحظوظ ورقم مسار حياتك.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_SA">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/styles.css">
+<style>
+  .wrap{max-width:560px;margin-inline:auto;padding:24px 20px}
+  .panel{background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:24px}
+  label{display:block;font-family:"Tajawal",sans-serif;font-weight:700;color:var(--navy);margin-bottom:8px}
+  input[type=date],input[type=text]{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:8px;font-family:"Space Grotesk","Tajawal",sans-serif;font-size:16px;color:var(--navy);background:#fff;margin-bottom:16px}
+  .btn{display:block;width:100%;background:var(--navy-dark);color:#fff;border:none;cursor:pointer;padding:14px;border-radius:8px;font-weight:800;font-family:"Tajawal",sans-serif;font-size:1.05rem}
+  .btn:hover{background:var(--navy)}
+  .result{margin-top:22px;display:none}.result.show{display:block}
+  .big{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:18px}
+  .numcard{background:var(--sand-bg);border:1px solid var(--cream);border-radius:14px;padding:18px 22px;text-align:center;min-width:140px}
+  .numcard .l{color:var(--muted-2);font-family:"Tajawal",sans-serif;font-weight:700;font-size:13px}
+  .numcard .n{font-family:"Space Grotesk",sans-serif;font-size:54px;font-weight:700;color:var(--gold-ink);line-height:1.1}
+  .desc{background:#fbf7ef;border-inline-start:3px solid var(--gold);border-radius:8px;padding:14px 16px;color:var(--ink);font-family:"Tajawal",sans-serif;line-height:1.9;margin-bottom:14px}
+  .desc b{color:var(--navy)}
+  .lucky-list{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:6px 0 16px}
+  .lucky-list span{background:var(--navy-dark);color:var(--sand);font-family:"Space Grotesk",sans-serif;font-weight:700;width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px}
+  .btn-share{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:var(--navy-dark);font-weight:800;border:none;cursor:pointer;padding:12px 22px;border-radius:8px;font-family:"Tajawal",sans-serif;font-size:15px}
+  .disc{color:var(--muted);font-size:12.5px;text-align:center;margin-top:16px;font-family:"Tajawal",sans-serif}
+  .toast{position:fixed;inset-inline:0;bottom:26px;display:flex;justify-content:center;pointer-events:none;opacity:0;transition:opacity .25s}
+  .toast.show{opacity:1}.toast span{background:var(--navy-dark);color:#fff;border-radius:999px;padding:10px 20px;font-size:14px;font-family:"Tajawal",sans-serif}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container masthead">
+    <div class="search"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6b7488" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg></div>
+    <div class="center"><a href="/" class="brand" style="justify-content:center"><img class="logo-img" src="https://d8j0ntlcm91z4.cloudfront.net/user_3Gqr8cNvaHecl4CfmnUHSrGscwp/hf_20260914_143316_077bc276-91b2-49e0-9e63-7414df6518b0.png" alt="رقم" width="46" height="46"><span class="center word" style="font-size:38px">رقم</span></a><div class="tagline">RAQAM · ECONOMY &amp; TECH</div></div>
+    <div class="actions"><a href="#" class="btn-sub">اشترك</a><a href="#" class="btn-in">دخول</a></div>
+  </div>
+  <div class="nav-bar"><nav class="container nav-links"><a href="/">الرئيسية</a><a href="#">اقتصاد</a><a href="#">أسواق ومال</a><a href="#">تقنية</a><a href="#">العالم</a><a href="/end-of-service.html" class="tools">أدوات وحاسبات</a><a href="/games.html" class="tools">ألعاب الأرقام</a></nav></div>
+</header>
+
+<div class="tool-head">
+  <div class="container">
+    <div class="crumbs"><a href="/">الرئيسية</a> ← <a href="/games.html">ألعاب الأرقام</a> ← رقمك المحظوظ</div>
+    <h1>🍀 رقمك المحظوظ</h1>
+    <p>اكتشف رقم مسار حياتك وأرقامك المحظوظة من تاريخ ميلادك — حاسبة أرقام ممتعة للتسلية.</p>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="panel">
+    <label for="bd">تاريخ ميلادك</label>
+    <input type="date" id="bd" max="2026-12-31">
+    <label for="nm">اسمك (اختياري)</label>
+    <input type="text" id="nm" placeholder="مثال: ناصر" autocomplete="off">
+    <button class="btn" id="go">احسب رقمي المحظوظ</button>
+
+    <div class="result" id="result">
+      <div class="big">
+        <div class="numcard"><div class="l">رقم مسار الحياة</div><div class="n" id="lifepath">—</div></div>
+        <div class="numcard"><div class="l">رقم اليوم المحظوظ</div><div class="n" id="today">—</div></div>
+      </div>
+      <div class="desc" id="lpdesc"></div>
+      <div style="text-align:center;color:var(--muted-2);font-family:'Tajawal',sans-serif;font-weight:700;margin-bottom:4px">أرقامك المحظوظة</div>
+      <div class="lucky-list" id="luckyList"></div>
+      <div style="text-align:center"><button class="btn-share" id="share">📋 شارك نتيجتك</button></div>
+    </div>
+    <p class="disc">هذه الحاسبة للتسلية فقط ولا تُعدّ تنبؤاً أو نصيحة من أي نوع.</p>
+  </div>
+</div>
+
+<div class="ad-slot" style="max-width:560px;margin-inline:auto">مساحة إعلانية</div>
+
+<footer class="site-footer">
+  <div class="cols">
+    <div><a href="/" class="brand"><img class="logo-img" src="https://d8j0ntlcm91z4.cloudfront.net/user_3Gqr8cNvaHecl4CfmnUHSrGscwp/hf_20260914_143316_077bc276-91b2-49e0-9e63-7414df6518b0.png" alt="رقم" width="46" height="46"><span class="word">رقم</span></a><p>أخبار الاقتصاد والتقنية بالعربية، مع أدوات وحاسبات وألعاب أرقام.</p></div>
+    <div><h4>ألعاب وأدوات</h4><a href="/games.html">ألعاب الأرقام</a><a href="/tool-lucky-number.html">رقمك المحظوظ</a><a href="/tool-chart.html">مولّد الرسوم البيانية</a></div>
+  </div>
+  <div class="fine"><div class="container">© <span id="yr"></span> رقم (raqam.ai) — جميع الحقوق محفوظة.</div></div>
+</footer>
+
+<div class="toast" id="toast"><span id="toastText"></span></div>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+(function(){
+  "use strict";
+  function reduce(n){ while(n>9){ var s=0; (''+n).split('').forEach(function(d){s+=+d;}); n=s; } return n; }
+  var DESC={
+    1:['القيادة والاستقلال','شخصية رائدة تحب المبادرة وتصنع طريقها بنفسها. طموحة وواثقة.'],
+    2:['التعاون والدبلوماسية','حسّاسة ومتوازنة، تجيد العمل مع الآخرين وبناء الجسور.'],
+    3:['الإبداع والتعبير','اجتماعية ومرحة ومليئة بالأفكار؛ التواصل والفن نقطة قوتك.'],
+    4:['النظام والانضباط','عملية ومنظّمة وموثوقة؛ تبنين على أساس متين وتنجزين ما تبدئين.'],
+    5:['الحرية والمغامرة','فضولية ومتعطشة للتجربة والتغيير؛ تكرهين الروتين وتحبين السفر.'],
+    6:['المسؤولية والرعاية','دافئة ومسؤولة، محورك العائلة والانسجام ومساعدة من حولك.'],
+    7:['التحليل والحكمة','عقلية باحثة تحب التأمل والمعرفة العميقة؛ حدسك قوي.'],
+    8:['الطموح والإنجاز','قيادية وطموحة في العمل والمال؛ تجيدين إدارة الموارد وتحقيق الأهداف.'],
+    9:['العطاء والإنسانية','مثالية وكريمة، تهتمين بالقضايا الكبرى ومساعدة الآخرين.']
+  };
+  function todaySeed(){ var d=new Date(); return d.getFullYear()*10000+(d.getMonth()+1)*100+d.getDate(); }
+  function calc(){ var v=document.getElementById('bd').value; if(!v){ flash('اختر تاريخ ميلادك أولاً'); return; }
+    var digits=v.replace(/-/g,''); var sum=0; digits.split('').forEach(function(d){ sum+=+d; }); var lp=reduce(sum); if(lp===0)lp=9;
+    document.getElementById('lifepath').textContent=lp;
+    var t=reduce((sum+todaySeed())%97+1); document.getElementById('today').textContent=t;
+    var d=DESC[lp]; document.getElementById('lpdesc').innerHTML='<b>مسار الحياة '+lp+' — '+d[0]+':</b> '+d[1];
+    // lucky numbers: derive 4 distinct from digits+lifepath
+    var set={}; var base=sum; var out=[]; var n=base;
+    while(out.length<5){ n=(n*7+13)%90+1; var r=n; if(!set[r]){ set[r]=1; out.push(r); } if(out.length>50)break; }
+    var ll=document.getElementById('luckyList'); ll.innerHTML=''; out.forEach(function(x){ var s=document.createElement('span'); s.textContent=x; ll.appendChild(s); });
+    window.__res={lp:lp,t:t,lucky:out};
+    document.getElementById('result').classList.add('show');
+  }
+  document.getElementById('go').addEventListener('click',calc);
+  document.getElementById('share').addEventListener('click',function(){ var r=window.__res; if(!r)return;
+    var nm=document.getElementById('nm').value.trim(); var who=nm?(nm+': '):'';
+    var t=who+'رقم مسار حياتي '+r.lp+' ورقمي المحظوظ اليوم '+r.t+' 🍀\nأرقامي المحظوظة: '+r.lucky.join(' · ')+'\nاحسب رقمك على رقم: raqam.ai/tool-lucky-number.html';
+    if(navigator.share){ navigator.share({text:t}).catch(function(){copy(t);}); } else copy(t); });
+  function copy(t){ if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(t).then(function(){flash('تم نسخ نتيجتك ✓');},function(){fb(t);}); } else fb(t); }
+  function fb(t){ try{ var ta=document.createElement('textarea'); ta.value=t; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta); flash('تم النسخ ✓'); }catch(e){ flash('انسخ يدوياً'); } }
+  var toast=document.getElementById('toast'), toastText=document.getElementById('toastText'), tT;
+  function flash(m){ toastText.textContent=m; toast.classList.add('show'); clearTimeout(tT); tT=setTimeout(function(){toast.classList.remove('show');},1600); }
+})();
+</script>
+<script src="/assets/site.js" defer></script>
+<!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "d6b527c601904cc791075bbea8fc5827"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="https://d8j0ntlcm91z4.cloudfront.net/user_3Gqr8cNvaHecl4CfmnUHSrGscwp/hf_20260914_143316_077bc276-91b2-49e0-9e63-7414df6518b0.png">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>سودوكو بالعربية | لعبة الأرقام المنطقية | رقم</title>
+<meta name="description" content="لعبة سودوكو المجانية بالعربية: املأ الشبكة بالأرقام من ١ إلى ٩ دون تكرار في أي صف أو عمود أو مربع. ثلاثة مستويات صعوبة ومؤقّت — تُلعب في المتصفح.">
+<meta name="keywords" content="سودوكو, لعبة سودوكو, ألعاب أرقام, ألعاب منطق, سودوكو بالعربي">
+<link rel="canonical" href="https://raqam.ai/game-sudoku.html">
+<meta property="og:title" content="سودوكو — رقم">
+<meta property="og:description" content="املأ الشبكة بالأرقام من ١ إلى ٩ دون تكرار.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_SA">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/styles.css">
+<style>
+  .wrap{max-width:480px;margin-inline:auto;padding:24px 20px}
+  .bar{display:flex;gap:10px;align-items:center;justify-content:center;margin-bottom:16px;flex-wrap:wrap}
+  .seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;box-shadow:var(--shadow)}
+  .seg button{border:none;background:#fff;color:var(--navy);font-family:"Tajawal",sans-serif;font-weight:700;font-size:14px;padding:9px 14px;cursor:pointer}
+  .seg button.on{background:var(--navy-dark);color:#fff}
+  .stat{background:#fff;border:1px solid var(--line);border-radius:8px;padding:8px 14px;text-align:center;box-shadow:var(--shadow);font-family:"Space Grotesk",sans-serif;color:var(--navy);font-weight:700}
+  .stat .l{color:var(--muted);font-size:11px;font-weight:700;font-family:"Tajawal",sans-serif;display:block}
+  .grid9{width:min(94vw,440px);aspect-ratio:1;margin-inline:auto;display:grid;grid-template-columns:repeat(9,1fr);background:var(--navy-dark);border:3px solid var(--navy-dark);border-radius:8px;overflow:hidden;gap:1px;touch-action:manipulation}
+  .sc{background:#fff;display:flex;align-items:center;justify-content:center;font-family:"Space Grotesk",sans-serif;font-size:clamp(16px,5vw,24px);color:var(--navy);cursor:pointer;user-select:none;aspect-ratio:1}
+  .sc.fixed{color:var(--navy-dark);font-weight:700;background:#f6f1e6;cursor:default}
+  .sc.sel{background:var(--sand)}
+  .sc.peer{background:#f3 efe6}
+  .sc.same{background:#efe0c0}
+  .sc.bad{color:#c0392b}
+  .sc.br{border-inline-end:2px solid var(--navy-dark)}
+  .sc.bb{border-bottom:2px solid var(--navy-dark)}
+  .keypad{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;max-width:400px;margin:16px auto 0}
+  .key{background:#fff;border:1px solid var(--line);border-radius:9px;padding:14px 0;text-align:center;font-family:"Space Grotesk",sans-serif;font-size:20px;color:var(--navy);cursor:pointer;font-weight:700;box-shadow:var(--shadow)}
+  .key:active{transform:translateY(1px);background:var(--sand-bg)}
+  .key.wide{grid-column:span 2;font-family:"Tajawal",sans-serif;font-weight:800;font-size:15px}
+  .msg{text-align:center;color:var(--muted-2);min-height:24px;margin-top:14px;font-weight:800;font-family:"Tajawal",sans-serif}
+  .win{color:#3f7d5a}
+  .hint{color:var(--muted);text-align:center;font-size:13px;margin-top:14px;font-family:"Tajawal",sans-serif}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container masthead">
+    <div class="search"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6b7488" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg></div>
+    <div class="center"><a href="/" class="brand" style="justify-content:center"><img class="logo-img" src="https://d8j0ntlcm91z4.cloudfront.net/user_3Gqr8cNvaHecl4CfmnUHSrGscwp/hf_20260914_143316_077bc276-91b2-49e0-9e63-7414df6518b0.png" alt="رقم" width="46" height="46"><span class="center word" style="font-size:38px">رقم</span></a><div class="tagline">RAQAM · ECONOMY &amp; TECH</div></div>
+    <div class="actions"><a href="#" class="btn-sub">اشترك</a><a href="#" class="btn-in">دخول</a></div>
+  </div>
+  <div class="nav-bar"><nav class="container nav-links"><a href="/">الرئيسية</a><a href="#">اقتصاد</a><a href="#">أسواق ومال</a><a href="#">تقنية</a><a href="#">العالم</a><a href="/end-of-service.html" class="tools">أدوات وحاسبات</a><a href="/games.html" class="tools active">ألعاب الأرقام</a></nav></div>
+</header>
+
+<div class="tool-head">
+  <div class="container">
+    <div class="crumbs"><a href="/">الرئيسية</a> ← <a href="/games.html">ألعاب الأرقام</a> ← سودوكو</div>
+    <h1>▦ سودوكو</h1>
+    <p>املأ الشبكة بالأرقام من ١ إلى ٩ بحيث لا يتكرّر أي رقم في الصف أو العمود أو المربع الواحد.</p>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="bar">
+    <div class="seg" id="diff">
+      <button data-d="0" class="on">سهل</button><button data-d="1">متوسط</button><button data-d="2">صعب</button>
+    </div>
+    <div class="stat"><span class="l">الوقت</span><span id="time">0:00</span></div>
+    <button class="newBtn" id="newBtn" style="background:var(--navy-dark);color:#fff;border:none;cursor:pointer;padding:9px 18px;border-radius:8px;font-weight:800;font-family:'Tajawal',sans-serif">لعبة جديدة</button>
+  </div>
+
+  <div class="grid9" id="grid"></div>
+
+  <div class="keypad" id="keypad"></div>
+  <div class="msg" id="msg"></div>
+  <p class="hint">انقر خانة فارغة ثم اختر الرقم. على الكمبيوتر اكتب ١-٩ واحذف بـ Backspace.</p>
+</div>
+
+<div class="ad-slot" style="max-width:480px;margin-inline:auto">مساحة إعلانية</div>
+
+<footer class="site-footer">
+  <div class="cols">
+    <div><a href="/" class="brand"><img class="logo-img" src="https://d8j0ntlcm91z4.cloudfront.net/user_3Gqr8cNvaHecl4CfmnUHSrGscwp/hf_20260914_143316_077bc276-91b2-49e0-9e63-7414df6518b0.png" alt="رقم" width="46" height="46"><span class="word">رقم</span></a><p>أخبار الاقتصاد والتقنية بالعربية، مع أدوات وحاسبات وألعاب أرقام.</p></div>
+    <div><h4>ألعاب الأرقام</h4><a href="/game-daily-number.html">لغز الرقم اليومي</a><a href="/game-2048.html">2048</a><a href="/game-sudoku.html">سودوكو</a><a href="/game-math-sprint.html">سباق الحساب</a></div>
+  </div>
+  <div class="fine"><div class="container">© <span id="yr"></span> رقم (raqam.ai) — جميع الحقوق محفوظة.</div></div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+(function(){
+  "use strict";
+  var gridEl=document.getElementById('grid'), keypad=document.getElementById('keypad'), msgEl=document.getElementById('msg'), timeEl=document.getElementById('time');
+  var solution=[], puzzle=[], cellsData=[], cellEls=[], sel=-1, diff=0, timer=null, secs=0, won=false;
+
+  function shuffle(a){ for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i];a[i]=a[j];a[j]=t; } return a; }
+  function ok(g,i,v){ var r=Math.floor(i/9), c=i%9;
+    for(var k=0;k<9;k++){ if(g[r*9+k]===v)return false; if(g[k*9+c]===v)return false; }
+    var br=Math.floor(r/3)*3, bc=Math.floor(c/3)*3;
+    for(var y=0;y<3;y++)for(var x=0;x<3;x++){ if(g[(br+y)*9+(bc+x)]===v)return false; } return true; }
+  function fill(g,i){ if(i>=81)return true; if(g[i]!==0)return fill(g,i+1);
+    var nums=shuffle([1,2,3,4,5,6,7,8,9]);
+    for(var n=0;n<9;n++){ if(ok(g,i,nums[n])){ g[i]=nums[n]; if(fill(g,i+1))return true; g[i]=0; } } return false; }
+  function countSolutions(g,limit){ // returns up to `limit` solution count
+    var i=g.indexOf(0); if(i===-1)return 1; var total=0;
+    for(var v=1;v<=9;v++){ if(ok(g,i,v)){ g[i]=v; total+=countSolutions(g,limit-total); g[i]=0; if(total>=limit)break; } } return total; }
+  function generate(){ var g=new Array(81).fill(0); fill(g,0); solution=g.slice();
+    var remove=[34,44,52][diff]; // holes
+    var idx=shuffle(Array.from({length:81},function(_,i){return i;})); puzzle=g.slice(); var removed=0;
+    for(var t=0;t<idx.length && removed<remove;t++){ var i=idx[t]; var bak=puzzle[i]; if(bak===0)continue; puzzle[i]=0;
+      var test=puzzle.slice(); if(countSolutions(test,2)!==1){ puzzle[i]=bak; } else { removed++; } }
+  }
+  function build(){ gridEl.innerHTML=''; cellEls=[]; cellsData=puzzle.slice();
+    for(var i=0;i<81;i++){ var d=document.createElement('div'); d.className='sc'; var c=i%9, r=Math.floor(i/9);
+      if(c===2||c===5)d.classList.add('br'); if(r===2||r===5)d.classList.add('bb');
+      if(puzzle[i]!==0){ d.textContent=puzzle[i]; d.classList.add('fixed'); } else { (function(idx){ d.addEventListener('click',function(){ select(idx); }); })(i); }
+      gridEl.appendChild(d); cellEls.push(d); }
+  }
+  function select(i){ sel=i; paint(); }
+  function paint(){ for(var i=0;i<81;i++){ var d=cellEls[i]; d.classList.remove('sel','same','bad');
+      d.textContent = cellsData[i]!==0 ? cellsData[i] : '';
+      if(!d.classList.contains('fixed')) { if(cellsData[i]!==0 && !isValidPlacement(i,cellsData[i])) d.classList.add('bad'); }
+    }
+    if(sel>=0){ cellEls[sel].classList.add('sel'); var v=cellsData[sel];
+      if(v!==0){ for(var j=0;j<81;j++){ if(cellsData[j]===v) cellEls[j].classList.add('same'); } } }
+  }
+  function isValidPlacement(i,v){ var r=Math.floor(i/9), c=i%9;
+    for(var k=0;k<9;k++){ if(k!==c && cellsData[r*9+k]===v)return false; if(k!==r && cellsData[k*9+c]===v)return false; }
+    var br=Math.floor(r/3)*3, bc=Math.floor(c/3)*3;
+    for(var y=0;y<3;y++)for(var x=0;x<3;x++){ var j=(br+y)*9+(bc+x); if(j!==i && cellsData[j]===v)return false; } return true; }
+  function put(v){ if(sel<0||won)return; if(cellEls[sel].classList.contains('fixed'))return; cellsData[sel]=v; paint(); checkWin(); }
+  function checkWin(){ for(var i=0;i<81;i++){ if(cellsData[i]!==solution[i])return; } won=true; clearInterval(timer);
+    msgEl.textContent='🎉 أحسنت! حللت السودوكو في '+timeEl.textContent; msgEl.className='msg win'; }
+  ['1','2','3','4','5','6','7','8','9'].forEach(function(k){ var b=document.createElement('div'); b.className='key'; b.textContent=k; b.addEventListener('click',function(){ put(+k); }); keypad.appendChild(b); });
+  var er=document.createElement('div'); er.className='key wide'; er.textContent='مسح ⌫'; er.addEventListener('click',function(){ put(0); }); keypad.appendChild(er);
+  document.addEventListener('keydown',function(e){ if(e.key>='1'&&e.key<='9')put(+e.key); else if(e.key==='Backspace'||e.key==='0'||e.key==='Delete'){e.preventDefault();put(0);} });
+  document.querySelectorAll('#diff button').forEach(function(b){ b.addEventListener('click',function(){ document.querySelectorAll('#diff button').forEach(function(x){x.classList.remove('on');}); b.classList.add('on'); diff=+b.dataset.d; newGame(); }); });
+  document.getElementById('newBtn').addEventListener('click',newGame);
+  function newGame(){ won=false; sel=-1; msgEl.textContent=''; msgEl.className='msg'; secs=0; timeEl.textContent='0:00';
+    generate(); build(); paint(); clearInterval(timer); timer=setInterval(function(){ secs++; var m=Math.floor(secs/60),s=secs%60; timeEl.textContent=m+':'+String(s).padStart(2,'0'); },1000); }
+  newGame();
+})();
+</script>
+<script src="/assets/site.js" defer></script>
+<!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "d6b527c601904cc791075bbea8fc5827"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

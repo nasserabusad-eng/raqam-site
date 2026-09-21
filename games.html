@@ -5,24 +5,41 @@
 <link rel="icon" type="image/png" href="https://d8j0ntlcm91z4.cloudfront.net/user_3Gqr8cNvaHecl4CfmnUHSrGscwp/hf_20260914_143316_077bc276-91b2-49e0-9e63-7414df6518b0.png">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ألعاب الأرقام | تحدّيات ذكاء وأرقام يومية بالعربية | رقم</title>
-<meta name="description" content="ألعاب الأرقام من رقم: تحدّيات ذهنية يومية بالعربية — لغز الرقم اليومي، 2048، سودوكو، وسباق الحساب. العب مجاناً في متصفحك بلا تحميل وحافظ على سلسلتك.">
+<meta name="description" content="ألعاب الأرقام من رقم: تحدّيات ذهنية يومية بالعربية — لغز الرقم اليومي، معادلة اليوم، 2048، سودوكو، وسباق الحساب. العب مجاناً في متصفحك بلا تحميل وحافظ على سلسلتك.">
 <meta name="keywords" content="ألعاب أرقام, ألعاب ذكاء, تحدي يومي, سودوكو, لعبة 2048, سباق الحساب, ألعاب رقم">
 <link rel="canonical" href="https://raqam.ai/games.html">
 <meta property="og:title" content="ألعاب الأرقام — رقم">
-<meta property="og:description" content="تحدّيات ذهنية يومية بالعربية: لغز الرقم، 2048، سودوكو، وسباق الحساب.">
+<meta property="og:description" content="تحدّيات ذهنية يومية بالعربية: لغز الرقم، معادلة اليوم، 2048، سودوكو، وسباق الحساب.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ar_SA">
+<meta property="og:image" content="https://d8j0ntlcm91z4.cloudfront.net/user_3Gqr8cNvaHecl4CfmnUHSrGscwp/hf_20260921_164520_a0257109-d109-46e3-ac2b-7804f103e474.png">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700;800&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/styles.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CollectionPage","name":"ألعاب الأرقام","inLanguage":"ar","url":"https://raqam.ai/games.html","publisher":{"@type":"Organization","name":"رقم","logo":{"@type":"ImageObject","url":"https://d8j0ntlcm91z4.cloudfront.net/user_3Gqr8cNvaHecl4CfmnUHSrGscwp/hf_20260914_143316_077bc276-91b2-49e0-9e63-7414df6518b0.png"}}}
+</script>
 <style>
-  .games-grid{max-width:var(--maxw);margin:26px auto;padding-inline:20px;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px}
-  .gcard{position:relative;overflow:hidden}
-  .gcard .ic{width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:28px;
-    background:var(--sand-bg);border:1px solid var(--line);margin-bottom:12px;font-family:"Space Grotesk",sans-serif;color:var(--gold-ink);font-weight:700}
-  .gcard .tag{position:absolute;top:16px;inset-inline-end:16px;background:var(--gold);color:var(--navy-dark);font-weight:800;font-size:11px;padding:3px 10px;border-radius:999px}
-  .gcard h3{display:flex;align-items:center;gap:8px}
+  .games-hero{background:linear-gradient(135deg,#232b3d,#374259);color:#fff;border-radius:0}
+  .games-hero .container{padding-block:34px}
+  .games-hero .crumbs a{color:var(--sand)}
+  .games-hero .crumbs{color:rgba(245,220,179,.7)}
+  .games-hero h1{color:#fff;font-size:34px;margin:8px 0 10px}
+  .games-hero p{color:rgba(255,255,255,.82);max-width:640px;line-height:1.9;margin:0}
+  .games-grid{max-width:var(--maxw);margin:26px auto;padding-inline:20px;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:22px}
+  .gcard{position:relative;overflow:hidden;padding:0;display:flex;flex-direction:column;transition:transform .15s,box-shadow .15s,border-color .15s}
+  .gcard:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(35,43,61,.16);border-color:var(--gold)}
+  .gcard .cover{position:relative;aspect-ratio:3/2;overflow:hidden;background:#232b3d}
+  .gcard .cover img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
+  .gcard:hover .cover img{transform:scale(1.04)}
+  .gcard .tag{position:absolute;top:12px;inset-inline-end:12px;background:var(--gold);color:var(--navy-dark);font-weight:800;font-size:11px;padding:4px 11px;border-radius:999px;box-shadow:0 3px 10px rgba(35,43,61,.3)}
+  .gcard .body{padding:16px 18px 18px}
+  .gcard h3{margin:0 0 7px;font-size:20px}
+  .gcard p{margin:0;color:var(--muted-2);font-size:14px;line-height:1.75}
+  .gcard .play{display:inline-flex;align-items:center;gap:6px;margin-top:12px;color:var(--gold-ink);font-weight:700;font-size:14px}
+  .gcard .play svg{width:15px;height:15px}
   .intro{max-width:var(--maxw);margin:0 auto;padding:22px 20px 0;color:var(--muted-2);font-family:"Tajawal",sans-serif;line-height:1.9}
 </style>
 </head>
@@ -48,21 +65,21 @@
   <div class="nav-bar">
     <nav class="container nav-links">
       <a href="/">الرئيسية</a>
-      <a href="#">اقتصاد</a>
-      <a href="#">أسواق ومال</a>
-      <a href="#">تقنية</a>
-      <a href="#">العالم</a>
+      <a href="/#ai">اقتصاد</a>
+      <a href="/#economy">أسواق ومال</a>
+      <a href="/#tech">تقنية</a>
+      <a href="/#ai">العالم</a>
       <a href="/end-of-service.html" class="tools">أدوات وحاسبات</a>
       <a href="/games.html" class="tools active">ألعاب الأرقام</a>
     </nav>
   </div>
 </header>
 
-<div class="tool-head">
+<div class="tool-head games-hero">
   <div class="container">
     <div class="crumbs"><a href="/">الرئيسية</a> ← ألعاب الأرقام</div>
     <h1>ألعاب الأرقام</h1>
-    <p>تحدّيات ذهنية سريعة قوامها الأرقام — تُلعب مباشرة في متصفحك بلا تحميل. لعبة جديدة كل يوم، وسلسلة تحافظ عليها، ونتيجة تشاركها.</p>
+    <p>تحدّيات ذهنية سريعة قوامها الأرقام — تُلعب مباشرة في متصفحك بلا تحميل. لعبة جديدة كل يوم، وسلسلة تحافظ عليها، ونتيجة تشاركها مع أصدقائك.</p>
   </div>
 </div>
 
@@ -72,44 +89,60 @@
 
 <div class="games-grid">
   <a class="card gcard" href="/game-daily-number.html">
-    <span class="tag">يومي</span>
-    <div class="ic">🔐</div>
-    <h3>لغز الرقم اليومي</h3>
-    <p>خمّن الرقم السري المكوّن من ٤ أرقام في ٦ محاولات. لغز واحد للجميع كل يوم — حافظ على سلسلتك وشارك نتيجتك.</p>
+    <div class="cover"><span class="tag">يومي</span><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3Gqr8cNvaHecl4CfmnUHSrGscwp/hf_20260921_164520_a0257109-d109-46e3-ac2b-7804f103e474.png" alt="لغز الرقم اليومي" loading="eager"></div>
+    <div class="body">
+      <h3>لغز الرقم اليومي</h3>
+      <p>خمّن الرقم السري المكوّن من ٤ أرقام في ٦ محاولات. لغز واحد للجميع كل يوم — حافظ على سلسلتك وشارك نتيجتك.</p>
+      <span class="play">العب الآن <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></span>
+    </div>
   </a>
   <a class="card gcard" href="/game-equation.html">
-    <span class="tag">يومي</span>
-    <div class="ic">➗</div>
-    <h3>معادلة اليوم</h3>
-    <p>خمّن المعادلة الحسابية السرية في ٦ محاولات — نسخة عربية من Nerdle. لغز حسابي جديد كل يوم، مع سلسلة ومشاركة.</p>
+    <div class="cover"><span class="tag">يومي</span><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3Gqr8cNvaHecl4CfmnUHSrGscwp/hf_20260921_164520_226f9dc9-91e2-4099-9027-8ef637e5511d.png" alt="معادلة اليوم" loading="lazy"></div>
+    <div class="body">
+      <h3>معادلة اليوم</h3>
+      <p>خمّن المعادلة الحسابية السرية في ٦ محاولات — نسخة عربية من Nerdle. لغز حسابي جديد كل يوم، مع سلسلة ومشاركة.</p>
+      <span class="play">العب الآن <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></span>
+    </div>
   </a>
   <a class="card gcard" href="/game-2048.html">
-    <div class="ic">🔢</div>
-    <h3>2048</h3>
-    <p>حرّك وادمج الأرقام المتشابهة حتى تصل إلى 2048. لعبة الإدمان الكلاسيكية — سجّل أعلى نقاطك.</p>
+    <div class="cover"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3Gqr8cNvaHecl4CfmnUHSrGscwp/hf_20260921_164520_8389f724-d0c8-4ac0-995f-94c0cb69795b.png" alt="لعبة 2048" loading="lazy"></div>
+    <div class="body">
+      <h3>2048</h3>
+      <p>حرّك وادمج الأرقام المتشابهة حتى تصل إلى 2048. لعبة الإدمان الكلاسيكية — سجّل أعلى نقاطك.</p>
+      <span class="play">العب الآن <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></span>
+    </div>
   </a>
   <a class="card gcard" href="/game-sudoku.html">
-    <div class="ic">▦</div>
-    <h3>سودوكو</h3>
-    <p>املأ الشبكة بالأرقام من ١ إلى ٩ دون تكرار في صف أو عمود أو مربع. ثلاثة مستويات صعوبة ومؤقّت.</p>
+    <div class="cover"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3Gqr8cNvaHecl4CfmnUHSrGscwp/hf_20260921_164520_f30f41c5-c2d5-4df9-a358-69c375e5d72b.png" alt="سودوكو" loading="lazy"></div>
+    <div class="body">
+      <h3>سودوكو</h3>
+      <p>املأ الشبكة بالأرقام من ١ إلى ٩ دون تكرار في صف أو عمود أو مربع. ثلاثة مستويات صعوبة ومؤقّت.</p>
+      <span class="play">العب الآن <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></span>
+    </div>
   </a>
   <a class="card gcard" href="/game-math-sprint.html">
-    <span class="tag">سرعة</span>
-    <div class="ic">⚡</div>
-    <h3>سباق الحساب</h3>
-    <p>كم مسألة تحلّها في ٦٠ ثانية؟ جمع وطرح وضرب سريع يشحذ حسابك الذهني — تحدَّ رقمك القياسي.</p>
+    <div class="cover"><span class="tag">سرعة</span><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3Gqr8cNvaHecl4CfmnUHSrGscwp/hf_20260921_164520_d15c97d1-e7eb-4448-b434-ef8c0add3e7b.png" alt="سباق الحساب" loading="lazy"></div>
+    <div class="body">
+      <h3>سباق الحساب</h3>
+      <p>كم مسألة تحلّها في ٦٠ ثانية؟ جمع وطرح وضرب سريع يشحذ حسابك الذهني — تحدَّ رقمك القياسي.</p>
+      <span class="play">العب الآن <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></span>
+    </div>
   </a>
   <a class="card gcard" href="/tool-lucky-number.html">
-    <span class="tag">أداة</span>
-    <div class="ic">🍀</div>
-    <h3>رقمك المحظوظ</h3>
-    <p>اكتشف رقم مسار حياتك وأرقامك المحظوظة من تاريخ ميلادك — حاسبة أرقام ممتعة للتسلية، مع مشاركة النتيجة.</p>
+    <div class="cover"><span class="tag">أداة</span><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3Gqr8cNvaHecl4CfmnUHSrGscwp/hf_20260921_164520_dcb226e3-8af5-4186-b102-e521343ef98d.png" alt="رقمك المحظوظ" loading="lazy"></div>
+    <div class="body">
+      <h3>رقمك المحظوظ</h3>
+      <p>اكتشف رقم مسار حياتك وأرقامك المحظوظة من تاريخ ميلادك — حاسبة أرقام ممتعة للتسلية، مع مشاركة النتيجة.</p>
+      <span class="play">جرّبها الآن <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></span>
+    </div>
   </a>
   <a class="card gcard" href="/tool-chart.html">
-    <span class="tag">أداة</span>
-    <div class="ic">📊</div>
-    <h3>مولّد الرسوم البيانية</h3>
-    <p>الصق أرقامك واحصل على رسم بياني أنيق قابل للتنزيل كصورة — أعمدة أو خطوط، فوري وبلا تسجيل.</p>
+    <div class="cover"><span class="tag">أداة</span><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3Gqr8cNvaHecl4CfmnUHSrGscwp/hf_20260921_164521_29121a2e-c934-47ff-87e6-dffe20d0505d.png" alt="مولّد الرسوم البيانية" loading="lazy"></div>
+    <div class="body">
+      <h3>مولّد الرسوم البيانية</h3>
+      <p>الصق أرقامك واحصل على رسم بياني أنيق قابل للتنزيل كصورة — أعمدة أو خطوط، فوري وبلا تسجيل.</p>
+      <span class="play">جرّبها الآن <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></span>
+    </div>
   </a>
 </div>
 
@@ -122,7 +155,7 @@
       <p>أخبار الاقتصاد والتقنية من حول العالم بالعربية، مع أدوات وحاسبات مالية دقيقة.</p>
     </div>
     <div><h4>الأقسام</h4><span>اقتصاد</span><span>أسواق ومال</span><span>تقنية</span><span>العالم</span></div>
-    <div><h4>ألعاب الأرقام</h4><a href="/game-daily-number.html">لغز الرقم اليومي</a><a href="/game-2048.html">2048</a><a href="/game-sudoku.html">سودوكو</a><a href="/game-math-sprint.html">سباق الحساب</a></div>
+    <div><h4>ألعاب الأرقام</h4><a href="/game-daily-number.html">لغز الرقم اليومي</a><a href="/game-equation.html">معادلة اليوم</a><a href="/game-2048.html">2048</a><a href="/game-sudoku.html">سودوكو</a><a href="/game-math-sprint.html">سباق الحساب</a></div>
   </div>
   <div class="fine"><div class="container">© <span id="yr"></span> رقم (raqam.ai) — جميع الحقوق محفوظة.</div></div>
 </footer>

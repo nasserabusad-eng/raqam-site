@@ -1,9 +1,0 @@
-id: 588
-name: Daily Rinds
-url: https://dailyrinds.com
-description: Guess the daily mystery cheese.
-category: Food
-status: active
-history:
-- date: '2025-12-20'
-  event: added

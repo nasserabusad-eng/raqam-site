@@ -1,9 +1,0 @@
-id: 92
-name: Disney Heardle
-url: https://www.disney.heardledecades.com
-description: Guess the Disney song from listening to small parts of it.
-category: Music
-status: active
-history:
-- date: '2024-05-28'
-  event: added

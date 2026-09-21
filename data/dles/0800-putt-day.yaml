@@ -1,9 +1,0 @@
-id: 800
-name: putt.day
-url: https://putt.day/play
-description: A daily hole of 3D mini golf.
-category: Miscellaneous
-status: active
-history:
-- date: '2026-07-21'
-  event: added

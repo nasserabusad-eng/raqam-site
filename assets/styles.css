@@ -111,6 +111,34 @@ a{color:inherit;text-decoration:none}
 .trick h3{font-family:"Cairo","Tajawal",sans-serif;color:var(--cyan);font-size:17px;margin:0 0 6px}
 .trick .ex{background:var(--card2);border:1px solid var(--line2);border-radius:10px;padding:8px 14px;margin-top:8px;color:var(--ink);font-weight:700}
 
+/* Article pages (times tables etc.) */
+.article{max-width:760px}
+.article .breadcrumb{color:var(--dim);font-size:13px;margin:0 0 14px}
+.article .breadcrumb a{color:var(--muted)}
+.article h1{font-family:"Cairo","Tajawal",sans-serif;font-size:32px;color:#fff;margin:6px 0 12px;line-height:1.35}
+.article h2{font-family:"Cairo","Tajawal",sans-serif;font-size:22px;color:var(--cyan);margin:30px 0 10px}
+.article > p, .article main > p{color:var(--muted);font-size:17px;margin:0 0 12px}
+.article p{color:var(--muted);font-size:17px;margin:0 0 12px}
+.article a{color:var(--cyan)}
+.times-table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;margin:16px 0}
+.times-table caption{caption-side:top;text-align:start;color:var(--muted);font-size:14px;margin-bottom:8px}
+.times-table td{padding:12px 20px;border-bottom:1px solid var(--line);font-size:19px;color:var(--ink)}
+.times-table tr:last-child td{border-bottom:none}
+.times-table tr:nth-child(even){background:var(--card2)}
+.times-table td:first-child{font-family:"Cairo",sans-serif;font-weight:700;width:42%}
+.times-table td:nth-child(2){color:var(--dim);width:10%;text-align:center}
+.times-table td strong{font-family:"Cairo",sans-serif;color:var(--lime);font-size:21px}
+.article details{background:var(--card);border:1px solid var(--line);border-radius:12px;margin:10px 0;padding:0 18px}
+.article details summary{cursor:pointer;padding:15px 0;list-style:none}
+.article details summary::-webkit-details-marker{display:none}
+.article details summary h3{display:inline;font-family:"Cairo","Tajawal",sans-serif;color:#fff;font-size:16px;margin:0}
+.article details[open] summary{border-bottom:1px solid var(--line)}
+.article details > p{padding:12px 0;margin:0}
+/* table index links on /times-tables */
+.tt-index{display:flex;flex-wrap:wrap;gap:10px;margin:8px 0 4px}
+.tt-index a{display:inline-flex;align-items:center;justify-content:center;min-width:92px;background:var(--card2);border:1px solid var(--line2);border-radius:12px;padding:11px 14px;color:var(--ink);font-family:"Cairo",sans-serif;font-weight:700;font-size:15px}
+.tt-index a:hover{border-color:var(--cyan);color:var(--cyan)}
+
 /* Footer */
 .foot{border-top:1px solid var(--line);margin-top:44px;background:rgba(0,0,0,.22)}
 .foot .in{display:flex;flex-wrap:wrap;gap:30px;justify-content:space-between;padding-block:30px}

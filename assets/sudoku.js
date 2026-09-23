@@ -1,5 +1,6 @@
 /*
   Sudoku engine: sudoku.js by Rob McGuire-Dale — https://github.com/robatron/sudoku.js
+  Bundled into raqam.ai under its original MIT License (unmodified engine):
 
   The MIT License (MIT)
   Copyright (c) 2014 Rob McGuire-Dale

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>خمّن الرقم | لعبة تخمين الأرقام بالعربية | رقم</title>
+<meta name="description" content="لعبة خمّن الرقم بالعربية: حاول أن تخمّن الرقم السري بين 1 و100 بأقل عدد من المحاولات، مع تلميحات «أعلى» و«أقل». لعبة ذكاء ومنطق ممتعة تُلعب مجاناً في المتصفح.">
+<meta name="keywords" content="خمن الرقم, لعبة تخمين الارقام, لعبة ذكاء, تخمين رقم, العاب ارقام, guess the number">
+<link rel="canonical" href="https://raqam.ai/guess.html">
+<meta property="og:title" content="خمّن الرقم — رقم">
+<meta property="og:description" content="خمّن الرقم السري بأقل عدد من المحاولات.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar">
+<meta property="og:image" content="https://d8j0ntlcm91z4.cloudfront.net/user_3Gqr8cNvaHecl4CfmnUHSrGscwp/hf_20260923_121458_39986424-73f6-4631-9818-f2f191a613a0.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-93NPFB6NL6"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-93NPFB6NL6');</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"خمّن الرقم","url":"https://raqam.ai/guess.html","applicationCategory":"GameApplication","operatingSystem":"Any","inLanguage":"ar","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+<style>
+  .guess-wrap{max-width:440px;margin-inline:auto;text-align:center}
+  .rangebar{color:var(--muted);font-size:15px;margin-bottom:14px}
+  .rangebar b{color:var(--cyan);font-family:"Cairo",sans-serif;font-size:20px}
+  .ginput{display:flex;gap:10px;margin-bottom:16px}
+  .ginput input{flex:1;background:var(--card2);border:1px solid var(--line2);border-radius:12px;color:#fff;
+    font-family:"Cairo",sans-serif;font-weight:800;font-size:24px;text-align:center;padding:12px;outline:none;min-width:0}
+  .ginput input:focus{border-color:var(--cyan)}
+  .feedback{min-height:64px;display:flex;align-items:center;justify-content:center;font-family:"Cairo",sans-serif;font-weight:800;font-size:22px;margin-bottom:10px}
+  .feedback.hi{color:var(--amber)}.feedback.lo{color:var(--cyan)}.feedback.win{color:var(--lime)}
+  .arrow{font-size:34px}
+  .hist{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:10px}
+  .gchip{background:var(--card2);border:1px solid var(--line2);border-radius:10px;padding:5px 12px;color:var(--muted);font-family:"Cairo",sans-serif;font-weight:700;font-size:14px}
+  .gchip.hi{color:var(--amber)}.gchip.lo{color:var(--cyan)}
+</style>
+</head>
+<body>
+
+<header class="top"><div class="wrap mast">
+  <a href="index.html" class="brand"><span class="mk">×</span><span class="word">رقم</span></a>
+  <nav class="nav"><a href="index.html">الرئيسية</a><a href="guess.html" class="on">خمّن الرقم</a><a href="sudoku.html">سودوكو</a><a href="minesweeper.html">كانسة الألغام</a><a href="tricks.html">خدع الأرقام</a></nav>
+  <span class="grow"></span>
+</div></header>
+
+<main class="gamewrap">
+  <div class="crumbs"><a href="index.html">الرئيسية</a> ← خمّن الرقم</div>
+  <div class="ghero"><img loading="lazy" src="https://d8j0ntlcm91z4.cloudfront.net/user_3Gqr8cNvaHecl4CfmnUHSrGscwp/hf_20260923_121458_39986424-73f6-4631-9818-f2f191a613a0.png" alt="خمّن الرقم"></div>
+  <div class="gtitle"><h1>خمّن الرقم 🎯</h1><p>خمّنتُ رقماً سرياً بين 1 و100 — هل تجده بأقل عدد من المحاولات؟</p></div>
+  <div class="ad ad-lead"><span class="lbl">مساحة إعلانية</span></div>
+
+  <div class="panel guess-wrap">
+    <div class="hud">
+      <div class="stat"><div class="l">المحاولات</div><div class="v" id="tries">0</div></div>
+      <div class="stat"><div class="l">الأفضل</div><div class="v" id="best">—</div></div>
+    </div>
+    <div class="rangebar">النطاق الحالي: <b id="lo">1</b> — <b id="hi">100</b></div>
+    <div class="ginput">
+      <input id="inp" type="number" inputmode="numeric" min="1" max="100" placeholder="اكتب تخمينك">
+      <button class="btn" id="goBtn">خمّن</button>
+    </div>
+    <div class="feedback" id="fb">ابدأ التخمين ⬇️</div>
+    <button class="btn sec" id="newBtn">لعبة جديدة</button>
+    <div class="hist" id="hist"></div>
+  </div>
+
+  <div class="prose" style="margin-top:26px;max-width:640px;margin-inline:auto">
+    <h2>كيف تلعب خمّن الرقم؟</h2>
+    <p>اختار الكمبيوتر رقماً سرياً بين 1 و100. اكتب تخمينك واضغط «خمّن»، وستحصل على تلميح: هل الرقم السري <b style="color:var(--amber)">أعلى</b> أم <b style="color:var(--cyan)">أقل</b> من تخمينك. استخدم التلميحات لتضييق النطاق حتى تصل إلى الرقم الصحيح. الحيلة الذكية أن تخمّن دائماً منتصف النطاق المتبقي (البحث الثنائي)، فتصل إلى أي رقم خلال 7 محاولات على الأكثر!</p>
+  </div>
+</main>
+
+<footer class="foot"><div class="fine">© <span id="yr"></span> رقم (raqam.ai) — ألعاب الأرقام والذكاء بالعربية.</div></footer>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+(function(){
+  "use strict";
+  var inp=document.getElementById('inp'), fb=document.getElementById('fb'), hist=document.getElementById('hist');
+  var triesEl=document.getElementById('tries'), bestEl=document.getElementById('best'), loEl=document.getElementById('lo'), hiEl=document.getElementById('hi');
+  var secret=0, tries=0, lo=1, hi=100, done=false;
+  var best=0; try{ best=parseInt(localStorage.getItem('raqam_guess_best')||'0',10)||0; }catch(e){}
+  if(best) bestEl.textContent=best;
+
+  function reset(){
+    secret=1+Math.floor(Math.random()*100); tries=0; lo=1; hi=100; done=false;
+    triesEl.textContent='0'; loEl.textContent='1'; hiEl.textContent='100';
+    fb.className='feedback'; fb.textContent='ابدأ التخمين ⬇️'; hist.innerHTML=''; inp.value=''; inp.disabled=false; inp.focus();
+  }
+  function guess(){
+    if(done) return;
+    var g=parseInt(inp.value,10);
+    if(isNaN(g)||g<1||g>100){ fb.className='feedback'; fb.textContent='اكتب رقماً بين 1 و100'; return; }
+    tries++; triesEl.textContent=tries;
+    var chip=document.createElement('span'); chip.className='gchip'; chip.textContent=g;
+    if(g===secret){
+      done=true; fb.className='feedback win'; fb.textContent='🎉 صحيح! الرقم '+secret+' في '+tries+' محاولة';
+      inp.disabled=true;
+      if(!best||tries<best){ best=tries; bestEl.textContent=best; try{localStorage.setItem('raqam_guess_best',best);}catch(e){} }
+    } else if(g<secret){
+      lo=Math.max(lo,g+1); loEl.textContent=lo; fb.className='feedback hi'; fb.innerHTML='<span class="arrow">⬆️</span> الرقم أعلى';
+      chip.classList.add('lo');
+    } else {
+      hi=Math.min(hi,g-1); hiEl.textContent=hi; fb.className='feedback lo'; fb.innerHTML='<span class="arrow">⬇️</span> الرقم أقل';
+      chip.classList.add('hi');
+    }
+    hist.appendChild(chip); inp.value=''; inp.focus();
+  }
+  document.getElementById('goBtn').addEventListener('click',guess);
+  document.getElementById('newBtn').addEventListener('click',reset);
+  inp.addEventListener('keydown',function(e){ if(e.key==='Enter') guess(); });
+  reset();
+})();
+</script>
+</body>
+</html>

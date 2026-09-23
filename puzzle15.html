@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>لغز الخمسة عشر | لعبة ترتيب الأرقام المنزلقة بالعربية | رقم</title>
+<meta name="description" content="لعبة لغز الخمسة عشر (15 Puzzle) بالعربية: حرّك المربعات المنزلقة لترتيب الأرقام من 1 إلى 15. لعبة ذكاء وتركيز كلاسيكية تُلعب مجاناً في المتصفح.">
+<meta name="keywords" content="لغز الخمسة عشر, لعبة ترتيب الارقام, لغز الارقام المنزلقة, 15 puzzle, العاب ذكاء, لغز منزلق">
+<link rel="canonical" href="https://raqam.ai/puzzle15.html">
+<meta property="og:title" content="لغز الخمسة عشر — رقم">
+<meta property="og:description" content="رتّب الأرقام المنزلقة من 1 إلى 15.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar">
+<meta property="og:image" content="https://d8j0ntlcm91z4.cloudfront.net/user_3Gqr8cNvaHecl4CfmnUHSrGscwp/hf_20260923_070124_98746f41-7aec-4fa2-afb1-25e5ee84ef5d.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-93NPFB6NL6"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-93NPFB6NL6');</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"لغز الخمسة عشر","url":"https://raqam.ai/puzzle15.html","applicationCategory":"GameApplication","operatingSystem":"Any","inLanguage":"ar","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+<style>
+  .p15{position:relative;width:min(92vw,400px);aspect-ratio:1;margin-inline:auto;background:#0e1533;border:1px solid var(--line2);border-radius:16px;padding:10px}
+  .p15 .grid{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(4,1fr);gap:8px;width:100%;height:100%}
+  .ptile{display:flex;align-items:center;justify-content:center;border-radius:11px;
+    background:linear-gradient(135deg,#1b2557,#22307a);border:1px solid var(--line2);color:#fff;
+    font-family:"Cairo",sans-serif;font-weight:800;font-size:clamp(22px,7vw,34px);cursor:pointer;transition:transform .08s}
+  .ptile.blank{background:transparent;border:none;cursor:default}
+  .ptile.done{background:linear-gradient(135deg,var(--cyan),var(--indigo));color:#06122e}
+</style>
+</head>
+<body>
+
+<header class="top"><div class="wrap mast">
+  <a href="index.html" class="brand"><span class="mk">×</span><span class="word">رقم</span></a>
+  <nav class="nav"><a href="index.html">الرئيسية</a><a href="sudoku.html">سودوكو</a><a href="puzzle15.html" class="on">لغز 15</a><a href="minesweeper.html">كانسة الألغام</a><a href="tricks.html">خدع الأرقام</a></nav>
+  <span class="grow"></span>
+</div></header>
+
+<main class="gamewrap">
+  <div class="crumbs"><a href="index.html">الرئيسية</a> ← لغز الخمسة عشر</div>
+  <div class="gtitle"><h1>لغز الخمسة عشر 🧩</h1><p>حرّك المربعات لترتيب الأرقام من 1 إلى 15</p></div>
+  <div class="ad ad-lead"><span class="lbl">مساحة إعلانية</span></div>
+
+  <div style="max-width:400px;margin-inline:auto">
+    <div class="hud">
+      <div class="stat"><div class="l">الحركات</div><div class="v" id="moves">0</div></div>
+      <div class="stat"><div class="l">الوقت</div><div class="v" id="time">0:00</div></div>
+      <button class="btn sec" id="newBtn">خلط جديد</button>
+    </div>
+    <div class="p15"><div class="grid" id="grid"></div></div>
+    <p class="hint" style="color:var(--muted);text-align:center;font-size:13px;margin-top:12px">اضغط على مربّع مجاور للفراغ لتحريكه</p>
+  </div>
+
+  <div class="prose" style="margin-top:26px;max-width:640px;margin-inline:auto">
+    <h2>كيف تحلّ لغز الخمسة عشر؟</h2>
+    <p>تتكوّن اللوحة من 15 مربّعاً مرقّماً وفراغ واحد. يمكنك تحريك أي مربّع ملاصق للفراغ إلى مكانه. الهدف إعادة ترتيب الأرقام تصاعدياً من 1 إلى 15 بأقل عدد من الحركات. الحيلة أن تحلّ الصفّ الأول ثم الثاني، وتترك المربّعين الأخيرين في كل صف للنهاية. لعبة كلاسيكية تقوّي التخطيط والتفكير المكاني.</p>
+  </div>
+</main>
+
+<footer class="foot"><div class="fine">© <span id="yr"></span> رقم (raqam.ai) — ألعاب الأرقام والذكاء بالعربية.</div></footer>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+(function(){
+  "use strict";
+  var gridEl=document.getElementById('grid'), movesEl=document.getElementById('moves'), timeEl=document.getElementById('time');
+  var N=4, board=[], blank=15, moves=0, secs=0, timer=null, started=false, done=false, tiles=[];
+
+  for(var i=0;i<16;i++){ (function(i){ var t=document.createElement('div'); t.className='ptile';
+    t.addEventListener('click',function(){ clickAt(t.dataset.pos|0); }); gridEl.appendChild(t); tiles.push(t); })(i); }
+
+  function fmt(s){ return Math.floor(s/60)+':'+('0'+(s%60)).slice(-2); }
+  function solvedArr(){ var a=[]; for(var i=1;i<=15;i++)a.push(i); a.push(0); return a; }
+  function isAdj(p,q){ var pr=Math.floor(p/N),pc=p%N,qr=Math.floor(q/N),qc=q%N; return (pr===qr&&Math.abs(pc-qc)===1)||(pc===qc&&Math.abs(pr-qr)===1); }
+
+  function shuffle(){
+    board=solvedArr(); blank=15;
+    // random valid moves to guarantee solvable
+    var last=-1;
+    for(var k=0;k<300;k++){ var nb=[]; for(var i=0;i<16;i++){ if(isAdj(i,blank)) nb.push(i); }
+      var pick=nb[Math.floor(Math.random()*nb.length)]; if(pick===last&&nb.length>1){ pick=nb[(nb.indexOf(pick)+1)%nb.length]; }
+      last=blank; var tmp=board[pick]; board[pick]=board[blank]; board[blank]=tmp; blank=pick;
+    }
+    moves=0; movesEl.textContent='0'; done=false; started=false; secs=0; timeEl.textContent='0:00'; clearInterval(timer);
+    draw();
+  }
+  function draw(){
+    for(var i=0;i<16;i++){ var v=board[i], t=tiles[i]; t.dataset.pos=i;
+      if(v===0){ t.className='ptile blank'; t.textContent=''; }
+      else { t.className='ptile'+((v===i+1)?' done':''); t.textContent=v; }
+    }
+  }
+  function startTimer(){ clearInterval(timer); secs=0; timer=setInterval(function(){ secs++; timeEl.textContent=fmt(secs); },1000); }
+  function clickAt(pos){
+    if(done) return;
+    if(!isAdj(pos,blank)) return;
+    if(!started){ started=true; startTimer(); }
+    board[blank]=board[pos]; board[pos]=0; blank=pos;
+    moves++; movesEl.textContent=moves; draw(); checkWin();
+  }
+  function checkWin(){
+    for(var i=0;i<15;i++){ if(board[i]!==i+1) return; }
+    done=true; clearInterval(timer);
+    setTimeout(function(){
+      var ov=document.createElement('div');
+      ov.style.cssText='position:fixed;inset:0;background:rgba(10,16,39,.86);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;z-index:200';
+      ov.innerHTML='<div style="font-family:Cairo,sans-serif;color:#fff;font-size:28px">🎉 رتّبتها!</div><div style="color:var(--muted)">'+moves+' حركة في '+fmt(secs)+'</div>';
+      var b=document.createElement('button'); b.className='btn'; b.textContent='خلط جديد';
+      b.addEventListener('click',function(){ document.body.removeChild(ov); shuffle(); });
+      ov.appendChild(b); document.body.appendChild(ov);
+    },120);
+  }
+  document.getElementById('newBtn').addEventListener('click',shuffle);
+  shuffle();
+})();
+</script>
+</body>
+</html>

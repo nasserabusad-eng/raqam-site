@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>كانسة الألغام بالعربية | لعبة الألغام Minesweeper مجاناً | رقم</title>
+<meta name="description" content="العب كانسة الألغام (Minesweeper) بالعربية مجاناً: اكشف الخانات وتجنّب الألغام باستخدام أرقام الجوار. لعبة ذكاء ومنطق تُلعب في المتصفح على الجوال والكمبيوتر.">
+<meta name="keywords" content="كانسة الالغام, لعبة الالغام, ماين سويبر, minesweeper بالعربي, العاب ذكاء, الغاز, لعبة منطق">
+<link rel="canonical" href="https://raqam.ai/minesweeper.html">
+<meta property="og:title" content="كانسة الألغام — رقم">
+<meta property="og:description" content="اكشف الخانات وتجنّب الألغام بذكاء.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar">
+<meta property="og:image" content="https://d8j0ntlcm91z4.cloudfront.net/user_3Gqr8cNvaHecl4CfmnUHSrGscwp/hf_20260923_070124_66b1ba2f-6cb9-407e-adc2-c449cf8fe288.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-93NPFB6NL6"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-93NPFB6NL6');</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"كانسة الألغام","url":"https://raqam.ai/minesweeper.html","applicationCategory":"GameApplication","operatingSystem":"Any","inLanguage":"ar","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+<style>
+  .ms-wrap{max-width:min(94vw,460px);margin-inline:auto}
+  .mboard{display:grid;gap:3px;background:#0e1533;border:1px solid var(--line2);border-radius:12px;padding:8px;touch-action:manipulation}
+  .mcell{aspect-ratio:1;display:flex;align-items:center;justify-content:center;background:var(--card2);border:1px solid var(--line);border-radius:5px;
+    font-family:"Cairo",sans-serif;font-weight:800;font-size:clamp(12px,3.6vw,18px);cursor:pointer;color:#fff;user-select:none;transition:background .08s}
+  .mcell.open{background:#0e1533;border-color:rgba(58,71,149,.4);cursor:default}
+  .mcell.flag{background:rgba(251,191,36,.16)}
+  .mcell.mine{background:rgba(248,113,113,.3)}
+  .mcell.c1{color:#60a5fa}.mcell.c2{color:#34d399}.mcell.c3{color:#f87171}.mcell.c4{color:#a78bfa}
+  .mcell.c5{color:#fbbf24}.mcell.c6{color:#22d3ee}.mcell.c7{color:#f472b6}.mcell.c8{color:#e5e7eb}
+  .flagbtn{display:inline-flex;align-items:center;gap:8px}
+  .flagbtn.on{background:linear-gradient(135deg,var(--amber),#f59e0b);color:#3a2a05;border-color:transparent}
+</style>
+</head>
+<body>
+
+<header class="top"><div class="wrap mast">
+  <a href="index.html" class="brand"><span class="mk">×</span><span class="word">رقم</span></a>
+  <nav class="nav"><a href="index.html">الرئيسية</a><a href="sudoku.html">سودوكو</a><a href="minesweeper.html" class="on">كانسة الألغام</a><a href="times-tables.html">جدول الضرب</a><a href="tricks.html">خدع الأرقام</a></nav>
+  <span class="grow"></span>
+</div></header>
+
+<main class="gamewrap">
+  <div class="crumbs"><a href="index.html">الرئيسية</a> ← كانسة الألغام</div>
+  <div class="gtitle"><h1>كانسة الألغام 💣</h1><p>اكشف كل الخانات الآمنة دون أن تفجّر لغماً</p></div>
+  <div class="ad ad-lead"><span class="lbl">مساحة إعلانية</span></div>
+
+  <div class="ms-wrap">
+    <div class="diffs" style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:14px">
+      <button class="diff on" data-r="9" data-m="10">سهل</button>
+      <button class="diff" data-r="12" data-m="24">متوسط</button>
+      <button class="diff" data-r="14" data-m="40">صعب</button>
+    </div>
+    <div class="hud">
+      <div class="stat"><div class="l">الألغام</div><div class="v" id="mines">10</div></div>
+      <div class="stat"><div class="l">الوقت</div><div class="v" id="time">0:00</div></div>
+      <button class="btn sec flagbtn" id="flagBtn">🚩 وضع العلم</button>
+      <button class="btn sec" id="newBtn">جديدة</button>
+    </div>
+    <div class="mboard" id="board"></div>
+    <p class="hint" style="color:var(--muted);text-align:center;font-size:13px;margin-top:12px">اضغط لكشف الخانة · فعّل «وضع العلم» لتعليم الألغام (أو اضغط مطوّلاً)</p>
+  </div>
+
+  <div class="prose" style="margin-top:26px;max-width:640px;margin-inline:auto">
+    <h2>كيف تلعب كانسة الألغام؟</h2>
+    <p>الشبكة مليئة بخانات مخفية، بعضها يحتوي على ألغام. عندما تكشف خانة آمنة يظهر رقم يدلّ على عدد الألغام الملاصقة لها في الاتجاهات الثمانية. استخدم هذه الأرقام لتستنتج مكان الألغام وتضع عليها علماً 🚩، واكشف بقية الخانات الآمنة. إذا كشفت لغماً خسرت الجولة. الفوز يكون بكشف جميع الخانات الخالية من الألغام.</p>
+  </div>
+</main>
+
+<footer class="foot"><div class="fine">© <span id="yr"></span> رقم (raqam.ai) — ألعاب الأرقام والمنطق بالعربية.</div></footer>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+(function(){
+  "use strict";
+  var boardEl=document.getElementById('board'), minesEl=document.getElementById('mines'), timeEl=document.getElementById('time');
+  var R=9, M=10, cells=[], mine=[], adj=[], open=[], flag=[], started=false, over=false, timer=null, secs=0, flagMode=false, safeLeft=0, flagsUsed=0;
+
+  function fmt(s){ return Math.floor(s/60)+':'+('0'+(s%60)).slice(-2); }
+  function idx(r,c){ return r*R+c; }
+  function inb(r,c){ return r>=0&&r<R&&c>=0&&c<R; }
+
+  function build(){
+    boardEl.style.gridTemplateColumns='repeat('+R+',1fr)';
+    boardEl.innerHTML=''; cells=[];
+    for(var i=0;i<R*R;i++){ (function(i){
+      var c=document.createElement('div'); c.className='mcell';
+      c.addEventListener('click',function(){ tap(i); });
+      var lp=null;
+      c.addEventListener('touchstart',function(){ lp=setTimeout(function(){ toggleFlag(i); lp=null; },350); },{passive:true});
+      c.addEventListener('touchend',function(){ if(lp){ clearTimeout(lp); } },{passive:true});
+      c.addEventListener('contextmenu',function(e){ e.preventDefault(); toggleFlag(i); });
+      boardEl.appendChild(c); cells.push(c);
+    })(i); }
+  }
+  function reset(r,m){
+    R=r; M=m; over=false; started=false; secs=0; flagsUsed=0; clearInterval(timer);
+    timeEl.textContent='0:00'; minesEl.textContent=M;
+    mine=new Array(R*R).fill(false); adj=new Array(R*R).fill(0);
+    open=new Array(R*R).fill(false); flag=new Array(R*R).fill(false);
+    safeLeft=R*R-M;
+    build(); draw();
+  }
+  function place(first){
+    var spots=[]; for(var i=0;i<R*R;i++){ if(i!==first) spots.push(i); }
+    for(var k=0;k<M;k++){ var j=Math.floor(Math.random()*spots.length); mine[spots[j]]=true; spots.splice(j,1); }
+    for(var r=0;r<R;r++)for(var c=0;c<R;c++){ if(mine[idx(r,c)])continue; var n=0;
+      for(var a=-1;a<=1;a++)for(var b=-1;b<=1;b++){ if(inb(r+a,c+b)&&mine[idx(r+a,c+b)]) n++; }
+      adj[idx(r,c)]=n; }
+  }
+  function draw(){
+    for(var i=0;i<R*R;i++){ var el=cells[i]; el.className='mcell';
+      if(flag[i]&&!open[i]){ el.classList.add('flag'); el.textContent='🚩'; continue; }
+      if(!open[i]){ el.textContent=''; continue; }
+      el.classList.add('open');
+      if(mine[i]){ el.classList.add('mine'); el.textContent='💣'; }
+      else if(adj[i]>0){ el.classList.add('c'+adj[i]); el.textContent=adj[i]; }
+      else el.textContent='';
+    }
+  }
+  function startTimer(){ clearInterval(timer); secs=0; timer=setInterval(function(){ secs++; timeEl.textContent=fmt(secs); },1000); }
+
+  function tap(i){
+    if(over) return;
+    if(flagMode){ toggleFlag(i); return; }
+    if(flag[i]) return;
+    if(!started){ place(i); started=true; startTimer(); }
+    reveal(i);
+    draw(); checkWin();
+  }
+  function reveal(i){
+    if(open[i]||flag[i]) return;
+    if(mine[i]){ open[i]=true; lose(); return; }
+    var stack=[i];
+    while(stack.length){ var j=stack.pop(); if(open[j]||flag[j]) continue; open[j]=true; safeLeft--;
+      if(adj[j]===0){ var r=Math.floor(j/R), c=j%R;
+        for(var a=-1;a<=1;a++)for(var b=-1;b<=1;b++){ if((a||b)&&inb(r+a,c+b)){ var nj=idx(r+a,c+b); if(!open[nj]&&!mine[nj]&&!flag[nj]) stack.push(nj); } }
+      }
+    }
+  }
+  function toggleFlag(i){
+    if(over||open[i]) return;
+    flag[i]=!flag[i]; flagsUsed+=flag[i]?1:-1; minesEl.textContent=M-flagsUsed; draw();
+  }
+  function lose(){
+    over=true; clearInterval(timer);
+    for(var i=0;i<R*R;i++){ if(mine[i]) open[i]=true; }
+    draw();
+    banner('💥 انفجر اللغم! حاول مجدداً', false);
+  }
+  function checkWin(){
+    if(over) return;
+    if(safeLeft<=0){ over=true; clearInterval(timer); banner('🎉 أحسنت! كشفت كل الخانات الآمنة في '+fmt(secs), true); }
+  }
+  function banner(msg, win){
+    var ov=document.createElement('div');
+    ov.style.cssText='position:fixed;inset:0;background:rgba(10,16,39,.85);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;z-index:200';
+    ov.innerHTML='<div style="font-family:Cairo,sans-serif;color:#fff;font-size:26px;text-align:center;padding:0 20px">'+msg+'</div>';
+    var b=document.createElement('button'); b.className='btn'; b.textContent='لعبة جديدة';
+    b.addEventListener('click',function(){ document.body.removeChild(ov); var d=document.querySelector('.diff.on'); reset(+d.getAttribute('data-r'),+d.getAttribute('data-m')); });
+    ov.appendChild(b); document.body.appendChild(ov);
+  }
+
+  document.querySelector('.diffs').addEventListener('click',function(e){
+    var b=e.target.closest('.diff'); if(!b) return;
+    document.querySelectorAll('.diff').forEach(function(x){x.classList.remove('on');}); b.classList.add('on');
+    reset(+b.getAttribute('data-r'),+b.getAttribute('data-m'));
+  });
+  document.getElementById('newBtn').addEventListener('click',function(){ var d=document.querySelector('.diff.on'); reset(+d.getAttribute('data-r'),+d.getAttribute('data-m')); });
+  document.getElementById('flagBtn').addEventListener('click',function(){ flagMode=!flagMode; this.classList.toggle('on',flagMode); this.textContent=flagMode?'🚩 وضع العلم (مُفعّل)':'🚩 وضع العلم'; });
+
+  reset(9,10);
+})();
+</script>
+</body>
+</html>

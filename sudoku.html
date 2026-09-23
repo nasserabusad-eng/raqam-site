@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>سودوكو بالعربية | لعبة سودوكو مجانية أونلاين | رقم</title>
+<meta name="description" content="العب سودوكو بالعربية مجاناً: ألغاز أرقام بمستويات سهل ومتوسط وصعب، مع مؤقّت وتلوين الأخطاء. لعبة ذكاء تُلعب في المتصفح على الجوال والكمبيوتر بدون تحميل.">
+<meta name="keywords" content="سودوكو, لعبة سودوكو, سودوكو بالعربي, سودوكو اونلاين, العاب ذكاء, الغاز ارقام, sudoku">
+<link rel="canonical" href="https://raqam.ai/sudoku.html">
+<meta property="og:title" content="سودوكو بالعربية — رقم">
+<meta property="og:description" content="ألغاز سودوكو مجانية بثلاثة مستويات.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar">
+<meta property="og:image" content="https://d8j0ntlcm91z4.cloudfront.net/user_3Gqr8cNvaHecl4CfmnUHSrGscwp/hf_20260923_070124_66b1ba2f-6cb9-407e-adc2-c449cf8fe288.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-93NPFB6NL6"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-93NPFB6NL6');</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"سودوكو","url":"https://raqam.ai/sudoku.html","applicationCategory":"GameApplication","operatingSystem":"Any","inLanguage":"ar","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+<style>
+  .sudoku-wrap{max-width:min(94vw,480px);margin-inline:auto}
+  .sboard{display:grid;grid-template-columns:repeat(9,1fr);gap:0;background:var(--line2);border:2.5px solid var(--cyan);border-radius:10px;overflow:hidden;aspect-ratio:1;touch-action:manipulation}
+  .scell{display:flex;align-items:center;justify-content:center;background:var(--card);color:#fff;
+    font-family:"Cairo","Tajawal",sans-serif;font-weight:700;font-size:clamp(16px,5.2vw,26px);cursor:pointer;
+    border:.5px solid rgba(58,71,149,.5);user-select:none;transition:background .1s}
+  .scell.given{color:var(--cyan);background:#101838;cursor:default;font-weight:800}
+  .scell.sel{background:rgba(34,211,238,.28)}
+  .scell.peer{background:rgba(99,102,241,.14)}
+  .scell.same{background:rgba(163,230,53,.16)}
+  .scell.err{color:#fecaca;background:rgba(248,113,113,.26)}
+  /* 3x3 box borders */
+  .scell:nth-child(3n){border-inline-start:1.5px solid var(--cyan)}
+  .scell:nth-child(9n+1){border-inline-start:none}
+  .sboard .scell:nth-child(n+19):nth-child(-n+27),
+  .sboard .scell:nth-child(n+46):nth-child(-n+54){border-bottom:1.5px solid var(--cyan)}
+  .pad{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:16px}
+  .pk-n{aspect-ratio:1;border-radius:12px;background:var(--card2);border:1px solid var(--line2);color:#fff;
+    font-family:"Cairo",sans-serif;font-weight:800;font-size:clamp(18px,5vw,24px);cursor:pointer}
+  .pk-n:hover{border-color:var(--cyan)}
+  .pk-n.erase{color:var(--red);font-size:20px}
+  .diffs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:14px}
+  .diff{padding:8px 18px;border-radius:999px;background:var(--card2);border:1px solid var(--line2);color:var(--muted);font-family:"Cairo",sans-serif;font-weight:700;cursor:pointer;font-size:14px}
+  .diff.on{background:linear-gradient(135deg,var(--cyan),var(--indigo));color:#06122e;border-color:transparent}
+</style>
+</head>
+<body>
+
+<header class="top"><div class="wrap mast">
+  <a href="index.html" class="brand"><span class="mk">×</span><span class="word">رقم</span></a>
+  <nav class="nav"><a href="index.html">الرئيسية</a><a href="sudoku.html" class="on">سودوكو</a><a href="times-tables.html">جدول الضرب</a><a href="mental-math.html">الحساب الذهني</a><a href="tricks.html">خدع الأرقام</a></nav>
+  <span class="grow"></span>
+</div></header>
+
+<main class="gamewrap">
+  <div class="crumbs"><a href="index.html">الرئيسية</a> ← سودوكو</div>
+  <div class="gtitle"><h1>سودوكو 🔢</h1><p>املأ الشبكة بحيث لا يتكرّر أي رقم في صفٍّ أو عمودٍ أو مربّع</p></div>
+  <div class="ad ad-lead"><span class="lbl">مساحة إعلانية</span></div>
+
+  <div class="sudoku-wrap">
+    <div class="diffs" id="diffs">
+      <button class="diff on" data-d="easy">سهل</button>
+      <button class="diff" data-d="medium">متوسط</button>
+      <button class="diff" data-d="hard">صعب</button>
+    </div>
+    <div class="hud">
+      <div class="stat"><div class="l">الوقت</div><div class="v" id="time">0:00</div></div>
+      <div class="stat"><div class="l">الأخطاء</div><div class="v" id="errs">0</div></div>
+      <button class="btn sec" id="newBtn">لعبة جديدة</button>
+    </div>
+    <div class="sboard" id="board"></div>
+    <div class="pad" id="pad"></div>
+  </div>
+
+  <div class="prose" style="margin-top:26px;max-width:640px;margin-inline:auto">
+    <h2>كيف تلعب سودوكو؟</h2>
+    <p>الهدف ملء شبكة 9×9 بالأرقام من 1 إلى 9، بحيث يظهر كل رقم مرة واحدة فقط في كل صفٍّ أفقي، وكل عمودٍ رأسي، وكل مربّع صغير من 3×3. اضغط على خانة فارغة ثم اختر الرقم من لوحة الأرقام في الأسفل. الخانات الملوّنة بالأزرق معطاة مسبقاً ولا يمكن تغييرها. ابدأ بالمستوى السهل ثم تدرّج نحو الصعب.</p>
+  </div>
+</main>
+
+<footer class="foot"><div class="fine">© <span id="yr"></span> رقم (raqam.ai) — محرّك السودوكو من <a href="https://github.com/robatron/sudoku.js" style="color:var(--muted)">sudoku.js</a> برخصة MIT.</div></footer>
+
+<script src="assets/sudoku.js"></script>
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+(function(){
+  "use strict";
+  var boardEl=document.getElementById('board'), padEl=document.getElementById('pad');
+  var timeEl=document.getElementById('time'), errsEl=document.getElementById('errs');
+  var cells=[], puzzle='', solution='', given=[], values=[], sel=-1, errs=0, timer=null, secs=0, done=false;
+
+  for(var i=0;i<81;i++){ (function(i){ var c=document.createElement('div'); c.className='scell';
+    c.addEventListener('click',function(){ select(i); }); boardEl.appendChild(c); cells.push(c); })(i); }
+
+  var padKeys=['1','2','3','4','5','6','7','8','9','⌫'];
+  padKeys.forEach(function(k){ var b=document.createElement('button'); b.className='pk-n'+(k==='⌫'?' erase':''); b.textContent=k;
+    b.addEventListener('click',function(){ enter(k==='⌫'?0:parseInt(k,10)); }); padEl.appendChild(b); });
+
+  function fmt(s){ return Math.floor(s/60)+':'+('0'+(s%60)).slice(-2); }
+  function startTimer(){ clearInterval(timer); secs=0; timeEl.textContent='0:00'; timer=setInterval(function(){ secs++; timeEl.textContent=fmt(secs); },1000); }
+
+  function newGame(diff){
+    puzzle = sudoku.generate(diff || 'easy');
+    solution = sudoku.solve(puzzle);
+    given=[]; values=[]; errs=0; done=false; sel=-1; errsEl.textContent='0';
+    for(var i=0;i<81;i++){ var ch=puzzle[i]; var g=(ch!=='.'); given.push(g); values.push(g?parseInt(ch,10):0); }
+    draw(); startTimer();
+  }
+  function draw(){
+    for(var i=0;i<81;i++){ var c=cells[i]; c.className='scell'+(given[i]?' given':'');
+      c.textContent = values[i]? values[i] : ''; }
+    if(sel>=0) highlight();
+  }
+  function highlight(){
+    cells.forEach(function(c){ c.classList.remove('sel','peer','same','err'); });
+    if(sel<0) return;
+    var r=Math.floor(sel/9), col=sel%9, br=Math.floor(r/3)*3, bc=Math.floor(col/3)*3;
+    var v=values[sel];
+    for(var i=0;i<81;i++){ var ir=Math.floor(i/9), ic=i%9;
+      if(ir===r||ic===col||(Math.floor(ir/3)*3===br&&Math.floor(ic/3)*3===bc)) cells[i].classList.add('peer');
+      if(v&&values[i]===v) cells[i].classList.add('same');
+    }
+    cells[sel].classList.add('sel');
+    markErrors();
+  }
+  function markErrors(){
+    for(var i=0;i<81;i++){ if(!values[i]) continue; if(conflict(i)) cells[i].classList.add('err'); }
+  }
+  function conflict(i){
+    var r=Math.floor(i/9), col=i%9, v=values[i]; if(!v) return false;
+    for(var k=0;k<9;k++){ var ri=r*9+k; if(ri!==i&&values[ri]===v) return true; var ci=k*9+col; if(ci!==i&&values[ci]===v) return true; }
+    var br=Math.floor(r/3)*3, bc=Math.floor(col/3)*3;
+    for(var a=0;a<3;a++)for(var b=0;b<3;b++){ var bi=(br+a)*9+(bc+b); if(bi!==i&&values[bi]===v) return true; }
+    return false;
+  }
+  function select(i){ if(done) return; sel=i; highlight(); }
+  function enter(n){
+    if(done||sel<0||given[sel]) return;
+    var was=values[sel];
+    values[sel]=n;
+    if(n!==0 && conflict(sel) && was!==n){ errs++; errsEl.textContent=errs; }
+    draw(); checkWin();
+  }
+  function checkWin(){
+    for(var i=0;i<81;i++){ if(!values[i]||conflict(i)) return; }
+    done=true; clearInterval(timer);
+    setTimeout(showWin,60);
+  }
+  function showWin(){
+    var ov=document.createElement('div');
+    ov.style.cssText='position:fixed;inset:0;background:rgba(10,16,39,.86);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;z-index:200';
+    ov.innerHTML='<div style="font-family:Cairo,sans-serif;color:#fff;font-size:30px">🎉 أحسنت!</div><div style="color:var(--muted)">حللت السودوكو في '+fmt(secs)+' بأخطاء: '+errs+'</div>';
+    var btn=document.createElement('button'); btn.className='btn'; btn.textContent='لعبة جديدة';
+    btn.addEventListener('click',function(){ document.body.removeChild(ov); var d=document.querySelector('.diff.on'); newGame(d?d.getAttribute('data-d'):'easy'); });
+    ov.appendChild(btn); document.body.appendChild(ov);
+  }
+
+  document.getElementById('diffs').addEventListener('click',function(e){
+    var b=e.target.closest('.diff'); if(!b) return;
+    document.querySelectorAll('.diff').forEach(function(x){x.classList.remove('on');}); b.classList.add('on');
+    newGame(b.getAttribute('data-d'));
+  });
+  document.getElementById('newBtn').addEventListener('click',function(){ var d=document.querySelector('.diff.on'); newGame(d?d.getAttribute('data-d'):'easy'); });
+  document.addEventListener('keydown',function(e){ if(e.key>='1'&&e.key<='9') enter(parseInt(e.key,10)); else if(e.key==='Backspace'||e.key==='Delete'||e.key==='0') enter(0); });
+
+  newGame('easy');
+})();
+</script>
+</body>
+</html>

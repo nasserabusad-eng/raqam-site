@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>لعبة 2048 بالعربية | ادمج الأرقام واربح | رقم</title>
+<meta name="description" content="لعبة 2048 المجانية بالعربية: حرّك المربعات وادمج الأرقام المتشابهة للوصول إلى 2048. لعبة أرقام وذكاء وإدمان تُلعب في المتصفح على الجوال والكمبيوتر.">
+<meta name="keywords" content="لعبة 2048, 2048 بالعربي, ألعاب أرقام, ألعاب ذكاء, العب 2048 مجاناً">
+<link rel="canonical" href="https://raqam.ai/game2048.html">
+<meta property="og:title" content="لعبة 2048 بالعربية — رقم">
+<meta property="og:description" content="ادمج الأرقام حتى تصل إلى 2048.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar">
+<meta property="og:image" content="https://d8j0ntlcm91z4.cloudfront.net/user_3Gqr8cNvaHecl4CfmnUHSrGscwp/hf_20260923_070124_98746f41-7aec-4fa2-afb1-25e5ee84ef5d.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-93NPFB6NL6"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-93NPFB6NL6');</script>
+<style>
+  .board2{position:relative;background:#0e1533;border:1px solid var(--line2);border-radius:16px;padding:10px;width:min(92vw,420px);aspect-ratio:1;margin-inline:auto;touch-action:none}
+  .g2{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(4,1fr);gap:10px;width:100%;height:100%}
+  .cell2{background:rgba(255,255,255,.05);border-radius:11px;display:flex;align-items:center;justify-content:center;
+    font-family:"Cairo","Tajawal",sans-serif;font-weight:800;font-size:clamp(20px,6vw,34px);color:#06122e;transition:transform .08s}
+  .cell2[data-v="2"]{background:#93c5fd}.cell2[data-v="4"]{background:#60a5fa}.cell2[data-v="8"]{background:#3b82f6;color:#fff}
+  .cell2[data-v="16"]{background:#6366f1;color:#fff}.cell2[data-v="32"]{background:#818cf8;color:#fff}.cell2[data-v="64"]{background:#22d3ee}
+  .cell2[data-v="128"]{background:#2dd4bf;font-size:clamp(18px,5vw,30px)}.cell2[data-v="256"]{background:#34d399}
+  .cell2[data-v="512"]{background:#a3e635}.cell2[data-v="1024"]{background:#fbbf24;font-size:clamp(16px,4.5vw,26px)}
+  .cell2[data-v="2048"]{background:#f59e0b;box-shadow:0 0 26px #fbbf24}
+  .pop{transform:scale(1.12)}
+  .ov{position:absolute;inset:0;background:rgba(10,16,39,.9);border-radius:16px;display:none;flex-direction:column;align-items:center;justify-content:center;gap:14px}
+  .ov.show{display:flex}.ov h2{font-family:"Cairo",sans-serif;color:#fff;font-size:28px;margin:0}
+  .hint{color:var(--muted);text-align:center;font-size:14px;margin-top:14px}
+</style>
+</head>
+<body>
+
+<header class="top"><div class="wrap mast">
+  <a href="index.html" class="brand"><span class="mk">×</span><span class="word">رقم</span></a>
+  <nav class="nav"><a href="index.html">الرئيسية</a><a href="times-tables.html">جدول الضرب</a><a href="mental-math.html">الحساب الذهني</a><a href="game2048.html" class="on">2048</a><a href="tricks.html">خدع الأرقام</a></nav>
+  <span class="grow"></span>
+</div></header>
+
+<main class="gamewrap">
+  <div class="crumbs"><a href="index.html">الرئيسية</a> ← 2048</div>
+  <div class="gtitle"><h1>2048 🔢</h1><p>ادمج الأرقام المتشابهة للوصول إلى 2048</p></div>
+  <div class="ad ad-lead"><span class="lbl">مساحة إعلانية</span></div>
+
+  <div class="hud">
+    <div class="stat"><div class="l">النقاط</div><div class="v" id="score">0</div></div>
+    <div class="stat"><div class="l">الأفضل</div><div class="v" id="best">0</div></div>
+    <button class="btn sec" id="newBtn">لعبة جديدة</button>
+  </div>
+
+  <div class="board2"><div class="g2" id="g2"></div><div class="ov" id="ov"><h2 id="ovt">🎉</h2><button class="btn" id="ovBtn">العب مجدداً</button></div></div>
+  <p class="hint">على الكمبيوتر: مفاتيح الأسهم · على الجوال: اسحب بإصبعك</p>
+</main>
+
+<footer class="foot"><div class="fine">© <span id="yr"></span> رقم (raqam.ai) — ألعاب الأرقام بالعربية.</div></footer>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+(function(){
+  "use strict";
+  var N=4, g2=document.getElementById('g2'), cells=[], board=[], score=0, won=false, over=false;
+  var scoreEl=document.getElementById('score'), bestEl=document.getElementById('best'), ov=document.getElementById('ov'), ovt=document.getElementById('ovt');
+  var best=0; try{ best=parseInt(localStorage.getItem('raqam_2048_best')||'0',10)||0; }catch(e){}
+  bestEl.textContent=best;
+  for(var i=0;i<N*N;i++){ var c=document.createElement('div'); c.className='cell2'; g2.appendChild(c); cells.push(c); }
+  function empty(){ var a=[]; for(var i=0;i<N*N;i++) if(board[i]===0) a.push(i); return a; }
+  function spawn(){ var e=empty(); if(!e.length)return; var idx=e[Math.floor(Math.random()*e.length)]; board[idx]=Math.random()<0.9?2:4; cells[idx].classList.add('pop'); }
+  function draw(){ for(var i=0;i<N*N;i++){ var v=board[i]; cells[i].textContent=v?v:''; if(v)cells[i].setAttribute('data-v',v); else cells[i].removeAttribute('data-v'); }
+    scoreEl.textContent=score; setTimeout(function(){cells.forEach(function(c){c.classList.remove('pop');});},90); }
+  function reset(){ board=new Array(N*N).fill(0); score=0; won=false; over=false; ov.classList.remove('show'); spawn(); spawn(); draw(); }
+  function getRow(b,r){ var a=[]; for(var c=0;c<N;c++)a.push(b[r*N+c]); return a; }
+  function setRow(b,r,a){ for(var c=0;c<N;c++)b[r*N+c]=a[c]; }
+  function getCol(b,c){ var a=[]; for(var r=0;r<N;r++)a.push(b[r*N+c]); return a; }
+  function setCol(b,c,a){ for(var r=0;r<N;r++)b[r*N+c]=a[r]; }
+  function slide(arr){ var a=arr.filter(function(x){return x!==0;}); var out=[], gained=0;
+    for(var i=0;i<a.length;i++){ if(i<a.length-1 && a[i]===a[i+1]){ var m=a[i]*2; out.push(m); gained+=m; if(m===2048)won=true; i++; } else out.push(a[i]); }
+    while(out.length<N)out.push(0); return {line:out, gained:gained}; }
+  function move(dir){
+    if(over) return; var before=board.slice(), gt=0;
+    if(dir==='l'||dir==='r'){ for(var r=0;r<N;r++){ var row=getRow(board,r); if(dir==='r')row.reverse(); var s=slide(row); if(dir==='r')s.line.reverse(); setRow(board,r,s.line); gt+=s.gained; } }
+    else { for(var c=0;c<N;c++){ var col=getCol(board,c); if(dir==='d')col.reverse(); var s2=slide(col); if(dir==='d')s2.line.reverse(); setCol(board,c,s2.line); gt+=s2.gained; } }
+    if(!before.some(function(v,i){return v!==board[i];})) return;
+    score+=gt; if(score>best){ best=score; bestEl.textContent=best; try{localStorage.setItem('raqam_2048_best',best);}catch(e){} }
+    spawn(); draw();
+    if(won){ won=false; ovt.textContent='وصلت إلى 2048! 🎉'; ov.classList.add('show'); }
+    else if(!canMove()){ over=true; ovt.textContent='انتهت اللعبة — نقاطك: '+score; ov.classList.add('show'); }
+  }
+  function canMove(){ if(empty().length)return true;
+    for(var r=0;r<N;r++)for(var c=0;c<N;c++){ var v=board[r*N+c]; if(c<N-1&&v===board[r*N+c+1])return true; if(r<N-1&&v===board[(r+1)*N+c])return true; } return false; }
+  document.addEventListener('keydown',function(e){ var k=e.key,d=null;
+    if(k==='ArrowLeft')d='l'; else if(k==='ArrowRight')d='r'; else if(k==='ArrowUp')d='u'; else if(k==='ArrowDown')d='d';
+    if(d){ e.preventDefault(); move(d); } });
+  var sx=0,sy=0, bd=document.querySelector('.board2');
+  bd.addEventListener('touchstart',function(e){ var t=e.touches[0]; sx=t.clientX; sy=t.clientY; },{passive:true});
+  bd.addEventListener('touchend',function(e){ var t=e.changedTouches[0]; var dx=t.clientX-sx, dy=t.clientY-sy;
+    if(Math.max(Math.abs(dx),Math.abs(dy))<24)return; if(Math.abs(dx)>Math.abs(dy)) move(dx>0?'r':'l'); else move(dy>0?'d':'u'); },{passive:true});
+  document.getElementById('newBtn').addEventListener('click',reset);
+  document.getElementById('ovBtn').addEventListener('click',reset);
+  reset();
+})();
+</script>
+</body>
+</html>

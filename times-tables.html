@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>جدول الضرب | تعلّم وتدرّب على جداول الضرب بالعربية | رقم</title>
+<meta name="description" content="جدول الضرب التفاعلي بالعربية: تعلّم جداول الضرب من 1 إلى 12 وتدرّب عليها باختبار سريع ممتع للأطفال والطلاب. مجاني ويُلعب في المتصفح.">
+<meta name="keywords" content="جدول الضرب, جداول الضرب, تعلم جدول الضرب, جدول الضرب كامل, تدريب جدول الضرب, جدول الضرب للاطفال">
+<link rel="canonical" href="https://raqam.ai/times-tables.html">
+<meta property="og:title" content="جدول الضرب التفاعلي — رقم">
+<meta property="og:description" content="تعلّم جداول الضرب وتدرّب عليها باختبار ممتع.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar">
+<meta property="og:image" content="https://d8j0ntlcm91z4.cloudfront.net/user_3Gqr8cNvaHecl4CfmnUHSrGscwp/hf_20260923_070124_4fbbff6a-c1a6-4f6f-b13f-262eef8e4c49.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-93NPFB6NL6"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-93NPFB6NL6');</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"جدول الضرب التفاعلي","url":"https://raqam.ai/times-tables.html","applicationCategory":"EducationalApplication","operatingSystem":"Any","inLanguage":"ar","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+</head>
+<body>
+
+<header class="top"><div class="wrap mast">
+  <a href="index.html" class="brand"><span class="mk">×</span><span class="word">رقم</span></a>
+  <nav class="nav"><a href="index.html">الرئيسية</a><a href="times-tables.html" class="on">جدول الضرب</a><a href="mental-math.html">الحساب الذهني</a><a href="game2048.html">2048</a><a href="tricks.html">خدع الأرقام</a></nav>
+  <span class="grow"></span>
+</div></header>
+
+<main class="gamewrap">
+  <div class="crumbs"><a href="index.html">الرئيسية</a> ← جدول الضرب</div>
+  <div class="gtitle"><h1>جدول الضرب ✖️</h1><p>اختر رقماً، تعلّم جدوله، ثم تدرّب عليه</p></div>
+
+  <div class="ad ad-lead"><span class="lbl">مساحة إعلانية</span></div>
+
+  <div class="panel">
+    <div class="picker" id="picker"></div>
+    <div class="hud">
+      <button class="btn sec" id="learnBtn">تعلّم</button>
+      <button class="btn" id="quizBtn">تدرّب 🎯</button>
+    </div>
+
+    <div id="learn"><div class="ttable" id="ttable"></div></div>
+
+    <div id="quiz" style="display:none">
+      <div class="hud"><div class="stat"><div class="l">السؤال</div><div class="v"><span id="qn">1</span>/10</div></div><div class="stat"><div class="l">النقاط</div><div class="v" id="score">0</div></div></div>
+      <div class="q-q" id="qtext">—</div>
+      <div class="q-opts" id="opts"></div>
+      <div id="done" style="display:none" class="overlay">
+        <div class="big" id="finalScore">0</div><div class="lbl">من 10 صحيحة</div>
+        <div id="verdict" style="color:var(--muted);margin-bottom:14px"></div>
+        <button class="btn" id="againBtn">حاول مجدداً</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="prose" style="margin-top:24px">
+    <h2>كيف تحفظ جدول الضرب بسرعة؟</h2>
+    <p>ابدأ بالجداول السهلة (2 و5 و10)، ثم انتقل تدريجياً إلى 3 و4 و6. كرّر كل جدول بصوت عالٍ ثم اختبر نفسك في وضع «تدرّب» حتى تُجيب دون تفكير. تذكّر أن الضرب تبديلي: 7×8 = 8×7، فحفظ نصف الجدول يكفي غالباً.</p>
+  </div>
+</main>
+
+<footer class="foot"><div class="fine">© <span id="yr"></span> رقم (raqam.ai) — تعلّم الأرقام والعب.</div></footer>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+(function(){
+  "use strict";
+  var sel=5;
+  var picker=document.getElementById('picker'), ttable=document.getElementById('ttable');
+  var learn=document.getElementById('learn'), quiz=document.getElementById('quiz');
+  for(var n=1;n<=12;n++){ (function(n){ var b=document.createElement('button'); b.className='pk'+(n===sel?' on':''); b.textContent=n;
+    b.addEventListener('click',function(){ sel=n; picker.querySelectorAll('.pk').forEach(function(x){x.classList.remove('on')}); b.classList.add('on'); renderTable(); if(quiz.style.display!=='none') startQuiz(); });
+    picker.appendChild(b); })(n); }
+  function renderTable(){ var h=''; for(var m=1;m<=12;m++){ h+='<div class="trow"><span>'+sel+' × '+m+'</span><span class="eq">= '+(sel*m)+'</span></div>'; } ttable.innerHTML=h; }
+  document.getElementById('learnBtn').addEventListener('click',function(){ learn.style.display=''; quiz.style.display='none'; });
+  document.getElementById('quizBtn').addEventListener('click',function(){ learn.style.display='none'; quiz.style.display=''; startQuiz(); });
+
+  var qi=0, score=0, N=10, answered=false;
+  var qtext=document.getElementById('qtext'), opts=document.getElementById('opts'), doneEl=document.getElementById('done');
+  function startQuiz(){ qi=0; score=0; answered=false; doneEl.style.display='none'; qtext.style.display=''; opts.style.display='';
+    document.getElementById('score').textContent='0'; nextQ(); }
+  function nextQ(){
+    answered=false; document.getElementById('qn').textContent=(qi+1);
+    var m=1+Math.floor(Math.random()*12); var ans=sel*m;
+    qtext.textContent=sel+' × '+m+' = ؟';
+    var set={}; set[ans]=1; var arr=[ans];
+    while(arr.length<4){ var d=ans+(Math.floor(Math.random()*9)-4)*(1+Math.floor(Math.random()*3)); if(d>0&&!set[d]){ set[d]=1; arr.push(d); } }
+    arr.sort(function(){return Math.random()-0.5;});
+    opts.innerHTML='';
+    arr.forEach(function(v){ var b=document.createElement('div'); b.className='q-opt'; b.textContent=v;
+      b.addEventListener('click',function(){ pick(v,ans,b); }); opts.appendChild(b); });
+  }
+  function pick(v,ans,el){
+    if(answered)return; answered=true;
+    var all=opts.querySelectorAll('.q-opt');
+    all.forEach(function(x){ if(parseInt(x.textContent,10)===ans) x.classList.add('correct'); });
+    if(v===ans){ score++; document.getElementById('score').textContent=score; } else { el.classList.add('wrong'); }
+    setTimeout(function(){ qi++; if(qi<N) nextQ(); else finish(); }, 650);
+  }
+  function finish(){
+    qtext.style.display='none'; opts.style.display='none'; doneEl.style.display='block';
+    document.getElementById('finalScore').textContent=score;
+    document.getElementById('verdict').textContent = score>=9?'ممتاز! أتقنت جدول '+sel+' 🏆' : score>=6?'جيد جداً، تدرّب أكثر قليلاً.' : 'راجع الجدول في وضع «تعلّم» وحاول مجدداً.';
+  }
+  document.getElementById('againBtn').addEventListener('click',startQuiz);
+  renderTable();
+})();
+</script>
+</body>
+</html>

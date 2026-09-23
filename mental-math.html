@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الحساب الذهني | لعبة الحساب السريع في 60 ثانية بالعربية | رقم</title>
+<meta name="description" content="لعبة الحساب الذهني السريع بالعربية: حلّ أكبر عدد من مسائل الجمع والطرح والضرب في 60 ثانية، وقوِّ سرعة عقلك في الرياضيات. مجانية وتُلعب في المتصفح.">
+<meta name="keywords" content="الحساب الذهني, حساب سريع, لعبة رياضيات, تمارين حساب ذهني, ألعاب أرقام, تقوية العقل">
+<link rel="canonical" href="https://raqam.ai/mental-math.html">
+<meta property="og:title" content="الحساب الذهني السريع — رقم">
+<meta property="og:description" content="حلّ أكبر عدد من المسائل في 60 ثانية.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar">
+<meta property="og:image" content="https://d8j0ntlcm91z4.cloudfront.net/user_3Gqr8cNvaHecl4CfmnUHSrGscwp/hf_20260923_070124_1d7ad79e-6c2c-4bd3-9821-4f4ad1596d99.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-93NPFB6NL6"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-93NPFB6NL6');</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"الحساب الذهني السريع","url":"https://raqam.ai/mental-math.html","applicationCategory":"EducationalApplication","operatingSystem":"Any","inLanguage":"ar","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+</head>
+<body>
+
+<header class="top"><div class="wrap mast">
+  <a href="index.html" class="brand"><span class="mk">×</span><span class="word">رقم</span></a>
+  <nav class="nav"><a href="index.html">الرئيسية</a><a href="times-tables.html">جدول الضرب</a><a href="mental-math.html" class="on">الحساب الذهني</a><a href="game2048.html">2048</a><a href="tricks.html">خدع الأرقام</a></nav>
+  <span class="grow"></span>
+</div></header>
+
+<main class="gamewrap">
+  <div class="crumbs"><a href="index.html">الرئيسية</a> ← الحساب الذهني</div>
+  <div class="gtitle"><h1>الحساب الذهني 🧠</h1><p>كم مسألة تحلّ في 60 ثانية؟</p></div>
+
+  <div class="ad ad-lead"><span class="lbl">مساحة إعلانية</span></div>
+
+  <div class="panel">
+    <!-- start -->
+    <div id="start" class="overlay">
+      <div class="big">60</div><div class="lbl">ثانية · جمع وطرح وضرب</div>
+      <div class="hud"><div class="stat"><div class="l">أفضل نتيجة</div><div class="v" id="best">0</div></div></div>
+      <button class="btn full" id="startBtn">ابدأ التحدّي</button>
+    </div>
+
+    <!-- play -->
+    <div id="play" style="display:none">
+      <div class="timerbar"><div class="fill" id="fill"></div></div>
+      <div class="hud"><div class="stat"><div class="l">الوقت</div><div class="v" id="time">60</div></div><div class="stat"><div class="l">النقاط</div><div class="v" id="score">0</div></div></div>
+      <div class="q-q" id="qtext">—</div>
+      <div class="q-opts" id="opts"></div>
+    </div>
+
+    <!-- done -->
+    <div id="done" style="display:none" class="overlay">
+      <div class="big" id="finalScore">0</div><div class="lbl">إجابة صحيحة في 60 ثانية</div>
+      <div id="verdict" style="color:var(--muted);margin-bottom:14px"></div>
+      <button class="btn full" id="againBtn">حاول مجدداً</button>
+    </div>
+  </div>
+
+  <div class="prose" style="margin-top:24px">
+    <h2>لماذا الحساب الذهني مهم؟</h2>
+    <p>الحساب الذهني يقوّي التركيز وسرعة التفكير ويجعل التعامل اليومي مع الأرقام أسهل. تدرّب دقيقة واحدة يومياً وستلاحظ تحسّناً سريعاً. جرّب أيضاً <a href="tricks.html" style="color:var(--cyan)">خدع الأرقام</a> لتتعلّم طرقاً أسرع للحساب.</p>
+  </div>
+</main>
+
+<footer class="foot"><div class="fine">© <span id="yr"></span> رقم (raqam.ai) — قوِّ عقلك بالأرقام.</div></footer>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+(function(){
+  "use strict";
+  var DUR=60;
+  var best=0; try{ best=parseInt(localStorage.getItem('raqam_mm_best')||'0',10)||0; }catch(e){}
+  document.getElementById('best').textContent=best;
+  var startEl=document.getElementById('start'), playEl=document.getElementById('play'), doneEl=document.getElementById('done');
+  var qtext=document.getElementById('qtext'), opts=document.getElementById('opts'), timeEl=document.getElementById('time'), scoreEl=document.getElementById('score'), fill=document.getElementById('fill');
+  var score=0, t=DUR, timer=null, answered=false;
+
+  function gen(){
+    var op=['+','-','×'][Math.floor(Math.random()*3)], a,b,ans;
+    if(op==='+'){ a=2+Math.floor(Math.random()*49); b=2+Math.floor(Math.random()*49); ans=a+b; }
+    else if(op==='-'){ a=5+Math.floor(Math.random()*45); b=1+Math.floor(Math.random()*(a-1)); ans=a-b; }
+    else { a=2+Math.floor(Math.random()*11); b=2+Math.floor(Math.random()*11); ans=a*b; }
+    return {q:a+' '+op+' '+b, ans:ans};
+  }
+  function show(){
+    answered=false; var cur=gen();
+    qtext.textContent=cur.q+' = ؟';
+    var set={}; set[cur.ans]=1; var arr=[cur.ans];
+    while(arr.length<4){ var d=cur.ans+(Math.floor(Math.random()*11)-5); if(d>0&&!set[d]){ set[d]=1; arr.push(d); } }
+    arr.sort(function(){return Math.random()-0.5;});
+    opts.innerHTML='';
+    arr.forEach(function(v){ var el=document.createElement('div'); el.className='q-opt'; el.textContent=v;
+      el.addEventListener('click',function(){ pick(v,cur.ans,el); }); opts.appendChild(el); });
+  }
+  function pick(v,ans,el){
+    if(answered)return; answered=true;
+    if(v===ans){ score++; scoreEl.textContent=score; el.classList.add('correct'); setTimeout(show,140); }
+    else { el.classList.add('wrong'); var all=opts.querySelectorAll('.q-opt'); all.forEach(function(x){ if(parseInt(x.textContent,10)===ans) x.classList.add('correct'); }); setTimeout(show,420); }
+  }
+  function tick(){
+    t--; timeEl.textContent=t; fill.style.width=(t/DUR*100)+'%';
+    if(t<=0){ clearInterval(timer); finish(); }
+  }
+  function begin(){
+    score=0; t=DUR; scoreEl.textContent='0'; timeEl.textContent=DUR; fill.style.width='100%';
+    startEl.style.display='none'; doneEl.style.display='none'; playEl.style.display='';
+    show(); clearInterval(timer); timer=setInterval(tick,1000);
+  }
+  function finish(){
+    playEl.style.display='none'; doneEl.style.display='block';
+    document.getElementById('finalScore').textContent=score;
+    if(score>best){ best=score; try{localStorage.setItem('raqam_mm_best',best);}catch(e){} document.getElementById('best').textContent=best; }
+    document.getElementById('verdict').textContent = score>=25?'خارق! عقلك سريع جداً ⚡' : score>=15?'ممتاز، استمر في التدريب.' : 'بداية جيدة — جرّب مجدداً وستتحسّن.';
+  }
+  document.getElementById('startBtn').addEventListener('click',begin);
+  document.getElementById('againBtn').addEventListener('click',begin);
+})();
+</script>
+</body>
+</html>

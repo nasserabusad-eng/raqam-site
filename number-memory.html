@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>ميموري الأرقام | لعبة الذاكرة بالأرقام بالعربية | رقم</title>
+<meta name="description" content="العب ميموري الأرقام بالعربية مجاناً: اقلب البطاقات وطابق الأزواج المتماثلة بأقل عدد من المحاولات وأسرع وقت. لعبة ذاكرة وتركيز للأطفال والكبار.">
+<meta name="keywords" content="ميموري, لعبة الذاكرة, العاب تركيز للاطفال, لعبة مطابقة البطاقات, العاب ارقام">
+<link rel="canonical" href="https://raqam.ai/number-memory">
+<meta property="og:title" content="ميموري الأرقام — رقم">
+<meta property="og:description" content="طابق أزواج الأرقام بأقل عدد من المحاولات.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar">
+<meta property="og:image" content="https://d8j0ntlcm91z4.cloudfront.net/user_3Gqr8cNvaHecl4CfmnUHSrGscwp/hf_20261026_113846_d98c3bd7-3d95-4492-baa7-ea6078500ee0.png">
+<link rel="alternate" hreflang="en" href="https://raqam.ai/en/number-memory">
+<link rel="alternate" hreflang="ar" href="https://raqam.ai/number-memory">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/styles.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-93NPFB6NL6"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-93NPFB6NL6');</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"ميموري الأرقام","url":"https://raqam.ai/number-memory","applicationCategory":"GameApplication","operatingSystem":"Any","inLanguage":"ar","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+<style>
+  .mem-wrap{max-width:420px;margin-inline:auto}
+  .diffs{display:flex;gap:8px;justify-content:center;margin-bottom:16px}
+  .diff{background:var(--card2);border:1px solid var(--line2);color:var(--muted);font-family:"Cairo",sans-serif;font-weight:700;font-size:14px;padding:8px 16px;border-radius:10px;cursor:pointer}
+  .diff.on{background:linear-gradient(135deg,var(--cyan),var(--indigo));color:#06122e;border-color:transparent}
+  .mgrid{display:grid;gap:8px;margin:0 auto 16px;max-width:380px}
+  .mcard{aspect-ratio:1;border-radius:10px;background:var(--card2);border:1px solid var(--line2);display:flex;align-items:center;justify-content:center;
+    font-family:"Space Grotesk",sans-serif;font-weight:700;color:transparent;cursor:pointer;font-size:clamp(16px,5vw,24px);transition:background .15s}
+  .mcard.open{color:#fff;background:var(--card);border-color:var(--cyan)}
+  .mcard.found{color:#06281b;background:var(--green);border-color:var(--green);cursor:default}
+  .win-ov{display:none;text-align:center;padding:14px 0}
+  .win-ov.show{display:block}
+  .win-ov h2{color:var(--lime);font-family:"Cairo",sans-serif;margin:0 0 8px}
+</style>
+</head>
+<body>
+
+<header class="top"><div class="wrap mast">
+  <a href="/" class="brand"><span class="mk">×</span><span class="word">رقم</span></a>
+  <nav class="nav"><a href="/">الرئيسية</a><a href="/games" class="on">الألعاب</a><a href="/times-tables">جدول الضرب</a><a href="/sudoku">سودوكو</a><a href="/minesweeper">كانسة الألغام</a></nav>
+  <span class="grow"></span>
+  <a href="/en/number-memory" style="color:var(--dim);font-size:13px;font-weight:700;margin-inline-start:6px">EN</a>
+</div></header>
+
+<main class="gamewrap">
+  <div class="crumbs"><a href="/">الرئيسية</a> ← <a href="/games">الألعاب</a> ← ميموري الأرقام</div>
+  <div class="ghero"><img loading="lazy" src="https://d8j0ntlcm91z4.cloudfront.net/user_3Gqr8cNvaHecl4CfmnUHSrGscwp/hf_20261026_113846_d98c3bd7-3d95-4492-baa7-ea6078500ee0.png" alt="ميموري الأرقام"></div>
+  <div class="gtitle"><h1>ميموري الأرقام 🧠</h1><p>اقلب البطاقات وطابق كل زوج أرقام متماثل بأقل عدد من المحاولات.</p></div>
+
+  <div class="ad ad-lead"><span class="lbl">مساحة إعلانية</span></div>
+
+  <div class="panel mem-wrap">
+    <div class="diffs" id="diffs">
+      <button class="diff on" data-n="6">سهل (6 أزواج)</button>
+      <button class="diff" data-n="8">متوسط (8 أزواج)</button>
+      <button class="diff" data-n="10">صعب (10 أزواج)</button>
+    </div>
+    <div class="hud">
+      <div class="stat"><div class="l">المحاولات</div><div class="v" id="moves">0</div></div>
+      <div class="stat"><div class="l">الوقت</div><div class="v" id="time">0:00</div></div>
+      <div class="stat"><div class="l">الأفضل</div><div class="v" id="best">—</div></div>
+    </div>
+    <div class="mgrid" id="mgrid"></div>
+    <div class="win-ov" id="winOv"><h2 id="winTitle"></h2></div>
+    <div style="text-align:center"><button class="btn sec" id="newBtn">لعبة جديدة</button></div>
+  </div>
+
+  <div class="prose" style="margin-top:26px;max-width:640px;margin-inline:auto">
+    <h2>كيف تلعب ميموري الأرقام؟</h2>
+    <p>كل البطاقات مقلوبة في البداية. اضغط على بطاقتين لتكشفهما: إن تطابق الرقمان تبقيان مكشوفتين، وإن اختلفا تنقلبان مجدداً بعد لحظة. حاول تذكّر مكان كل رقم رأيته لتُطابق الأزواج بأقل عدد ممكن من المحاولات. اختر مستوى الصعوبة المناسب لك — كلما زاد عدد الأزواج زاد التحدي على الذاكرة والتركيز.</p>
+  </div>
+</main>
+
+<footer class="foot"><div class="fine">© <span id="yr"></span> رقم (raqam.ai) — ألعاب الأرقام والذكاء بالعربية.</div></footer>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+(function(){
+  "use strict";
+  var gridEl=document.getElementById('mgrid'), movesEl=document.getElementById('moves'), timeEl=document.getElementById('time'),
+      bestEl=document.getElementById('best'), winOv=document.getElementById('winOv'), diffsEl=document.getElementById('diffs');
+  var pairs=6, cols=4, cards=[], openIdx=[], found=0, moves=0, timer=null, secs=0, busy=false;
+
+  function bestKey(){ return 'raqam_memory_best_'+pairs; }
+  function loadBest(){ var b=0; try{ b=parseInt(localStorage.getItem(bestKey())||'0',10)||0; }catch(e){} bestEl.textContent=b||'—'; }
+  function saveBestIfBetter(){ var b=0; try{ b=parseInt(localStorage.getItem(bestKey())||'0',10)||0; }catch(e){}
+    if(!b||moves<b){ try{localStorage.setItem(bestKey(),moves);}catch(e){} bestEl.textContent=moves; } }
+
+  function fmtTime(s){ return Math.floor(s/60)+':'+('0'+(s%60)).slice(-2); }
+  function startTimer(){ clearInterval(timer); secs=0; timeEl.textContent='0:00'; timer=setInterval(function(){ secs++; timeEl.textContent=fmtTime(secs); },1000); }
+
+  function newGame(){
+    clearInterval(timer); secs=0; timeEl.textContent='0:00'; moves=0; movesEl.textContent='0'; found=0; openIdx=[]; busy=false;
+    winOv.classList.remove('show');
+    var vals=[]; for(var i=1;i<=pairs;i++){ vals.push(i,i); }
+    for(var j=vals.length-1;j>0;j--){ var k=Math.floor(Math.random()*(j+1)); var t=vals[j]; vals[j]=vals[k]; vals[k]=t; }
+    cards = vals.map(function(v){ return {val:v, open:false, done:false}; });
+    cols = pairs<=6?4:(pairs<=8?4:5);
+    gridEl.style.gridTemplateColumns='repeat('+cols+',1fr)';
+    loadBest();
+    render();
+  }
+  function render(){
+    gridEl.innerHTML='';
+    cards.forEach(function(c,i){
+      var el=document.createElement('div'); el.className='mcard'+(c.open||c.done?' open':'')+(c.done?' found':'');
+      el.textContent = (c.open||c.done) ? c.val : '';
+      el.addEventListener('click',function(){ flip(i); });
+      gridEl.appendChild(el);
+    });
+  }
+  function flip(i){
+    if(busy||cards[i].open||cards[i].done) return;
+    if(!timer) startTimer();
+    cards[i].open=true; render();
+    openIdx.push(i);
+    if(openIdx.length===2){
+      busy=true; moves++; movesEl.textContent=moves;
+      var a=openIdx[0], b=openIdx[1];
+      if(cards[a].val===cards[b].val){
+        cards[a].done=true; cards[b].done=true; openIdx=[]; busy=false; found++;
+        render();
+        if(found===pairs){ clearInterval(timer); saveBestIfBetter(); winOv.classList.add('show');
+          document.getElementById('winTitle').textContent='🎉 أحسنت! طابقت الكل في '+moves+' محاولة و'+fmtTime(secs); }
+      } else {
+        setTimeout(function(){ cards[a].open=false; cards[b].open=false; openIdx=[]; busy=false; render(); },700);
+      }
+    }
+  }
+  diffsEl.addEventListener('click',function(e){
+    var b=e.target.closest('.diff'); if(!b) return;
+    Array.prototype.forEach.call(diffsEl.querySelectorAll('.diff'),function(x){x.classList.remove('on');}); b.classList.add('on');
+    pairs=parseInt(b.dataset.n,10); newGame();
+  });
+  document.getElementById('newBtn').addEventListener('click',newGame);
+  newGame();
+})();
+</script>
+</body>
+</html>

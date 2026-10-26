@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Equation of the Day | Guess the Hidden Equation | raqam</title>
+<meta name="description" content="Equation of the Day from raqam: guess the secret math equation in 6 tries (an English take on Nerdle). A new puzzle every day — keep your streak and share your score.">
+<link rel="canonical" href="https://raqam.ai/en/game-equation">
+<meta property="og:title" content="Equation of the Day | Guess the Hidden Equation | raqam">
+<meta property="og:description" content="Equation of the Day from raqam: guess the secret math equation in 6 tries (an English take on Nerdle). A new puzzle every day — keep your streak and share your score.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://d8j0ntlcm91z4.cloudfront.net/user_3Gqr8cNvaHecl4CfmnUHSrGscwp/hf_20261026_113848_2b72a138-942d-411b-86d5-478ba3bd1949.png">
+<link rel="alternate" hreflang="ar" href="https://raqam.ai/game-equation">
+<link rel="alternate" hreflang="en" href="https://raqam.ai/en/game-equation">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/styles.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-93NPFB6NL6"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-93NPFB6NL6');</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Equation of the Day","url":"https://raqam.ai/en/game-equation","applicationCategory":"GameApplication","operatingSystem":"Any","inLanguage":"en","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+<style>
+  .eq-wrap{max-width:500px;margin-inline:auto}
+  .rows{display:flex;flex-direction:column;gap:8px;align-items:center;margin-bottom:16px}
+  .row{display:flex;gap:7px}
+  .tile{width:clamp(32px,10vw,42px);height:clamp(38px,11.5vw,48px);border-radius:8px;border:2px solid var(--line2);background:var(--card2);display:flex;align-items:center;justify-content:center;font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:clamp(16px,5vw,22px);color:#fff}
+  .tile.active{border-color:var(--cyan)}
+  .tile.g{background:var(--green);border-color:var(--green);color:#06281b}
+  .tile.y{background:var(--amber);border-color:var(--amber);color:#2e2206}
+  .tile.b{background:var(--card);border-color:var(--line);color:var(--dim)}
+  .legend{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;color:var(--muted);font-size:13px;margin-bottom:16px}
+  .legend span{display:inline-flex;align-items:center;gap:6px}.dot{width:14px;height:14px;border-radius:4px;display:inline-block}
+  .keypad{display:grid;grid-template-columns:repeat(8,1fr);gap:6px;max-width:460px;margin:0 auto}
+  .key{background:var(--card2);border:1px solid var(--line2);border-radius:8px;padding:12px 0;text-align:center;font-family:"Space Grotesk",sans-serif;font-size:17px;color:#fff;cursor:pointer;font-weight:700}
+  .key.op{color:var(--amber)}
+  .key:active{transform:translateY(1px)}
+  .key.wide{grid-column:span 4;font-family:"Cairo",sans-serif;font-weight:800;font-size:14px}
+  .key.used{opacity:.35}
+  .msg{text-align:center;color:var(--muted);min-height:22px;margin:16px 0 6px;font-weight:700}
+  .endbox{display:none;flex-direction:column;align-items:center;gap:12px;margin-top:10px}
+  .endbox.show{display:flex}
+  .endbox h2{color:#fff;margin:0;font-size:22px;text-align:center;font-family:"Cairo",sans-serif}
+  .cd{color:var(--dim);font-size:13px;font-family:"Space Grotesk",sans-serif}
+  .toast{position:fixed;inset-inline:0;bottom:26px;display:flex;justify-content:center;pointer-events:none;opacity:0;transition:opacity .25s}
+  .toast.show{opacity:1}
+  .toast span{background:var(--card2);border:1px solid var(--line2);color:#fff;border-radius:999px;padding:10px 20px;font-size:14px}
+</style>
+</head>
+<body>
+
+<header class="top"><div class="wrap mast">
+  <a href="/en/" class="brand"><span class="mk">×</span><span class="word">raqam</span></a>
+  <nav class="nav"><a href="/en/">Home</a><a href="/en/games" class="on">Games</a><a href="/en/times-tables">Times Tables</a><a href="/en/sudoku">Sudoku</a><a href="/en/mental-math">Mental Math</a></nav>
+  <span class="grow"></span>
+  <a href="/game-equation" style="color:var(--dim);font-size:13px;font-weight:700;margin-inline-start:6px">عربي</a>
+</div></header>
+
+<main class="gamewrap">
+  <div class="crumbs"><a href="/en/">Home</a> ← <a href="/en/games">Games</a> ← Equation of the Day</div>
+  <div class="ghero"><img loading="lazy" src="https://d8j0ntlcm91z4.cloudfront.net/user_3Gqr8cNvaHecl4CfmnUHSrGscwp/hf_20261026_113848_2b72a138-942d-411b-86d5-478ba3bd1949.png" alt="Equation of the Day"></div>
+  <div class="gtitle"><h1>Equation of the Day ➗</h1><p>Guess the secret math equation in 6 tries. Same equation for everyone today — share your result and challenge your friends.</p></div>
+
+  <div class="ad ad-lead"><span class="lbl">Ad space</span></div>
+
+  <div class="panel eq-wrap">
+    <div class="hud">
+      <div class="stat"><div class="l">Equation</div><div class="v" id="puzzleNo">—</div></div>
+      <div class="stat"><div class="l">Streak 🔥</div><div class="v" id="streak">0</div></div>
+      <div class="stat"><div class="l">Best streak</div><div class="v" id="bestStreak">0</div></div>
+    </div>
+    <div class="rows" id="rows"></div>
+    <div class="legend">
+      <span><i class="dot" style="background:var(--green)"></i> Correct, right spot</span>
+      <span><i class="dot" style="background:var(--amber)"></i> In the equation, wrong spot</span>
+      <span><i class="dot" style="background:var(--card)"></i> Not in the equation</span>
+    </div>
+    <div class="msg" id="msg"></div>
+    <div class="keypad" id="keypad"></div>
+    <div class="endbox" id="endbox">
+      <h2 id="endTitle"></h2>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center">
+        <button class="btn" id="shareBtn">📋 Share your result</button>
+        <a class="btn sec" href="/en/games">🎲 More games</a>
+      </div>
+      <div class="cd" id="countdown"></div>
+    </div>
+    <p style="color:var(--dim);text-align:center;font-size:13px;margin-top:18px">Type a valid 8-character equation like "number op number = number" (use + − ×). Example: 12+34=46.</p>
+  </div>
+
+  <div class="prose" style="margin-top:26px;max-width:640px;margin-inline:auto">
+    <h2>How to play Equation of the Day</h2>
+    <p>Every day there's a new secret 8-character equation (numbers and math operators). Type a valid equation of your own (like 12+34=46) and press Check: a green tile means a correct character in the correct spot, yellow means it's in the equation but in the wrong spot, and gray means it isn't in the equation at all. You have 6 tries — think about the operations (addition, subtraction, multiplication) and narrow down the numbers step by step.</p>
+  </div>
+</main>
+
+<footer class="foot"><div class="fine">© <span id="yr"></span> raqam.ai — number & brain games in English and Arabic.</div></footer>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+
+<div class="toast" id="toast"><span id="toastText"></span></div>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+(function(){
+  "use strict";
+  var COLS=8, TRIES=6;
+  var rowsEl=document.getElementById('rows'), msgEl=document.getElementById('msg'), keypadEl=document.getElementById('keypad'), endbox=document.getElementById('endbox');
+  function dayNumber(){ var d=new Date(); var s=new Date(2026,0,1); var a=new Date(d.getFullYear(),d.getMonth(),d.getDate()); return Math.floor((a-s)/86400000)+1; }
+  function seedInt(){ var d=new Date(); return d.getFullYear()*10000+(d.getMonth()+1)*100+d.getDate(); }
+  function mulberry32(a){ return function(){ a|=0; a=a+0x6D2B79F5|0; var t=Math.imul(a^a>>>15,1|a); t=t+Math.imul(t^t>>>7,61|t)^t; return ((t^t>>>14)>>>0)/4294967296; }; }
+  function makeEquation(){ var rnd=mulberry32(seedInt()^0x51ed270b); var ops=['+','-','*']; for(var i=0;i<4000;i++){ var op=ops[Math.floor(rnd()*3)]; var a,b,c;
+      if(op==='*'){ a=2+Math.floor(rnd()*11); b=2+Math.floor(rnd()*11); c=a*b; }
+      else if(op==='+'){ a=3+Math.floor(rnd()*95); b=3+Math.floor(rnd()*95); c=a+b; }
+      else { a=10+Math.floor(rnd()*89); b=1+Math.floor(rnd()*(a-1)); c=a-b; }
+      var s=''+a+op+b+'='+c; if(s.length===COLS && c>=0){ return s; } } return '12+34=46'; }
+  var SECRET=makeEquation();
+  var KEY='raqam_equation';
+  function load(){ try{ return JSON.parse(localStorage.getItem(KEY)||'{}'); }catch(e){ return {}; } }
+  function save(o){ try{ localStorage.setItem(KEY,JSON.stringify(o)); }catch(e){} }
+  var store=load(), streak=store.streak||0, bestStreak=store.bestStreak||0;
+  document.getElementById('puzzleNo').textContent='#'+dayNumber();
+  document.getElementById('streak').textContent=streak; document.getElementById('bestStreak').textContent=bestStreak;
+  var guesses=[], current='', row=0, done=false, tileEls=[];
+  for(var r=0;r<TRIES;r++){ var rw=document.createElement('div'); rw.className='row'; var t=[]; for(var c=0;c<COLS;c++){ var el=document.createElement('div'); el.className='tile'; rw.appendChild(el); t.push(el); } rowsEl.appendChild(rw); tileEls.push(t); }
+  var keys=['1','2','3','4','5','6','7','8','9','0','+','-','*','='];
+  keys.forEach(function(k){ var b=document.createElement('div'); b.className='key'+('+-*='.indexOf(k)>=0?' op':''); b.textContent=(k==='*'?'×':k); b.dataset.k=k; b.addEventListener('click',function(){ typeCh(k); }); keypadEl.appendChild(b); });
+  var del=document.createElement('div'); del.className='key wide'; del.textContent='⌫ Delete'; del.addEventListener('click',backspace); keypadEl.appendChild(del);
+  var ent=document.createElement('div'); ent.className='key wide'; ent.textContent='Check ✓'; ent.addEventListener('click',submit); keypadEl.appendChild(ent);
+  function disp(ch){ return ch==='*'?'×':ch; }
+  function renderCurrent(){ for(var c=0;c<COLS;c++){ var el=tileEls[row][c]; el.textContent=current[c]?disp(current[c]):''; el.className='tile'+(c===current.length&&!done?' active':''); } }
+  function typeCh(k){ if(done||current.length>=COLS)return; current+=k; renderCurrent(); }
+  function backspace(){ if(done)return; current=current.slice(0,-1); renderCurrent(); }
+  function validEq(s){ var m=s.match(/^(\d+)([+\-*])(\d+)=(\d+)$/); if(!m)return false;
+    var a=m[1],b=m[3],c=m[4]; if((a.length>1&&a[0]==='0')||(b.length>1&&b[0]==='0')||(c.length>1&&c[0]==='0'))return false;
+    var A=+a,B=+b,C=+c,op=m[2]; var res=op==='+'?A+B:op==='-'?A-B:A*B; return res===C; }
+  function score(g){ var res=new Array(COLS).fill('b'); var sec=SECRET.split(''), gg=g.split(''); var used=new Array(COLS).fill(false);
+    for(var i=0;i<COLS;i++){ if(gg[i]===sec[i]){ res[i]='g'; used[i]=true; } }
+    for(var j=0;j<COLS;j++){ if(res[j]==='g')continue; for(var k=0;k<COLS;k++){ if(!used[k]&&gg[j]===sec[k]){ res[j]='y'; used[k]=true; break; } } } return res; }
+  function emojiFor(res){ return res.map(function(x){ return x==='g'?'🟩':x==='y'?'🟨':'⬛'; }).join(''); }
+  function submit(){ if(done)return; if(current.length<COLS){ flash('Complete all 8 characters'); return; } if(!validEq(current)){ flash('Not a valid equation'); return; }
+    var res=score(current);
+    for(var c=0;c<COLS;c++){ var el=tileEls[row][c]; el.classList.remove('active'); el.classList.add(res[c]);
+      var kEl=keypadEl.querySelector('.key[data-k="'+current[c]+'"]'); if(res[c]==='b'&&kEl)kEl.classList.add('used'); }
+    guesses.push({res:res}); var win=res.every(function(x){return x==='g';}); row++;
+    if(win){ finish(true); } else if(row>=TRIES){ finish(false); } else { current=''; renderCurrent(); } }
+  function finish(win){ done=true;
+    if(store.lastDay!==dayNumber()){ if(win){ streak=(store.lastDay===dayNumber()-1)?(store.streak||0)+1:1; } else { streak=0; }
+      bestStreak=Math.max(bestStreak,streak); store.lastDay=dayNumber(); store.streak=streak; store.bestStreak=bestStreak; store.lastWin=win; store.lastRows=guesses.length; store.lastGrid=guesses.map(function(g){return emojiFor(g.res);}); save(store); }
+    document.getElementById('streak').textContent=streak; document.getElementById('bestStreak').textContent=bestStreak;
+    msgEl.textContent = win ? ('🎉 Nice! In '+guesses.length+' tries') : ('💡 The equation was: '+SECRET.replace(/\*/g,'×'));
+    document.getElementById('endTitle').textContent = win ? ('You won today! 🔥 Streak: '+streak) : 'Better luck tomorrow!';
+    endbox.classList.add('show'); startCountdown(); }
+  function shareText(){ var rows=guesses.length?guesses.map(function(g){return emojiFor(g.res);}):(store.lastGrid||[]); var count=store.lastWin?(guesses.length||store.lastRows):'X';
+    return 'raqam · Equation of the Day #'+dayNumber()+' — '+count+'/'+TRIES+'\n'+rows.join('\n')+'\nPlay: raqam.ai/en/game-equation'; }
+  document.getElementById('shareBtn').addEventListener('click',function(){ var t=shareText(); if(navigator.share){ navigator.share({text:t}).catch(function(){copy(t);}); } else copy(t); });
+  function copy(t){ if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(t).then(function(){flash('Result copied ✓');},function(){fb(t);}); } else fb(t); }
+  function fb(t){ try{ var ta=document.createElement('textarea'); ta.value=t; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta); flash('Result copied ✓'); }catch(e){ flash('Copy manually'); } }
+  var toast=document.getElementById('toast'), toastText=document.getElementById('toastText'), tT;
+  function flash(m){ toastText.textContent=m; toast.classList.add('show'); clearTimeout(tT); tT=setTimeout(function(){toast.classList.remove('show');},1600); }
+  function startCountdown(){ var cd=document.getElementById('countdown'); function tick(){ var now=new Date(); var next=new Date(now.getFullYear(),now.getMonth(),now.getDate()+1,0,0,0); var s=Math.max(0,Math.floor((next-now)/1000)); var h=String(Math.floor(s/3600)).padStart(2,'0'),m=String(Math.floor(s%3600/60)).padStart(2,'0'),ss=String(s%60).padStart(2,'0'); cd.textContent='New puzzle in: '+h+':'+m+':'+ss; } tick(); setInterval(tick,1000); }
+  document.addEventListener('keydown',function(e){ if((e.key>='0'&&e.key<='9')||e.key==='+'||e.key==='-'||e.key==='*'||e.key==='=')typeCh(e.key); else if(e.key==='Backspace'){e.preventDefault();backspace();} else if(e.key==='Enter')submit(); });
+  if(store.lastDay===dayNumber()){ msgEl.textContent="You already played today's equation — come back tomorrow!"; document.getElementById('endTitle').textContent=store.lastWin?('You won today! 🔥 Streak: '+streak):'Better luck tomorrow!'; endbox.classList.add('show'); done=true; startCountdown();
+    Array.prototype.forEach.call(keypadEl.querySelectorAll('.key'),function(k){ k.style.pointerEvents='none'; k.style.opacity='.4'; }); } else { renderCurrent(); }
+})();
+</script>
+</body>
+</html>

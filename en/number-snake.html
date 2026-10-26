@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Number Snake | Classic Snake with a Number Twist | raqam</title>
+<meta name="description" content="Play Number Snake for free: guide the snake to eat the numbers 1, then 2, then 3 in order without hitting the wall or itself. A classic game with a math twist.">
+<link rel="canonical" href="https://raqam.ai/en/number-snake">
+<meta property="og:title" content="Number Snake | Classic Snake with a Number Twist | raqam">
+<meta property="og:description" content="Play Number Snake for free: guide the snake to eat the numbers 1, then 2, then 3 in order without hitting the wall or itself. A classic game with a math twist.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://d8j0ntlcm91z4.cloudfront.net/user_3Gqr8cNvaHecl4CfmnUHSrGscwp/hf_20261026_113845_29db23d1-b67b-4d41-9371-5db8fcd1f812.png">
+<link rel="alternate" hreflang="ar" href="https://raqam.ai/number-snake">
+<link rel="alternate" hreflang="en" href="https://raqam.ai/en/number-snake">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/styles.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-93NPFB6NL6"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-93NPFB6NL6');</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Number Snake","url":"https://raqam.ai/en/number-snake","applicationCategory":"GameApplication","operatingSystem":"Any","inLanguage":"en","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+<style>
+  .snake-wrap{max-width:420px;margin-inline:auto}
+  .sboard{display:grid;background:var(--bg2);border:2px solid var(--line2);border-radius:12px;overflow:hidden;aspect-ratio:1;touch-action:none;position:relative}
+  .scell{background:transparent}
+  .scell.body{background:var(--indigo)}
+  .scell.head{background:var(--cyan)}
+  .scell.food{display:flex;align-items:center;justify-content:center;background:var(--amber);color:#2e2206;font-weight:700;border-radius:4px;font-family:"Space Grotesk",sans-serif}
+  .dpad{display:grid;grid-template-columns:repeat(3,56px);grid-template-rows:repeat(2,56px);gap:6px;justify-content:center;margin:16px auto 0}
+  .dbtn{background:var(--card2);border:1px solid var(--line2);border-radius:10px;color:#fff;font-size:22px;display:flex;align-items:center;justify-content:center;cursor:pointer;user-select:none}
+  .dbtn:active{background:var(--card)}
+  .overlay{text-align:center;padding:10px 0}
+  .overlay h2{color:#fff;font-family:"Cairo",sans-serif;margin:0 0 8px}
+  .overlay p{color:var(--muted);margin:0 0 16px}
+</style>
+</head>
+<body>
+
+<header class="top"><div class="wrap mast">
+  <a href="/en/" class="brand"><span class="mk">×</span><span class="word">raqam</span></a>
+  <nav class="nav"><a href="/en/">Home</a><a href="/en/games" class="on">Games</a><a href="/en/times-tables">Times Tables</a><a href="/en/sudoku">Sudoku</a><a href="/en/mental-math">Mental Math</a></nav>
+  <span class="grow"></span>
+  <a href="/number-snake" style="color:var(--dim);font-size:13px;font-weight:700;margin-inline-start:6px">عربي</a>
+</div></header>
+
+<main class="gamewrap">
+  <div class="crumbs"><a href="/en/">Home</a> ← <a href="/en/games">Games</a> ← Number Snake</div>
+  <div class="ghero"><img loading="lazy" src="https://d8j0ntlcm91z4.cloudfront.net/user_3Gqr8cNvaHecl4CfmnUHSrGscwp/hf_20261026_113845_29db23d1-b67b-4d41-9371-5db8fcd1f812.png" alt="Number Snake"></div>
+  <div class="gtitle"><h1>Number Snake 🐍</h1><p>Guide the snake to eat the numbers 1, then 2, then 3 in the right order — without hitting the wall or itself.</p></div>
+
+  <div class="ad ad-lead"><span class="lbl">Ad space</span></div>
+
+  <div class="panel snake-wrap">
+    <div class="hud">
+      <div class="stat"><div class="l">Next number</div><div class="v" id="nextNum">1</div></div>
+      <div class="stat"><div class="l">Best</div><div class="v" id="best">0</div></div>
+    </div>
+
+    <div class="sboard" id="board">
+      <div class="overlay" id="startOv" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(10,16,39,.9);z-index:5">
+        <h2>Ready?</h2>
+        <p>Use the arrows or the buttons below to move.</p>
+        <button class="btn" id="startBtn">Start Playing</button>
+      </div>
+      <div class="overlay" id="endOv" style="position:absolute;inset:0;display:none;flex-direction:column;align-items:center;justify-content:center;background:rgba(10,16,39,.9);z-index:5">
+        <h2 id="endTitle">Game Over</h2>
+        <p id="endText"></p>
+        <button class="btn" id="againBtn">Play Again</button>
+      </div>
+    </div>
+
+    <div class="dpad">
+      <div></div><div class="dbtn" data-dir="up">▲</div><div></div>
+      <div class="dbtn" data-dir="left">◄</div><div class="dbtn" data-dir="down">▼</div><div class="dbtn" data-dir="right">►</div>
+    </div>
+  </div>
+
+  <div class="prose" style="margin-top:26px;max-width:640px;margin-inline:auto">
+    <h2>How to play Number Snake</h2>
+    <p>Guide the snake toward the glowing number on the board — you must eat the numbers in order: 1, then 2, then 3, and so on. Each number you eat lengthens the snake and shows the next target somewhere random on the board. Watch out: hitting the wall or the snake's own body ends the round immediately. How many numbers can you collect before you slip up?</p>
+  </div>
+</main>
+
+<footer class="foot"><div class="fine">© <span id="yr"></span> raqam.ai — number & brain games in English and Arabic.</div></footer>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+(function(){
+  "use strict";
+  var SIZE=14, SPEED=160;
+  var boardEl=document.getElementById('board'), startOv=document.getElementById('startOv'), endOv=document.getElementById('endOv');
+  var nextNumEl=document.getElementById('nextNum'), bestEl=document.getElementById('best');
+  var best=0; try{ best=parseInt(localStorage.getItem('raqam_snake_best')||'0',10)||0; }catch(e){} bestEl.textContent=best;
+
+  var cells=[], snake, dir, nextDir, food, nextNum, loopId, running=false;
+
+  for(var i=0;i<SIZE*SIZE;i++){ var c=document.createElement('div'); c.className='scell'; boardEl.appendChild(c); cells.push(c); }
+  boardEl.style.gridTemplateColumns='repeat('+SIZE+',1fr)';
+  boardEl.style.gridTemplateRows='repeat('+SIZE+',1fr)';
+
+  function idx(x,y){ return y*SIZE+x; }
+  function reset(){
+    snake=[{x:6,y:7},{x:5,y:7},{x:4,y:7}]; dir={x:1,y:0}; nextDir=dir; nextNum=1;
+    placeFood(); draw(); nextNumEl.textContent=nextNum;
+  }
+  function placeFood(){
+    var free=[]; for(var y=0;y<SIZE;y++)for(var x=0;x<SIZE;x++){
+      if(!snake.some(function(s){return s.x===x&&s.y===y;})) free.push({x:x,y:y});
+    }
+    food = free[Math.floor(Math.random()*free.length)];
+  }
+  function draw(){
+    cells.forEach(function(c){ c.className='scell'; c.textContent=''; });
+    snake.forEach(function(s,i){ var c=cells[idx(s.x,s.y)]; if(c) c.className='scell '+(i===0?'head':'body'); });
+    var fc=cells[idx(food.x,food.y)]; if(fc){ fc.className='scell food'; fc.textContent=nextNum>9?(nextNum%10===0?10:nextNum%10):nextNum; }
+  }
+  function step(){
+    dir=nextDir;
+    var head={x:snake[0].x+dir.x, y:snake[0].y+dir.y};
+    if(head.x<0||head.y<0||head.x>=SIZE||head.y>=SIZE||snake.some(function(s){return s.x===head.x&&s.y===head.y;})){
+      return gameOver();
+    }
+    snake.unshift(head);
+    if(head.x===food.x && head.y===food.y){
+      nextNum++; nextNumEl.textContent=nextNum; placeFood();
+    } else {
+      snake.pop();
+    }
+    draw();
+  }
+  function gameOver(){
+    running=false; clearInterval(loopId);
+    var score=nextNum-1;
+    if(score>best){ best=score; try{localStorage.setItem('raqam_snake_best',best);}catch(e){} bestEl.textContent=best; }
+    document.getElementById('endText').textContent='You collected '+score+' numbers. '+(score>=best?'New record! 🏆':'');
+    endOv.style.display='flex';
+  }
+  function start(){
+    reset(); running=true; startOv.style.display='none'; endOv.style.display='none';
+    clearInterval(loopId); loopId=setInterval(step,SPEED);
+  }
+  function setDir(nx,ny){ if(!running)return; if(snake.length>1 && nx===-dir.x && ny===-dir.y) return; nextDir={x:nx,y:ny}; }
+  document.getElementById('startBtn').addEventListener('click',start);
+  document.getElementById('againBtn').addEventListener('click',start);
+  document.querySelectorAll('.dbtn').forEach(function(b){
+    b.addEventListener('click',function(){
+      var d=b.dataset.dir;
+      if(d==='up')setDir(0,-1); else if(d==='down')setDir(0,1); else if(d==='left')setDir(-1,0); else if(d==='right')setDir(1,0);
+    });
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='ArrowUp'){e.preventDefault();setDir(0,-1);} else if(e.key==='ArrowDown'){e.preventDefault();setDir(0,1);}
+    else if(e.key==='ArrowLeft'){e.preventDefault();setDir(-1,0);} else if(e.key==='ArrowRight'){e.preventDefault();setDir(1,0);}
+  });
+  var tsx=0, tsy=0;
+  boardEl.addEventListener('touchstart',function(e){ var t=e.touches[0]; tsx=t.clientX; tsy=t.clientY; },{passive:true});
+  boardEl.addEventListener('touchend',function(e){ var t=e.changedTouches[0]; var dx=t.clientX-tsx, dy=t.clientY-tsy;
+    if(Math.max(Math.abs(dx),Math.abs(dy))<20) return;
+    if(Math.abs(dx)>Math.abs(dy)) setDir(dx>0?1:-1,0); else setDir(0,dy>0?1:-1);
+  },{passive:true});
+  reset();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Number Sequence | Spot the Pattern Puzzle | raqam</title>
+<meta name="description" content="Number Sequence: spot the pattern and guess the next number in the series. 10 progressively harder questions that build logical and math thinking, free in your browser.">
+<link rel="canonical" href="https://raqam.ai/en/number-sequence">
+<meta property="og:title" content="Number Sequence | Spot the Pattern Puzzle | raqam">
+<meta property="og:description" content="Number Sequence: spot the pattern and guess the next number in the series. 10 progressively harder questions that build logical and math thinking, free in your browser.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://d8j0ntlcm91z4.cloudfront.net/user_3Gqr8cNvaHecl4CfmnUHSrGscwp/hf_20261026_113845_2b578af1-1b60-4606-8b43-664d44174c58.png">
+<link rel="alternate" hreflang="ar" href="https://raqam.ai/number-sequence">
+<link rel="alternate" hreflang="en" href="https://raqam.ai/en/number-sequence">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/styles.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-93NPFB6NL6"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-93NPFB6NL6');</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Number Sequence","url":"https://raqam.ai/en/number-sequence","applicationCategory":"GameApplication","operatingSystem":"Any","inLanguage":"en","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+<style>
+  .seq-row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:6px 0 22px}
+  .seq-n{min-width:56px;height:56px;padding:0 8px;border-radius:12px;background:var(--card2);border:1px solid var(--line2);
+    display:flex;align-items:center;justify-content:center;font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:22px;color:#fff}
+  .seq-n.q{background:linear-gradient(135deg,var(--cyan),var(--indigo));color:#06122e;border-color:transparent;font-size:26px}
+</style>
+</head>
+<body>
+
+<header class="top"><div class="wrap mast">
+  <a href="/en/" class="brand"><span class="mk">×</span><span class="word">raqam</span></a>
+  <nav class="nav"><a href="/en/">Home</a><a href="/en/games" class="on">Games</a><a href="/en/times-tables">Times Tables</a><a href="/en/sudoku">Sudoku</a><a href="/en/mental-math">Mental Math</a></nav>
+  <span class="grow"></span>
+  <a href="/number-sequence" style="color:var(--dim);font-size:13px;font-weight:700;margin-inline-start:6px">عربي</a>
+</div></header>
+
+<main class="gamewrap">
+  <div class="crumbs"><a href="/en/">Home</a> ← <a href="/en/games">Games</a> ← Number Sequence</div>
+  <div class="ghero"><img loading="lazy" src="https://d8j0ntlcm91z4.cloudfront.net/user_3Gqr8cNvaHecl4CfmnUHSrGscwp/hf_20261026_113845_2b578af1-1b60-4606-8b43-664d44174c58.png" alt="Number Sequence"></div>
+  <div class="gtitle"><h1>Number Sequence 🔢</h1><p>Spot the pattern and guess the next number in the series — 10 progressively harder questions.</p></div>
+
+  <div class="ad ad-lead"><span class="lbl">Ad space</span></div>
+
+  <div class="panel">
+    <div id="start" class="overlay">
+      <div class="big">10</div><div class="lbl">questions · varied patterns</div>
+      <div class="hud"><div class="stat"><div class="l">Best score</div><div class="v" id="best">0</div></div></div>
+      <button class="btn full" id="startBtn">Start</button>
+    </div>
+
+    <div id="play" style="display:none">
+      <div class="hud"><div class="stat"><div class="l">Question</div><div class="v"><span id="qn">1</span>/10</div></div><div class="stat"><div class="l">Score</div><div class="v" id="score">0</div></div></div>
+      <div class="seq-row" id="seqRow"></div>
+      <div class="q-opts" id="opts"></div>
+    </div>
+
+    <div id="done" style="display:none" class="overlay">
+      <div class="big" id="finalScore">0</div><div class="lbl">out of 10 correct</div>
+      <div id="verdict" style="color:var(--muted);margin-bottom:14px"></div>
+      <button class="btn full" id="againBtn">Try Again</button>
+    </div>
+  </div>
+
+  <div class="prose" style="margin-top:24px">
+    <h2>How to solve number sequence puzzles</h2>
+    <p>Look at the difference between each number and the next: is it constant (an additive pattern)? Is each number double the last (a multiplicative pattern)? Or are the numbers perfect squares (1, 4, 9, 16)? Once you spot the rule, predicting the next number becomes easy. These puzzles show up often in IQ tests and job interviews, and practicing them builds logical and mathematical thinking.</p>
+  </div>
+</main>
+
+<footer class="foot"><div class="fine">© <span id="yr"></span> raqam.ai — number & brain games in English and Arabic.</div></footer>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+(function(){
+  "use strict";
+  var N=10;
+  var best=0; try{ best=parseInt(localStorage.getItem('raqam_seq_best')||'0',10)||0; }catch(e){}
+  document.getElementById('best').textContent=best;
+  var startEl=document.getElementById('start'), playEl=document.getElementById('play'), doneEl=document.getElementById('done');
+  var seqRow=document.getElementById('seqRow'), opts=document.getElementById('opts');
+  var qi=0, score=0, answered=false;
+
+  function rnd(n){ return Math.floor(Math.random()*n); }
+  function gen(){
+    var kinds=['add','mul','square','fib'];
+    var kind=kinds[rnd(kinds.length)];
+    var seq=[], ans;
+    if(kind==='add'){
+      var start=1+rnd(15), d=1+rnd(9);
+      for(var i=0;i<4;i++) seq.push(start+d*i);
+      ans=start+d*4;
+    } else if(kind==='mul'){
+      var s2=1+rnd(4), r=2+rnd(3);
+      for(var j=0;j<4;j++) seq.push(s2*Math.pow(r,j));
+      ans=s2*Math.pow(r,4);
+    } else if(kind==='square'){
+      var off=1+rnd(6);
+      for(var k=0;k<4;k++) seq.push((off+k)*(off+k));
+      ans=(off+4)*(off+4);
+    } else {
+      var a=1+rnd(5), b=1+rnd(5);
+      seq=[a,b,a+b,a+2*b];
+      ans=2*a+3*b;
+    }
+    return {seq:seq, ans:ans};
+  }
+  function show(){
+    answered=false;
+    document.getElementById('qn').textContent=qi+1;
+    var cur=gen();
+    seqRow.innerHTML='';
+    cur.seq.forEach(function(v){ var el=document.createElement('div'); el.className='seq-n'; el.textContent=v; seqRow.appendChild(el); });
+    var qEl=document.createElement('div'); qEl.className='seq-n q'; qEl.textContent='?'; seqRow.appendChild(qEl);
+    var set={}; set[cur.ans]=1; var arr=[cur.ans];
+    while(arr.length<4){ var delta=1+rnd(Math.max(3,Math.round(cur.ans*0.2))); var sign=Math.random()<0.5?-1:1; var d=cur.ans+sign*delta;
+      if(d>=0 && !set[d]){ set[d]=1; arr.push(d); } }
+    arr.sort(function(){return Math.random()-0.5;});
+    opts.innerHTML='';
+    arr.forEach(function(v){ var el=document.createElement('div'); el.className='q-opt'; el.textContent=v;
+      el.addEventListener('click',function(){ pick(v,cur.ans,el); }); opts.appendChild(el); });
+  }
+  function pick(v,ans,el){
+    if(answered)return; answered=true;
+    var all=opts.querySelectorAll('.q-opt');
+    all.forEach(function(x){ if(parseInt(x.textContent,10)===ans) x.classList.add('correct'); });
+    if(v===ans){ score++; document.getElementById('score').textContent=score; } else { el.classList.add('wrong'); }
+    setTimeout(function(){ qi++; if(qi<N) show(); else finish(); }, 650);
+  }
+  function begin(){
+    qi=0; score=0; document.getElementById('score').textContent='0';
+    startEl.style.display='none'; doneEl.style.display='none'; playEl.style.display='';
+    show();
+  }
+  function finish(){
+    playEl.style.display='none'; doneEl.style.display='block';
+    document.getElementById('finalScore').textContent=score;
+    if(score>best){ best=score; try{localStorage.setItem('raqam_seq_best',best);}catch(e){} document.getElementById('best').textContent=best; }
+    document.getElementById('verdict').textContent = score>=9?'Excellent! Your math intuition is strong 🏆' : score>=6?'Very good — practice a bit more.' : 'Start over and focus on the difference between the numbers.';
+  }
+  document.getElementById('startBtn').addEventListener('click',begin);
+  document.getElementById('againBtn').addEventListener('click',begin);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lights Out Game | Free Logic Puzzle | raqam</title>
+<meta name="description" content="Play Lights Out for free: every tap flips a tile and its neighbors — the goal is to switch off every light. A fun, deep logic puzzle you can play free in your browser.">
+<link rel="canonical" href="https://raqam.ai/en/lightsout">
+<meta property="og:title" content="Lights Out Game | Free Logic Puzzle | raqam">
+<meta property="og:description" content="Play Lights Out for free: every tap flips a tile and its neighbors — the goal is to switch off every light. A fun, deep logic puzzle you can play free in your browser.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://d8j0ntlcm91z4.cloudfront.net/user_3Gqr8cNvaHecl4CfmnUHSrGscwp/hf_20260923_121458_609f9936-3143-4911-a905-f3a3f909a8e6.png">
+<link rel="alternate" hreflang="ar" href="https://raqam.ai/lightsout">
+<link rel="alternate" hreflang="en" href="https://raqam.ai/en/lightsout">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/styles.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-93NPFB6NL6"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-93NPFB6NL6');</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Lights Out","url":"https://raqam.ai/en/lightsout","applicationCategory":"GameApplication","operatingSystem":"Any","inLanguage":"en","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+<style>
+  .lo{width:min(88vw,380px);aspect-ratio:1;margin-inline:auto;display:grid;gap:10px;background:#0e1533;border:1px solid var(--line2);border-radius:16px;padding:12px}
+  .lcell{border-radius:12px;background:#141c44;border:1px solid var(--line);cursor:pointer;transition:.12s;box-shadow:inset 0 0 0 0 rgba(0,0,0,0)}
+  .lcell.on{background:linear-gradient(135deg,var(--cyan),var(--lime));border-color:transparent;box-shadow:0 0 18px rgba(34,211,238,.55)}
+</style>
+</head>
+<body>
+
+<header class="top"><div class="wrap mast">
+  <a href="/en/" class="brand"><span class="mk">×</span><span class="word">raqam</span></a>
+  <nav class="nav"><a href="/en/">Home</a><a href="/en/games" class="on">Games</a><a href="/en/times-tables">Times Tables</a><a href="/en/sudoku">Sudoku</a><a href="/en/mental-math">Mental Math</a></nav>
+  <span class="grow"></span>
+  <a href="/lightsout" style="color:var(--dim);font-size:13px;font-weight:700;margin-inline-start:6px">عربي</a>
+</div></header>
+
+<main class="gamewrap">
+  <div class="crumbs"><a href="/en/">Home</a> ← Lights Out</div>
+  <div class="ghero"><img loading="lazy" src="https://d8j0ntlcm91z4.cloudfront.net/user_3Gqr8cNvaHecl4CfmnUHSrGscwp/hf_20260923_121458_609f9936-3143-4911-a905-f3a3f909a8e6.png" alt="Lights Out"></div>
+  <div class="gtitle"><h1>Lights Out 💡</h1><p>Every tap flips a tile and its neighbors — switch them all off</p></div>
+  <div class="ad ad-lead"><span class="lbl">Ad space</span></div>
+
+  <div style="max-width:380px;margin-inline:auto">
+    <div class="diffs" style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:14px">
+      <button class="diff on" data-n="3">3×3</button>
+      <button class="diff" data-n="4">4×4</button>
+      <button class="diff" data-n="5">5×5</button>
+    </div>
+    <div class="hud">
+      <div class="stat"><div class="l">Moves</div><div class="v" id="moves">0</div></div>
+      <div class="stat"><div class="l">Lit</div><div class="v" id="lit">0</div></div>
+      <button class="btn sec" id="newBtn">New Puzzle</button>
+    </div>
+    <div class="lo" id="board"></div>
+  </div>
+
+  <div class="prose" style="margin-top:26px;max-width:640px;margin-inline:auto">
+    <h2>How to play Lights Out?</h2>
+    <p>The board is made of lit and unlit tiles. Tapping any tile flips its state along with its four neighbors (up, down, left, right). The goal is to switch off every light. It looks simple but it's a deep logic puzzle: each tile needs to be pressed either once or not at all, and the order you press them in doesn't matter. Start with the 3×3 grid, then challenge yourself with 5×5.</p>
+  </div>
+</main>
+
+<footer class="foot"><div class="fine">© <span id="yr"></span> raqam.ai — number & brain games in English and Arabic.</div></footer>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+
+<script>
+(function(){
+  "use strict";
+  var boardEl=document.getElementById('board'), movesEl=document.getElementById('moves'), litEl=document.getElementById('lit');
+  var N=3, state=[], cells=[], moves=0, done=false;
+
+  function idx(r,c){ return r*N+c; }
+  function build(){
+    boardEl.style.gridTemplateColumns='repeat('+N+',1fr)';
+    boardEl.innerHTML=''; cells=[];
+    for(var i=0;i<N*N;i++){ (function(i){ var c=document.createElement('div'); c.className='lcell';
+      c.addEventListener('click',function(){ press(i); }); boardEl.appendChild(c); cells.push(c); })(i); }
+  }
+  function toggle(r,c){ if(r<0||r>=N||c<0||c>=N) return; state[idx(r,c)]=!state[idx(r,c)]; }
+  function applyPress(i,count){
+    var r=Math.floor(i/N), c=i%N;
+    toggle(r,c); toggle(r-1,c); toggle(r+1,c); toggle(r,c-1); toggle(r,c+1);
+  }
+  function newPuzzle(n){
+    N=n; state=new Array(N*N).fill(false); moves=0; done=false; movesEl.textContent='0';
+    build();
+    var k=N*N; while(k--){ if(Math.random()<0.5) applyPress(Math.floor(Math.random()*N*N)); }
+    if(litCount()===0) applyPress(Math.floor(Math.random()*N*N));
+    draw();
+  }
+  function litCount(){ var n=0; for(var i=0;i<N*N;i++) if(state[i]) n++; return n; }
+  function draw(){ for(var i=0;i<N*N;i++){ cells[i].classList.toggle('on',state[i]); } litEl.textContent=litCount(); }
+  function press(i){
+    if(done) return;
+    applyPress(i); moves++; movesEl.textContent=moves; draw();
+    if(litCount()===0){ done=true; win(); }
+  }
+  function win(){
+    setTimeout(function(){
+      var ov=document.createElement('div');
+      ov.style.cssText='position:fixed;inset:0;background:rgba(10,16,39,.86);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;z-index:200';
+      ov.innerHTML='<div style="font-family:Cairo,sans-serif;color:#fff;font-size:28px">🎉 All lights out!</div><div style="color:var(--muted)">in '+moves+' moves</div>';
+      var b=document.createElement('button'); b.className='btn'; b.textContent='New Puzzle';
+      b.addEventListener('click',function(){ document.body.removeChild(ov); var d=document.querySelector('.diff.on'); newPuzzle(+d.getAttribute('data-n')); });
+      ov.appendChild(b); document.body.appendChild(ov);
+    },140);
+  }
+  document.querySelector('.diffs').addEventListener('click',function(e){
+    var b=e.target.closest('.diff'); if(!b) return;
+    document.querySelectorAll('.diff').forEach(function(x){x.classList.remove('on');}); b.classList.add('on');
+    newPuzzle(+b.getAttribute('data-n'));
+  });
+  document.getElementById('newBtn').addEventListener('click',function(){ var d=document.querySelector('.diff.on'); newPuzzle(+d.getAttribute('data-n')); });
+  newPuzzle(3);
+})();
+</script>
+</body>
+</html>

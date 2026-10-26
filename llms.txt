@@ -30,3 +30,7 @@
 - [معادلة اليوم](https://raqam.ai/game-equation): خمّن المعادلة الحسابية السرية اليومية.
 - [سباق الحساب](https://raqam.ai/game-math-sprint): حلّ أكبر عدد من مسائل الحساب في 60 ثانية.
 - [كل الألعاب](https://raqam.ai/games): فهرس كامل لجميع ألعاب الأرقام على رقم.
+
+## English
+- [raqam in English](https://raqam.ai/en/): Free number and math games in English — times tables, mental math, Sudoku, 2048, daily puzzles, and logic games. Mirrors the Arabic site at every page (toggle with the EN/عربي link in the header); scores and streaks carry over between languages.
+- [All games (EN)](https://raqam.ai/en/games): Full index of English game pages.

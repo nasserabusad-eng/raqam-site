@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Times Tables for Kids | Learn the Full Multiplication Table Easily</title>
+<meta name="description" content="Times tables for kids, made easy and interactive: learn the full multiplication table from 1 to 12 and practice with a fun quiz, plus a full printable PDF table. Free.">
+<link rel="canonical" href="https://raqam.ai/en/times-tables">
+<meta property="og:title" content="Times Tables for Kids | Learn the Full Multiplication Table Easily">
+<meta property="og:description" content="Times tables for kids, made easy and interactive: learn the full multiplication table from 1 to 12 and practice with a fun quiz, plus a full printable PDF table. Free.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://d8j0ntlcm91z4.cloudfront.net/user_3Gqr8cNvaHecl4CfmnUHSrGscwp/hf_20260923_070124_4fbbff6a-c1a6-4f6f-b13f-262eef8e4c49.png">
+<link rel="alternate" hreflang="ar" href="https://raqam.ai/times-tables">
+<link rel="alternate" hreflang="en" href="https://raqam.ai/en/times-tables">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/styles.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-93NPFB6NL6"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-93NPFB6NL6');</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Interactive Times Tables","url":"https://raqam.ai/en/times-tables","applicationCategory":"EducationalApplication","operatingSystem":"Any","inLanguage":"en","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What's the easiest way to teach kids the times tables?", "acceptedAnswer": {"@type": "Answer", "text": "Start with the easy tables (2, 5, and 10), then move to 3 and 4, and use patterns — for example, the digits of the products in the 9 times table (from 9×1 to 9×10) always add up to 9. Short daily practice with an interactive quiz works better than one long memorization session."}}, {"@type": "Question", "name": "Is there a full printable times table PDF?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, the Full Times Table page is ready to print or save as a PDF, and we have worksheets for every table from 2 to 12."}}, {"@type": "Question", "name": "At what age should a child start learning the times tables?", "acceptedAnswer": {"@type": "Answer", "text": "Usually in 2nd and 3rd grade, after they've mastered addition and understand multiplication as repeated addition."}}]}
+</script>
+</head>
+<body>
+
+<header class="top"><div class="wrap mast">
+  <a href="/en/" class="brand"><span class="mk">×</span><span class="word">raqam</span></a>
+  <nav class="nav"><a href="/en/">Home</a><a href="/en/games">Games</a><a href="/en/times-tables" class="on">Times Tables</a><a href="/en/sudoku">Sudoku</a><a href="/en/mental-math">Mental Math</a></nav>
+  <span class="grow"></span>
+  <a href="/times-tables" style="color:var(--dim);font-size:13px;font-weight:700;margin-inline-start:6px">عربي</a>
+</div></header>
+
+<main class="gamewrap">
+  <div class="crumbs"><a href="/en/">Home</a> ← Times Tables</div>
+  <div class="ghero"><img loading="lazy" src="https://d8j0ntlcm91z4.cloudfront.net/user_3Gqr8cNvaHecl4CfmnUHSrGscwp/hf_20260923_070124_4fbbff6a-c1a6-4f6f-b13f-262eef8e4c49.png" alt="Times Tables"></div>
+  <div class="gtitle"><h1>Times Tables ✖️</h1><p>Pick a number, learn its table, then practice it</p></div>
+
+  <div class="ad ad-lead"><span class="lbl">Ad space</span></div>
+
+  <div class="panel">
+    <div class="picker" id="picker"></div>
+    <div class="hud">
+      <button class="btn sec" id="learnBtn">Learn</button>
+      <button class="btn" id="quizBtn">Practice 🎯</button>
+    </div>
+
+    <div id="learn"><div class="ttable" id="ttable"></div></div>
+
+    <div id="quiz" style="display:none">
+      <div class="hud"><div class="stat"><div class="l">Question</div><div class="v"><span id="qn">1</span>/10</div></div><div class="stat"><div class="l">Score</div><div class="v" id="score">0</div></div></div>
+      <div class="q-q" id="qtext">—</div>
+      <div class="q-opts" id="opts"></div>
+      <div id="done" style="display:none" class="overlay">
+        <div class="big" id="finalScore">0</div><div class="lbl">out of 10 correct</div>
+        <div id="verdict" style="color:var(--muted);margin-bottom:14px"></div>
+        <button class="btn" id="againBtn">Try Again</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="prose" style="margin-top:24px">
+    <h2>How to memorize the times tables fast?</h2>
+    <p>Start with the easy tables (2, 5, and 10), then gradually move to 3, 4, and 6. Say each table out loud, then test yourself in "Practice" mode until you can answer without thinking. Remember that multiplication is commutative: 7×8 = 8×7, so memorizing half the table is often enough.</p>
+  </div>
+
+  <div class="prose" style="margin-top:26px">
+    <h2>Full times tables from 2 to 12</h2>
+    <p>Browse each multiplication table written out in full from 1 to 12, with the easiest way to memorize it and common questions about it:</p>
+    <div class="tt-index">
+      <a href="/times-table-1">Table 1</a>
+      <a href="/times-table-2">Table 2</a>
+      <a href="/times-table-3">Table 3</a>
+      <a href="/times-table-4">Table 4</a>
+      <a href="/times-table-5">Table 5</a>
+      <a href="/times-table-6">Table 6</a>
+      <a href="/times-table-7">Table 7</a>
+      <a href="/times-table-8">Table 8</a>
+      <a href="/times-table-9">Table 9</a>
+      <a href="/times-table-10">Table 10</a>
+      <a href="/times-table-11">Table 11</a>
+      <a href="/times-table-12">Table 12</a>
+    </div>
+  </div>
+
+  <div class="prose" style="margin-top:26px">
+    <h2>Other tools and tables</h2>
+    <div class="tt-index">
+      <a href="/times-table-full">🖨️ Full printable table</a>
+      <a href="/en/division">Division Table</a>
+      <a href="/en/squares">Squares &amp; Square Roots</a>
+    </div>
+  </div>
+<div class="prose faq-seo" style="margin-top:26px;max-width:760px;margin-inline:auto">
+  <h2>Frequently Asked Questions</h2>
+  <details style="border:1px solid rgba(127,127,127,.3);border-radius:10px;padding:10px 14px;margin:0 0 8px"><summary style="cursor:pointer;font-weight:700"><h3 style="display:inline;font-size:16px;margin:0">What's the easiest way to teach kids the times tables?</h3></summary><p style="margin:8px 0 0;line-height:1.9">Start with the easy tables (2, 5, and 10), then move to 3 and 4, and use patterns — for example, the digits of the products in the 9 times table (from 9×1 to 9×10) always add up to 9. Short daily practice with an interactive quiz works better than one long memorization session.</p></details><details style="border:1px solid rgba(127,127,127,.3);border-radius:10px;padding:10px 14px;margin:0 0 8px"><summary style="cursor:pointer;font-weight:700"><h3 style="display:inline;font-size:16px;margin:0">Is there a full printable times table PDF?</h3></summary><p style="margin:8px 0 0;line-height:1.9">Yes, the Full Times Table page is ready to print or save as a PDF, and we have worksheets for every table from 2 to 12.</p></details><details style="border:1px solid rgba(127,127,127,.3);border-radius:10px;padding:10px 14px;margin:0 0 8px"><summary style="cursor:pointer;font-weight:700"><h3 style="display:inline;font-size:16px;margin:0">At what age should a child start learning the times tables?</h3></summary><p style="margin:8px 0 0;line-height:1.9">Usually in 2nd and 3rd grade, after they've mastered addition and understand multiplication as repeated addition.</p></details>
+</div>
+</main>
+
+<footer class="foot"><div class="fine">© <span id="yr"></span> raqam.ai — learn numbers and play.</div></footer>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+
+<script>
+(function(){
+  "use strict";
+  var sel=5;
+  var picker=document.getElementById('picker'), ttable=document.getElementById('ttable');
+  var learn=document.getElementById('learn'), quiz=document.getElementById('quiz');
+  for(var n=1;n<=12;n++){ (function(n){ var b=document.createElement('button'); b.className='pk'+(n===sel?' on':''); b.textContent=n;
+    b.addEventListener('click',function(){ sel=n; picker.querySelectorAll('.pk').forEach(function(x){x.classList.remove('on')}); b.classList.add('on'); renderTable(); if(quiz.style.display!=='none') startQuiz(); });
+    picker.appendChild(b); })(n); }
+  function renderTable(){ var h=''; for(var m=1;m<=12;m++){ h+='<div class="trow"><span>'+sel+' × '+m+'</span><span class="eq">= '+(sel*m)+'</span></div>'; } ttable.innerHTML=h; }
+  document.getElementById('learnBtn').addEventListener('click',function(){ learn.style.display=''; quiz.style.display='none'; });
+  document.getElementById('quizBtn').addEventListener('click',function(){ learn.style.display='none'; quiz.style.display=''; startQuiz(); });
+
+  var qi=0, score=0, N=10, answered=false;
+  var qtext=document.getElementById('qtext'), opts=document.getElementById('opts'), doneEl=document.getElementById('done');
+  function startQuiz(){ qi=0; score=0; answered=false; doneEl.style.display='none'; qtext.style.display=''; opts.style.display='';
+    document.getElementById('score').textContent='0'; nextQ(); }
+  function nextQ(){
+    answered=false; document.getElementById('qn').textContent=(qi+1);
+    var m=1+Math.floor(Math.random()*12); var ans=sel*m;
+    qtext.textContent=sel+' × '+m+' = ?';
+    var set={}; set[ans]=1; var arr=[ans];
+    while(arr.length<4){ var d=ans+(Math.floor(Math.random()*9)-4)*(1+Math.floor(Math.random()*3)); if(d>0&&!set[d]){ set[d]=1; arr.push(d); } }
+    arr.sort(function(){return Math.random()-0.5;});
+    opts.innerHTML='';
+    arr.forEach(function(v){ var b=document.createElement('div'); b.className='q-opt'; b.textContent=v;
+      b.addEventListener('click',function(){ pick(v,ans,b); }); opts.appendChild(b); });
+  }
+  function pick(v,ans,el){
+    if(answered)return; answered=true;
+    var all=opts.querySelectorAll('.q-opt');
+    all.forEach(function(x){ if(parseInt(x.textContent,10)===ans) x.classList.add('correct'); });
+    if(v===ans){ score++; document.getElementById('score').textContent=score; } else { el.classList.add('wrong'); }
+    setTimeout(function(){ qi++; if(qi<N) nextQ(); else finish(); }, 650);
+  }
+  function finish(){
+    qtext.style.display='none'; opts.style.display='none'; doneEl.style.display='block';
+    document.getElementById('finalScore').textContent=score;
+    document.getElementById('verdict').textContent = score>=9?"Excellent! You've mastered the "+sel+' table 🏆' : score>=6?'Great job, practice a little more.' : 'Review the table in Learn mode and try again.';
+  }
+  document.getElementById('againBtn').addEventListener('click',startQuiz);
+  renderTable();
+})();
+</script>
+</body>
+</html>

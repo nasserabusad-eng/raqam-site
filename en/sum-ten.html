@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sum to Ten Game | Free Number Matching | raqam</title>
+<meta name="description" content="Play Sum to Ten for free: pick two numbers on the grid that add up to exactly 10 before time runs out. A fast, fun math speed game you can play in your browser.">
+<link rel="canonical" href="https://raqam.ai/en/sum-ten">
+<meta property="og:title" content="Sum to Ten Game | Free Number Matching | raqam">
+<meta property="og:description" content="Play Sum to Ten for free: pick two numbers on the grid that add up to exactly 10 before time runs out. A fast, fun math speed game you can play in your browser.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://d8j0ntlcm91z4.cloudfront.net/user_3Gqr8cNvaHecl4CfmnUHSrGscwp/hf_20261101_155449_da4c5d6b-e856-4986-a52c-4d4767cbf9d9.png">
+<link rel="alternate" hreflang="ar" href="https://raqam.ai/sum-ten">
+<link rel="alternate" hreflang="en" href="https://raqam.ai/en/sum-ten">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/styles.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-93NPFB6NL6"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-93NPFB6NL6');</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Sum to Ten","url":"https://raqam.ai/en/sum-ten","applicationCategory":"GameApplication","operatingSystem":"Any","inLanguage":"en","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+<style>
+  .st-wrap{max-width:420px;margin-inline:auto}
+  .stgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:7px;background:#0e1533;border:1px solid var(--line2);border-radius:16px;padding:10px}
+  .stcell{aspect-ratio:1;display:flex;align-items:center;justify-content:center;background:var(--card2);border:1px solid var(--line);border-radius:10px;
+    font-family:"Cairo",sans-serif;font-weight:800;font-size:clamp(16px,5.4vw,22px);color:#fff;cursor:pointer;user-select:none;transition:background .1s,transform .1s}
+  .stcell.sel{background:linear-gradient(135deg,var(--cyan),var(--indigo));color:#06122e;transform:scale(1.06)}
+  .stcell.ok{background:rgba(163,230,53,.3);border-color:var(--lime)}
+  .stcell.bad{background:rgba(248,113,113,.3);border-color:var(--red)}
+</style>
+</head>
+<body>
+
+<header class="top"><div class="wrap mast">
+  <a href="/en/" class="brand"><span class="mk">×</span><span class="word">raqam</span></a>
+  <nav class="nav"><a href="/en/">Home</a><a href="/en/games" class="on">Games</a><a href="/en/times-tables">Times Tables</a><a href="/en/sudoku">Sudoku</a><a href="/en/mental-math">Mental Math</a></nav>
+  <span class="grow"></span>
+  <a href="/sum-ten" class="lang-btn"><span class="ic">🌐</span>عربي</a>
+</div></header>
+
+<main class="gamewrap">
+  <div class="crumbs"><a href="/en/">Home</a> ← Sum to Ten</div>
+  <div class="ghero"><img loading="lazy" src="https://d8j0ntlcm91z4.cloudfront.net/user_3Gqr8cNvaHecl4CfmnUHSrGscwp/hf_20261101_155449_da4c5d6b-e856-4986-a52c-4d4767cbf9d9.png" alt="Sum to Ten"></div>
+  <div class="gtitle"><h1>Sum to Ten 🔟</h1><p>Pick two numbers on the grid that add up to exactly 10 — as fast as you can</p></div>
+
+  <div class="ad ad-lead"><span class="lbl">Ad space</span></div>
+
+  <div class="panel st-wrap">
+    <div class="hud">
+      <div class="stat"><div class="l">Score</div><div class="v" id="score">0</div></div>
+      <div class="stat"><div class="l">Time</div><div class="v" id="time">90</div></div>
+      <div class="stat"><div class="l">Best</div><div class="v" id="best">0</div></div>
+    </div>
+    <div class="stgrid" id="grid"></div>
+    <div style="text-align:center;margin-top:14px">
+      <button class="btn sec" id="newBtn">🔄 New Game</button>
+    </div>
+  </div>
+
+  <div class="prose" style="margin-top:26px;max-width:640px;margin-inline:auto">
+    <h2>How to play Sum to Ten?</h2>
+    <p>The grid is full of numbers from 1 to 9. Tap two numbers that add up to exactly 10 (like 4 and 6, or 2 and 8) and they'll vanish and get replaced by two fresh numbers, earning you a point. Pick two numbers that don't add up to 10 and both tiles flash red and get deselected. Rack up as many points as you can before time runs out (90 seconds). A fast game that sharpens your speed at finding complements to 10.</p>
+  </div>
+</main>
+
+<footer class="foot"><div class="fine">© <span id="yr"></span> raqam.ai — number & brain games in English and Arabic.</div></footer>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+
+<script>
+(function(){
+  "use strict";
+  var gridEl=document.getElementById('grid'), scoreEl=document.getElementById('score'), timeEl=document.getElementById('time'), bestEl=document.getElementById('best');
+  var N=30, vals=[], cells=[], score=0, secs=90, timer=null, selA=-1, over=false, locked=false;
+  var best=0; try{ best=parseInt(localStorage.getItem('raqam_sumten_best')||'0',10)||0; }catch(e){}
+  bestEl.textContent=best;
+
+  function rnd(){ return 1+Math.floor(Math.random()*9); }
+  function build(){
+    gridEl.innerHTML=''; cells=[];
+    for(var i=0;i<N;i++){ (function(i){ var c=document.createElement('div'); c.className='stcell';
+      c.addEventListener('click',function(){ tap(i); }); gridEl.appendChild(c); cells.push(c); })(i); }
+  }
+  function reset(){
+    vals=[]; for(var i=0;i<N;i++) vals.push(rnd());
+    score=0; secs=90; selA=-1; over=false; locked=false;
+    scoreEl.textContent='0'; timeEl.textContent='90';
+    build(); draw(); clearInterval(timer);
+    timer=setInterval(tick,1000);
+  }
+  function draw(){
+    for(var i=0;i<N;i++){ cells[i].textContent=vals[i]; cells[i].className='stcell'+(i===selA?' sel':''); }
+  }
+  function tick(){
+    if(over) return;
+    secs--; timeEl.textContent=Math.max(0,secs);
+    if(secs<=0){ finish(); }
+  }
+  function finish(){
+    over=true; clearInterval(timer);
+    if(score>best){ best=score; bestEl.textContent=best; try{localStorage.setItem('raqam_sumten_best',best);}catch(e){} }
+    setTimeout(function(){
+      var ov=document.createElement('div');
+      ov.style.cssText='position:fixed;inset:0;background:rgba(10,16,39,.86);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;z-index:200';
+      ov.innerHTML='<div style="font-family:Cairo,sans-serif;color:#fff;font-size:28px">⏱️ Time\'s up!</div><div style="color:var(--muted)">Score: '+score+'</div>';
+      var b=document.createElement('button'); b.className='btn'; b.textContent='New Game';
+      b.addEventListener('click',function(){ document.body.removeChild(ov); reset(); });
+      ov.appendChild(b); document.body.appendChild(ov);
+    },120);
+  }
+  function tap(i){
+    if(over||locked) return;
+    if(selA===i){ selA=-1; draw(); return; }
+    if(selA<0){ selA=i; draw(); return; }
+    var a=selA, b=i;
+    if(vals[a]+vals[b]===10){
+      cells[a].classList.add('ok'); cells[b].classList.add('ok');
+      score++; scoreEl.textContent=score;
+      locked=true;
+      setTimeout(function(){ vals[a]=rnd(); vals[b]=rnd(); selA=-1; locked=false; draw(); },180);
+    } else {
+      cells[a].classList.add('bad'); cells[b].classList.add('bad');
+      locked=true;
+      setTimeout(function(){ selA=-1; locked=false; draw(); },260);
+    }
+  }
+  document.getElementById('newBtn').addEventListener('click',reset);
+  reset();
+})();
+</script>
+</body>
+</html>

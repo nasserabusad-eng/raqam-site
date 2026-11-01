@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prime Hunter Game | Spot the Prime Numbers | raqam</title>
+<meta name="description" content="Play Prime Hunter for free: tap every prime number on the grid before time runs out and avoid the non-primes. A fun math and logic game you can play in your browser.">
+<link rel="canonical" href="https://raqam.ai/en/prime-hunter">
+<meta property="og:title" content="Prime Hunter Game | Spot the Prime Numbers | raqam">
+<meta property="og:description" content="Play Prime Hunter for free: tap every prime number on the grid before time runs out and avoid the non-primes. A fun math and logic game you can play in your browser.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://d8j0ntlcm91z4.cloudfront.net/user_3Gqr8cNvaHecl4CfmnUHSrGscwp/hf_20261101_155449_53cef6fd-0358-4a6d-8eac-1fa3c8960ba5.png">
+<link rel="alternate" hreflang="ar" href="https://raqam.ai/prime-hunter">
+<link rel="alternate" hreflang="en" href="https://raqam.ai/en/prime-hunter">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/styles.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-93NPFB6NL6"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-93NPFB6NL6');</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Prime Hunter","url":"https://raqam.ai/en/prime-hunter","applicationCategory":"GameApplication","operatingSystem":"Any","inLanguage":"en","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+<style>
+  .ph-wrap{max-width:460px;margin-inline:auto}
+  .phgrid{display:grid;gap:7px;background:#0e1533;border:1px solid var(--line2);border-radius:16px;padding:10px}
+  .phcell{aspect-ratio:1;display:flex;align-items:center;justify-content:center;background:var(--card2);border:1px solid var(--line);border-radius:10px;
+    font-family:"Cairo",sans-serif;font-weight:800;font-size:clamp(13px,4.4vw,18px);color:#fff;cursor:pointer;user-select:none;transition:background .1s}
+  .phcell.ok{background:rgba(163,230,53,.3);border-color:var(--lime);cursor:default}
+  .phcell.bad{background:rgba(248,113,113,.3);border-color:var(--red);cursor:default}
+</style>
+</head>
+<body>
+
+<header class="top"><div class="wrap mast">
+  <a href="/en/" class="brand"><span class="mk">×</span><span class="word">raqam</span></a>
+  <nav class="nav"><a href="/en/">Home</a><a href="/en/games" class="on">Games</a><a href="/en/times-tables">Times Tables</a><a href="/en/sudoku">Sudoku</a><a href="/en/mental-math">Mental Math</a></nav>
+  <span class="grow"></span>
+  <a href="/prime-hunter" class="lang-btn"><span class="ic">🌐</span>عربي</a>
+</div></header>
+
+<main class="gamewrap">
+  <div class="crumbs"><a href="/en/">Home</a> ← Prime Hunter</div>
+  <div class="ghero"><img loading="lazy" src="https://d8j0ntlcm91z4.cloudfront.net/user_3Gqr8cNvaHecl4CfmnUHSrGscwp/hf_20261101_155449_53cef6fd-0358-4a6d-8eac-1fa3c8960ba5.png" alt="Prime Hunter"></div>
+  <div class="gtitle"><h1>Prime Hunter 🔎</h1><p>Tap every prime number on the grid, and avoid the non-primes</p></div>
+
+  <div class="ad ad-lead"><span class="lbl">Ad space</span></div>
+
+  <div class="panel ph-wrap">
+    <div class="diffs" style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:14px">
+      <button class="diff on" data-n="5" data-max="30">Easy (up to 30)</button>
+      <button class="diff" data-n="6" data-max="60">Medium (up to 60)</button>
+      <button class="diff" data-n="6" data-max="99">Hard (up to 99)</button>
+    </div>
+    <div class="hud">
+      <div class="stat"><div class="l">Score</div><div class="v" id="score">0</div></div>
+      <div class="stat"><div class="l">Time</div><div class="v" id="time">60</div></div>
+      <div class="stat"><div class="l">Mistakes</div><div class="v" id="mistakes">0</div></div>
+    </div>
+    <div class="phgrid" id="grid"></div>
+    <div style="text-align:center;margin-top:14px">
+      <button class="btn sec" id="newBtn">🔄 New Game</button>
+    </div>
+  </div>
+
+  <div class="prose" style="margin-top:26px;max-width:640px;margin-inline:auto">
+    <h2>What are prime numbers?</h2>
+    <p>A prime number is a natural number greater than 1 that's only divisible by itself and 1 (like 2, 3, 5, 7, 11...). Tap every prime number you spot on the grid before time runs out — tapping a correct prime earns a point, and tapping a non-prime counts as a mistake. Once you've cleared the whole grid, a fresh one appears automatically. Pick a difficulty based on the number range you want to practice.</p>
+  </div>
+</main>
+
+<footer class="foot"><div class="fine">© <span id="yr"></span> raqam.ai — number & brain games in English and Arabic.</div></footer>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+
+<script>
+(function(){
+  "use strict";
+  var gridEl=document.getElementById('grid'), scoreEl=document.getElementById('score'), timeEl=document.getElementById('time'), mistEl=document.getElementById('mistakes');
+  var cols=5, max=30, vals=[], cells=[], score=0, mistakes=0, secs=60, timer=null, over=false;
+
+  function isPrime(n){
+    if(n<2) return false;
+    for(var i=2;i*i<=n;i++){ if(n%i===0) return false; }
+    return true;
+  }
+  function rndGrid(){
+    var n=cols*cols;
+    var arr=[];
+    for(var i=0;i<n;i++) arr.push(2+Math.floor(Math.random()*(max-1)));
+    return arr;
+  }
+  function build(){
+    gridEl.style.gridTemplateColumns='repeat('+cols+',1fr)';
+    gridEl.innerHTML=''; cells=[];
+    vals=rndGrid();
+    vals.forEach(function(v,i){
+      var c=document.createElement('div'); c.className='phcell'; c.textContent=v;
+      c.addEventListener('click',function(){ tap(i); }); gridEl.appendChild(c); cells.push(c);
+    });
+  }
+  function tap(i){
+    if(over) return;
+    var c=cells[i];
+    if(c.classList.contains('ok')||c.classList.contains('bad')) return;
+    if(isPrime(vals[i])){ c.classList.add('ok'); score++; scoreEl.textContent=score; }
+    else { c.classList.add('bad'); mistakes++; mistEl.textContent=mistakes; }
+    var allDone = cells.every(function(x){ return x.classList.contains('ok')||x.classList.contains('bad'); });
+    if(allDone) setTimeout(build,220);
+  }
+  function tick(){
+    if(over) return;
+    secs--; timeEl.textContent=Math.max(0,secs);
+    if(secs<=0) finish();
+  }
+  function finish(){
+    over=true; clearInterval(timer);
+    setTimeout(function(){
+      var ov=document.createElement('div');
+      ov.style.cssText='position:fixed;inset:0;background:rgba(10,16,39,.86);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;z-index:200';
+      ov.innerHTML='<div style="font-family:Cairo,sans-serif;color:#fff;font-size:28px">⏱️ Time\'s up!</div><div style="color:var(--muted)">Score: '+score+' · Mistakes: '+mistakes+'</div>';
+      var b=document.createElement('button'); b.className='btn'; b.textContent='New Game';
+      b.addEventListener('click',function(){ document.body.removeChild(ov); reset(); });
+      ov.appendChild(b); document.body.appendChild(ov);
+    },120);
+  }
+  function reset(){
+    var d=document.querySelector('.diff.on');
+    cols=+d.getAttribute('data-n'); max=+d.getAttribute('data-max');
+    score=0; mistakes=0; secs=60; over=false;
+    scoreEl.textContent='0'; mistEl.textContent='0'; timeEl.textContent='60';
+    build(); clearInterval(timer); timer=setInterval(tick,1000);
+  }
+  document.querySelectorAll('.diff').forEach(function(b){
+    b.addEventListener('click',function(){
+      document.querySelectorAll('.diff').forEach(function(x){x.classList.remove('on');}); b.classList.add('on');
+      reset();
+    });
+  });
+  document.getElementById('newBtn').addEventListener('click',reset);
+  reset();
+})();
+</script>
+</body>
+</html>

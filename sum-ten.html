@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>اجمع لعشرة | لعبة مطابقة الأرقام بالعربية | رقم</title>
+<meta name="description" content="العب اجمع لعشرة بالعربية مجاناً: اختر رقمين من الشبكة مجموعهما 10 قبل نفاد الوقت. لعبة سرعة وذكاء حسابي ممتعة تُلعب في المتصفح.">
+<meta name="keywords" content="اجمع لعشرة, لعبة جمع الارقام, العاب ذكاء, العاب حسابية, make 10 بالعربي, لعبة سرعة">
+<link rel="canonical" href="https://raqam.ai/sum-ten">
+<meta property="og:title" content="اجمع لعشرة — رقم">
+<meta property="og:description" content="اختر رقمين مجموعهما 10 قبل نفاد الوقت.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar">
+<meta property="og:image" content="https://d8j0ntlcm91z4.cloudfront.net/user_3Gqr8cNvaHecl4CfmnUHSrGscwp/hf_20261101_155449_da4c5d6b-e856-4986-a52c-4d4767cbf9d9.png">
+<link rel="alternate" hreflang="en" href="https://raqam.ai/en/sum-ten">
+<link rel="alternate" hreflang="ar" href="https://raqam.ai/sum-ten">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/styles.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-93NPFB6NL6"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-93NPFB6NL6');</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"اجمع لعشرة","url":"https://raqam.ai/sum-ten","applicationCategory":"GameApplication","operatingSystem":"Any","inLanguage":"ar","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+<style>
+  .st-wrap{max-width:420px;margin-inline:auto}
+  .stgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:7px;background:#0e1533;border:1px solid var(--line2);border-radius:16px;padding:10px}
+  .stcell{aspect-ratio:1;display:flex;align-items:center;justify-content:center;background:var(--card2);border:1px solid var(--line);border-radius:10px;
+    font-family:"Cairo",sans-serif;font-weight:800;font-size:clamp(16px,5.4vw,22px);color:#fff;cursor:pointer;user-select:none;transition:background .1s,transform .1s}
+  .stcell.sel{background:linear-gradient(135deg,var(--cyan),var(--indigo));color:#06122e;transform:scale(1.06)}
+  .stcell.ok{background:rgba(163,230,53,.3);border-color:var(--lime)}
+  .stcell.bad{background:rgba(248,113,113,.3);border-color:var(--red)}
+</style>
+</head>
+<body>
+
+<header class="top"><div class="wrap mast">
+  <a href="/" class="brand"><span class="mk">×</span><span class="word">رقم</span></a>
+  <nav class="nav"><a href="/">الرئيسية</a><a href="/games" class="on">الألعاب</a><a href="/times-tables">جدول الضرب</a><a href="/mental-math">الحساب الذهني</a><a href="/sudoku">سودوكو</a></nav>
+  <span class="grow"></span>
+  <a href="/en/sum-ten" class="lang-btn"><span class="ic">🌐</span>EN</a>
+</div></header>
+
+<main class="gamewrap">
+  <div class="crumbs"><a href="/">الرئيسية</a> ← <a href="/games">الألعاب</a> ← اجمع لعشرة</div>
+  <div class="ghero"><img loading="lazy" src="https://d8j0ntlcm91z4.cloudfront.net/user_3Gqr8cNvaHecl4CfmnUHSrGscwp/hf_20261101_155449_da4c5d6b-e856-4986-a52c-4d4767cbf9d9.png" alt="اجمع لعشرة"></div>
+  <div class="gtitle"><h1>اجمع لعشرة 🔟</h1><p>اختر رقمين من الشبكة مجموعهما 10 بالضبط — بأسرع وقت ممكن</p></div>
+
+  <div class="ad ad-lead"><span class="lbl">مساحة إعلانية</span></div>
+
+  <div class="panel st-wrap">
+    <div class="hud">
+      <div class="stat"><div class="l">النقاط</div><div class="v" id="score">0</div></div>
+      <div class="stat"><div class="l">الوقت</div><div class="v" id="time">90</div></div>
+      <div class="stat"><div class="l">الأفضل</div><div class="v" id="best">0</div></div>
+    </div>
+    <div class="stgrid" id="grid"></div>
+    <div style="text-align:center;margin-top:14px">
+      <button class="btn sec" id="newBtn">🔄 لعبة جديدة</button>
+    </div>
+  </div>
+
+  <div class="prose" style="margin-top:26px;max-width:640px;margin-inline:auto">
+    <h2>كيف تلعب اجمع لعشرة؟</h2>
+    <p>الشبكة مليئة بأرقام من 1 إلى 9. اضغط على رقمين مجموعهما 10 بالضبط (مثل 4 و6، أو 2 و8) ليختفيا ويحل مكانهما رقمان جديدان، وتحصل على نقطة. إذا اخترت رقمين مجموعهما ليس 10 تومض الخانتان بالأحمر ويُلغى الاختيار. اجمع أكبر عدد ممكن من النقاط قبل نفاد الوقت (90 ثانية). لعبة سريعة تقوّي سرعة حساب المتممات إلى 10.</p>
+  </div>
+</main>
+
+<footer class="foot"><div class="fine">© <span id="yr"></span> رقم (raqam.ai) — ألعاب الأرقام والذكاء بالعربية.</div></footer>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+(function(){
+  "use strict";
+  var gridEl=document.getElementById('grid'), scoreEl=document.getElementById('score'), timeEl=document.getElementById('time'), bestEl=document.getElementById('best');
+  var N=30, vals=[], cells=[], score=0, secs=90, timer=null, selA=-1, over=false, locked=false;
+  var best=0; try{ best=parseInt(localStorage.getItem('raqam_sumten_best')||'0',10)||0; }catch(e){}
+  bestEl.textContent=best;
+
+  function rnd(){ return 1+Math.floor(Math.random()*9); }
+  function build(){
+    gridEl.innerHTML=''; cells=[];
+    for(var i=0;i<N;i++){ (function(i){ var c=document.createElement('div'); c.className='stcell';
+      c.addEventListener('click',function(){ tap(i); }); gridEl.appendChild(c); cells.push(c); })(i); }
+  }
+  function reset(){
+    vals=[]; for(var i=0;i<N;i++) vals.push(rnd());
+    score=0; secs=90; selA=-1; over=false; locked=false;
+    scoreEl.textContent='0'; timeEl.textContent='90';
+    build(); draw(); clearInterval(timer);
+    timer=setInterval(tick,1000);
+  }
+  function draw(){
+    for(var i=0;i<N;i++){ cells[i].textContent=vals[i]; cells[i].className='stcell'+(i===selA?' sel':''); }
+  }
+  function tick(){
+    if(over) return;
+    secs--; timeEl.textContent=Math.max(0,secs);
+    if(secs<=0){ finish(); }
+  }
+  function finish(){
+    over=true; clearInterval(timer);
+    if(score>best){ best=score; bestEl.textContent=best; try{localStorage.setItem('raqam_sumten_best',best);}catch(e){} }
+    setTimeout(function(){
+      var ov=document.createElement('div');
+      ov.style.cssText='position:fixed;inset:0;background:rgba(10,16,39,.86);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;z-index:200';
+      ov.innerHTML='<div style="font-family:Cairo,sans-serif;color:#fff;font-size:28px">⏱️ انتهى الوقت!</div><div style="color:var(--muted)">النقاط: '+score+'</div>';
+      var b=document.createElement('button'); b.className='btn'; b.textContent='لعبة جديدة';
+      b.addEventListener('click',function(){ document.body.removeChild(ov); reset(); });
+      ov.appendChild(b); document.body.appendChild(ov);
+    },120);
+  }
+  function tap(i){
+    if(over||locked) return;
+    if(selA===i){ selA=-1; draw(); return; }
+    if(selA<0){ selA=i; draw(); return; }
+    var a=selA, b=i;
+    if(vals[a]+vals[b]===10){
+      cells[a].classList.add('ok'); cells[b].classList.add('ok');
+      score++; scoreEl.textContent=score;
+      locked=true;
+      setTimeout(function(){ vals[a]=rnd(); vals[b]=rnd(); selA=-1; locked=false; draw(); },180);
+    } else {
+      cells[a].classList.add('bad'); cells[b].classList.add('bad');
+      locked=true;
+      setTimeout(function(){ selA=-1; locked=false; draw(); },260);
+    }
+  }
+  document.getElementById('newBtn').addEventListener('click',reset);
+  reset();
+})();
+</script>
+</body>
+</html>

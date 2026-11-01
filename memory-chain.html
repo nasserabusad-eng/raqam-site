@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>سلسلة الذاكرة | لعبة حفظ تسلسل الأرقام بالعربية | رقم</title>
+<meta name="description" content="العب سلسلة الذاكرة بالعربية مجاناً: احفظ تسلسل الأرقام المتزايد وكرّره بالضغط على لوحة الأرقام. لعبة ذاكرة وتركيز تتحدّاك مع كل جولة.">
+<meta name="keywords" content="سلسلة الذاكرة, لعبة الذاكرة, حفظ الارقام, العاب تركيز, simon بالعربي, العاب ذاكرة ارقام">
+<link rel="canonical" href="https://raqam.ai/memory-chain">
+<meta property="og:title" content="سلسلة الذاكرة — رقم">
+<meta property="og:description" content="احفظ تسلسل الأرقام المتزايد وكرّره.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar">
+<meta property="og:image" content="https://d8j0ntlcm91z4.cloudfront.net/user_3Gqr8cNvaHecl4CfmnUHSrGscwp/hf_20261101_155450_ce5b4609-c1fc-4e83-bd55-91a39eee59f7.png">
+<link rel="alternate" hreflang="en" href="https://raqam.ai/en/memory-chain">
+<link rel="alternate" hreflang="ar" href="https://raqam.ai/memory-chain">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/styles.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-93NPFB6NL6"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-93NPFB6NL6');</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"سلسلة الذاكرة","url":"https://raqam.ai/memory-chain","applicationCategory":"GameApplication","operatingSystem":"Any","inLanguage":"ar","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+<style>
+  .mc-wrap{max-width:360px;margin-inline:auto;text-align:center}
+  .mc-status{color:var(--muted);min-height:24px;margin-bottom:14px;font-weight:700}
+  .mc-status.win{color:var(--lime)}
+  .numpad{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .nk{aspect-ratio:1;border-radius:14px;background:var(--card2);border:1px solid var(--line2);color:#fff;
+    font-family:"Cairo",sans-serif;font-weight:800;font-size:clamp(20px,6vw,28px);cursor:pointer;transition:background .12s,transform .1s}
+  .nk.zero{grid-column:2}
+  .nk.lit{background:linear-gradient(135deg,var(--cyan),var(--indigo));color:#06122e;transform:scale(1.08);box-shadow:0 0 22px rgba(34,211,238,.5)}
+  .nk:disabled{opacity:.9;cursor:default}
+</style>
+</head>
+<body>
+
+<header class="top"><div class="wrap mast">
+  <a href="/" class="brand"><span class="mk">×</span><span class="word">رقم</span></a>
+  <nav class="nav"><a href="/">الرئيسية</a><a href="/games" class="on">الألعاب</a><a href="/times-tables">جدول الضرب</a><a href="/mental-math">الحساب الذهني</a><a href="/sudoku">سودوكو</a></nav>
+  <span class="grow"></span>
+  <a href="/en/memory-chain" class="lang-btn"><span class="ic">🌐</span>EN</a>
+</div></header>
+
+<main class="gamewrap">
+  <div class="crumbs"><a href="/">الرئيسية</a> ← <a href="/games">الألعاب</a> ← سلسلة الذاكرة</div>
+  <div class="ghero"><img loading="lazy" src="https://d8j0ntlcm91z4.cloudfront.net/user_3Gqr8cNvaHecl4CfmnUHSrGscwp/hf_20261101_155450_ce5b4609-c1fc-4e83-bd55-91a39eee59f7.png" alt="سلسلة الذاكرة"></div>
+  <div class="gtitle"><h1>سلسلة الذاكرة 🔗</h1><p>راقب تسلسل الأرقام المضيئة، ثم كرّره بالترتيب نفسه</p></div>
+
+  <div class="ad ad-lead"><span class="lbl">مساحة إعلانية</span></div>
+
+  <div class="panel mc-wrap">
+    <div class="hud">
+      <div class="stat"><div class="l">الجولة</div><div class="v" id="round">0</div></div>
+      <div class="stat"><div class="l">الأفضل</div><div class="v" id="best">0</div></div>
+    </div>
+    <div class="mc-status" id="status">اضغط «ابدأ» لتشاهد أول رقم</div>
+    <div class="numpad" id="pad"></div>
+    <div style="margin-top:16px">
+      <button class="btn" id="startBtn">▶️ ابدأ</button>
+    </div>
+  </div>
+
+  <div class="prose" style="margin-top:26px;max-width:640px;margin-inline:auto">
+    <h2>كيف تلعب سلسلة الذاكرة؟</h2>
+    <p>تضيء الأرقام على لوحة الأعداد واحداً تلو الآخر لتكوّن سلسلة. راقب بعناية، ثم اضغط الأرقام نفسها بالترتيب الذي ظهرت به. إن أجبت بشكل صحيح تطول السلسلة برقم إضافي في الجولة التالية. أول خطأ ينهي اللعبة، وتُعرض لك أطول سلسلة وصلت إليها. لعبة كلاسيكية تقوّي الذاكرة قصيرة المدى والتركيز.</p>
+  </div>
+</main>
+
+<footer class="foot"><div class="fine">© <span id="yr"></span> رقم (raqam.ai) — ألعاب الأرقام والذكاء بالعربية.</div></footer>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+(function(){
+  "use strict";
+  var padEl=document.getElementById('pad'), statusEl=document.getElementById('status'), roundEl=document.getElementById('round'), bestEl=document.getElementById('best');
+  var keys=[], seq=[], step=0, round=0, playing=false, accepting=false;
+  var best=0; try{ best=parseInt(localStorage.getItem('raqam_memorychain_best')||'0',10)||0; }catch(e){}
+  bestEl.textContent=best;
+
+  var order=[1,2,3,4,5,6,7,8,9,0];
+  order.forEach(function(n){
+    var b=document.createElement('button'); b.className='nk'+(n===0?' zero':''); b.textContent=n; b.disabled=true;
+    b.addEventListener('click',function(){ press(n,b); });
+    padEl.appendChild(b); keys.push(b);
+  });
+  function keyBtn(n){ return keys[order.indexOf(n)]; }
+  function setDisabled(v){ keys.forEach(function(b){ b.disabled=v; }); }
+
+  function startGame(){
+    seq=[]; round=0; playing=true;
+    nextRound();
+  }
+  function nextRound(){
+    round++; roundEl.textContent=round;
+    seq.push(Math.floor(Math.random()*10));
+    step=0; accepting=false;
+    statusEl.className='mc-status'; statusEl.textContent='راقب التسلسل...';
+    setDisabled(true);
+    setTimeout(function(){ playSeq(0); }, 500);
+  }
+  function playSeq(i){
+    if(i>=seq.length){ accepting=true; setDisabled(false); statusEl.textContent='دورك! كرّر التسلسل'; return; }
+    var b=keyBtn(seq[i]);
+    b.classList.add('lit');
+    setTimeout(function(){
+      b.classList.remove('lit');
+      setTimeout(function(){ playSeq(i+1); }, 220);
+    }, 480);
+  }
+  function press(n,b){
+    if(!accepting) return;
+    b.classList.add('lit'); setTimeout(function(){ b.classList.remove('lit'); },180);
+    if(n===seq[step]){
+      step++;
+      if(step===seq.length){
+        accepting=false; setDisabled(true);
+        statusEl.className='mc-status win'; statusEl.textContent='✅ صحيح! الجولة التالية...';
+        setTimeout(nextRound, 700);
+      }
+    } else {
+      gameOver();
+    }
+  }
+  function gameOver(){
+    accepting=false; playing=false; setDisabled(true);
+    var finalScore=round-1;
+    if(finalScore>best){ best=finalScore; bestEl.textContent=best; try{localStorage.setItem('raqam_memorychain_best',best);}catch(e){} }
+    statusEl.className='mc-status'; statusEl.textContent='❌ خطأ! وصلت إلى '+finalScore;
+    setTimeout(function(){
+      var ov=document.createElement('div');
+      ov.style.cssText='position:fixed;inset:0;background:rgba(10,16,39,.86);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;z-index:200';
+      ov.innerHTML='<div style="font-family:Cairo,sans-serif;color:#fff;font-size:28px">🔗 انتهت السلسلة</div><div style="color:var(--muted)">وصلت إلى '+finalScore+' · الأفضل: '+best+'</div>';
+      var b=document.createElement('button'); b.className='btn'; b.textContent='حاول مجدداً';
+      b.addEventListener('click',function(){ document.body.removeChild(ov); startGame(); });
+      ov.appendChild(b); document.body.appendChild(ov);
+    },500);
+  }
+  document.getElementById('startBtn').addEventListener('click',startGame);
+})();
+</script>
+</body>
+</html>

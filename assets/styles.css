@@ -155,12 +155,14 @@ a{color:inherit;text-decoration:none}
 .lang-btn:hover{border-color:var(--cyan);color:var(--cyan)}
 .lang-btn .ic{font-size:13px;opacity:.8}
 
-/* Cross-promo banner (bkam.ai) */
-.promo-banner{position:relative;overflow:hidden;display:flex;align-items:center;gap:14px;background-image:linear-gradient(90deg,rgba(10,16,39,.90),rgba(10,16,39,.62) 55%,rgba(10,16,39,.28)),url('https://d8j0ntlcm91z4.cloudfront.net/user_3Gqr8cNvaHecl4CfmnUHSrGscwp/hf_20261107_192906_04f5a317-2a2e-4ec5-9f46-abd008e246ee.png');background-size:cover;background-position:center;border:1px solid rgba(251,191,36,.4);border-radius:16px;padding:14px 20px;margin:16px 0;transition:.15s}
-.promo-banner:hover{border-color:var(--amber);transform:translateY(-1px)}
-.promo-banner .ic{font-size:30px;flex:0 0 auto;line-height:1;filter:drop-shadow(0 1px 3px rgba(0,0,0,.5))}
-.promo-banner .t{flex:1;min-width:0}
-.promo-banner .t b{display:block;font-family:"Cairo","Tajawal",sans-serif;color:#fff;font-size:15px;margin-bottom:2px}
-.promo-banner .t span{color:var(--muted);font-size:13px}
-.promo-banner .go{flex:0 0 auto;color:var(--amber);font-weight:800;font-size:14px;font-family:"Cairo","Tajawal",sans-serif;background:rgba(10,16,39,.55);padding:4px 10px;border-radius:999px}
-@media(max-width:560px){.promo-banner .t span{display:none}}
+/* Cross-promo banner (bkam.ai) — bigger 2-column ad card */
+.promo-banner{display:grid;grid-template-columns:1fr 1.25fr;align-items:stretch;background:var(--card);border:1px solid rgba(251,191,36,.35);border-radius:20px;overflow:hidden;margin:22px 0;text-decoration:none;transition:.15s;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.promo-banner:hover{border-color:var(--amber);transform:translateY(-2px)}
+.promo-banner .pb-art{position:relative;overflow:hidden;background:#0e1533;min-height:200px}
+.promo-banner .pb-art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.promo-banner .pb-body{padding:26px 30px;display:flex;flex-direction:column;justify-content:center;gap:10px;min-width:0}
+.promo-banner .pb-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(251,191,36,.14);color:var(--amber);border:1px solid rgba(251,191,36,.4);padding:5px 13px;border-radius:999px;font-weight:800;font-size:12px;width:fit-content;font-family:"Cairo","Tajawal",sans-serif}
+.promo-banner h3{font-family:"Cairo","Tajawal",sans-serif;font-size:24px;color:#fff;margin:2px 0 0;line-height:1.35}
+.promo-banner p{color:var(--muted);font-size:15px;margin:0;line-height:1.6;max-width:440px}
+.promo-banner .pb-cta{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#fb923c,#f59e0b);color:#1a0f00;font-weight:800;font-size:15px;font-family:"Cairo","Tajawal",sans-serif;padding:11px 24px;border-radius:12px;width:fit-content;margin-top:6px;box-shadow:0 8px 20px rgba(251,146,60,.35)}
+@media(max-width:680px){.promo-banner{grid-template-columns:1fr}.promo-banner .pb-art{min-height:170px}.promo-banner .pb-body{padding:22px 20px}.promo-banner h3{font-size:21px}}

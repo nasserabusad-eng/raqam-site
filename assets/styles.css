@@ -155,12 +155,12 @@ a{color:inherit;text-decoration:none}
 .lang-btn:hover{border-color:var(--cyan);color:var(--cyan)}
 .lang-btn .ic{font-size:13px;opacity:.8}
 
-/* Cross-promo banner (ma7zooz.com) */
-.promo-banner{display:flex;align-items:center;gap:14px;background:linear-gradient(135deg,rgba(244,114,182,.13),rgba(99,102,241,.13));border:1px solid rgba(244,114,182,.35);border-radius:16px;padding:14px 20px;margin:16px 0;transition:.15s}
-.promo-banner:hover{border-color:var(--pink);transform:translateY(-1px)}
-.promo-banner .ic{font-size:30px;flex:0 0 auto;line-height:1}
+/* Cross-promo banner (bkam.ai) */
+.promo-banner{position:relative;overflow:hidden;display:flex;align-items:center;gap:14px;background-image:linear-gradient(90deg,rgba(10,16,39,.90),rgba(10,16,39,.62) 55%,rgba(10,16,39,.28)),url('https://d8j0ntlcm91z4.cloudfront.net/user_3Gqr8cNvaHecl4CfmnUHSrGscwp/hf_20261107_192906_04f5a317-2a2e-4ec5-9f46-abd008e246ee.png');background-size:cover;background-position:center;border:1px solid rgba(251,191,36,.4);border-radius:16px;padding:14px 20px;margin:16px 0;transition:.15s}
+.promo-banner:hover{border-color:var(--amber);transform:translateY(-1px)}
+.promo-banner .ic{font-size:30px;flex:0 0 auto;line-height:1;filter:drop-shadow(0 1px 3px rgba(0,0,0,.5))}
 .promo-banner .t{flex:1;min-width:0}
 .promo-banner .t b{display:block;font-family:"Cairo","Tajawal",sans-serif;color:#fff;font-size:15px;margin-bottom:2px}
 .promo-banner .t span{color:var(--muted);font-size:13px}
-.promo-banner .go{flex:0 0 auto;color:var(--pink);font-weight:800;font-size:14px;font-family:"Cairo","Tajawal",sans-serif}
+.promo-banner .go{flex:0 0 auto;color:var(--amber);font-weight:800;font-size:14px;font-family:"Cairo","Tajawal",sans-serif;background:rgba(10,16,39,.55);padding:4px 10px;border-radius:999px}
 @media(max-width:560px){.promo-banner .t span{display:none}}
